@@ -14,7 +14,7 @@ import argparse
 import json
 import re
 import sys
-from functools import lru_cache
+from functools import cache
 from pathlib import Path
 
 DATA = Path(__file__).resolve().parent.parent / "data"
@@ -28,7 +28,7 @@ def fail(msg):
     sys.exit(1)
 
 
-@lru_cache(maxsize=None)
+@cache
 def load(path):
     with open(path, encoding="utf-8") as f:
         return json.load(f)
@@ -149,7 +149,7 @@ def cmd_control(args):
 def cmd_search(args):
     terms = [t.lower() for t in args.terms]
     hits = 0
-    for domain, fam, path in catalog_files():
+    for domain, _fam, path in catalog_files():
         for c in controls(path):
             text = " ".join([c["title"], part(c, "statement"), part(c, "guidance"),
                              prop(c, "risk-statement") or "", prop(c, "rationale") or ""]).lower()

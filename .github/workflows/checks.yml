@@ -1,0 +1,40 @@
+# Lint, SAST and SCA checks for every Python and shell script (see tool/check.sh).
+name: Checks
+
+on:
+  push:
+    branches: [main]
+    paths: &check-paths
+      - "**/*.py"
+      - "**/*.sh"
+      - ".pylintrc"
+      - "tool/extract_oscal/requirements*"
+      - ".github/workflows/checks.yml"
+  pull_request:
+    paths: *check-paths
+  # Weekly, so newly published advisories against the pinned dependencies are caught.
+  schedule:
+    - cron: "0 1 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  check:
+    name: Lint, SAST and SCA
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - uses: astral-sh/setup-uv@bec219d24cd3e171d82865faccec33120bb574f4 # v10.1.0
+
+      - name: Run checks
+        run: ./tool/check.sh

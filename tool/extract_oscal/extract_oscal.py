@@ -22,10 +22,11 @@ import socket
 import sys
 import tempfile
 import uuid
+from collections.abc import Iterable
 from datetime import datetime, timedelta, timezone
 from email.message import Message
 from pathlib import Path
-from typing import Any, Dict, FrozenSet, Iterable, List, Optional, Tuple
+from typing import Any
 from urllib.parse import urljoin, urlparse
 
 import requests
@@ -34,7 +35,7 @@ from bs4 import BeautifulSoup, Tag
 logging.basicConfig(level=logging.INFO, format="[%(levelname)s] %(message)s")
 logger = logging.getLogger(__name__)
 
-DEFAULT_ALLOWED_HOSTS: FrozenSet[str] = frozenset({"info.standards.tech.gov.sg"})
+DEFAULT_ALLOWED_HOSTS: frozenset[str] = frozenset({"info.standards.tech.gov.sg"})
 SITE_BASE = "https://info.standards.tech.gov.sg"
 DEFAULT_SOURCE_BASES = {
     "catalog": f"{SITE_BASE}/control-catalog/cybersecurity/",
@@ -112,7 +113,7 @@ def _ensure_public_host(host: str) -> None:
             raise FetchError(f"Host {host} resolves to non-public address {ip}")
 
 
-def validate_url(url: str, allowed_hosts: FrozenSet[str]) -> None:
+def validate_url(url: str, allowed_hosts: frozenset[str]) -> None:
     parsed = urlparse(url)
     if parsed.scheme.lower() != "https":
         raise FetchError(f"Only https URLs are allowed: {url}")
@@ -130,7 +131,7 @@ def validate_url(url: str, allowed_hosts: FrozenSet[str]) -> None:
     _ensure_public_host(host)
 
 
-def _charset_from_content_type(content_type: Optional[str]) -> Optional[str]:
+def _charset_from_content_type(content_type: str | None) -> str | None:
     if not content_type:
         return None
     msg = Message()
@@ -141,9 +142,9 @@ def _charset_from_content_type(content_type: Optional[str]) -> Optional[str]:
 
 def fetch_url(
     url: str,
-    allowed_hosts: FrozenSet[str],
+    allowed_hosts: frozenset[str],
     max_size_bytes: int = MAX_SIZE_BYTES,
-) -> Tuple[bytes, Optional[str]]:
+) -> tuple[bytes, str | None]:
     """Fetches a URL, validating every redirect hop. Returns (body, declared charset)."""
     headers = {
         "User-Agent": "GovTech-OSCAL-Converter/1.0",
@@ -252,9 +253,9 @@ def clean_prose(elems: Iterable[Tag]) -> str:
     return "\n".join(p for p in (_prose_from(e) for e in elems) if p)
 
 
-def _parse_params(elems: List[Tag]) -> List[Dict[str, Any]]:
+def _parse_params(elems: list[Tag]) -> list[dict[str, Any]]:
     """Parses the first table found within the Parameters section only."""
-    table: Optional[Tag] = None
+    table: Tag | None = None
     for el in elems:
         table = el if el.name == "table" else el.find("table")
         if table:
@@ -262,7 +263,7 @@ def _parse_params(elems: List[Tag]) -> List[Dict[str, Any]]:
     if not table:
         return []
 
-    params: List[Dict[str, Any]] = []
+    params: list[dict[str, Any]] = []
     for row in table.find_all("tr")[1:]:
         cols = row.find_all(["td", "th"])
         if len(cols) < 3:
@@ -287,7 +288,7 @@ def _parse_params(elems: List[Tag]) -> List[Dict[str, Any]]:
     return params
 
 
-def _parse_last_updated(soup: BeautifulSoup) -> Optional[datetime]:
+def _parse_last_updated(soup: BeautifulSoup) -> datetime | None:
     node = soup.find(string=LAST_UPDATED_RE)
     if not node:
         return None
@@ -307,7 +308,7 @@ def _parse_last_updated(soup: BeautifulSoup) -> Optional[datetime]:
         return None
 
 
-def _resolve_published(soup: BeautifulSoup, override: Optional[datetime]) -> Tuple[str, str]:
+def _resolve_published(soup: BeautifulSoup, override: datetime | None) -> tuple[str, str]:
     """Returns (last-modified timestamp, version) from the override, the page, or now."""
     published = override or _parse_last_updated(soup)
     if published is None:
@@ -320,16 +321,16 @@ def _resolve_published(soup: BeautifulSoup, override: Optional[datetime]) -> Tup
 
 
 def _collect_sections(
-    heading: Tag, section_tag: str, stop_tags: FrozenSet[str]
-) -> Tuple[List[Tag], Dict[str, List[Tag]]]:
+    heading: Tag, section_tag: str, stop_tags: frozenset[str]
+) -> tuple[list[Tag], dict[str, list[Tag]]]:
     """Groups the siblings after a control heading by their section headings.
 
     Returns (elements before the first section heading, {section title: elements}),
     so multi-paragraph sections are captured in full.
     """
-    preamble: List[Tag] = []
-    sections: Dict[str, List[Tag]] = {}
-    current: Optional[str] = None
+    preamble: list[Tag] = []
+    sections: dict[str, list[Tag]] = {}
+    current: str | None = None
     for sib in heading.next_siblings:
         if not isinstance(sib, Tag):
             continue
@@ -345,15 +346,15 @@ def _collect_sections(
     return preamble, sections
 
 
-def _warn_unknown(names: Iterable[str], known: FrozenSet[str], seen: set[str], what: str, where: str) -> None:
+def _warn_unknown(names: Iterable[str], known: frozenset[str], seen: set[str], what: str, where: str) -> None:
     for name in set(names) - known - seen:
         seen.add(name)
         logger.warning("Ignoring unrecognised %s %r (first seen in %s)", what, _s(name), _s(where))
 
 
-def _key_values(ul: Tag) -> Dict[str, str]:
+def _key_values(ul: Tag) -> dict[str, str]:
     """Parses a "<li><b>Key:</b> value</li>" list into {lowercased key: value}."""
-    values: Dict[str, str] = {}
+    values: dict[str, str] = {}
     for li in ul.find_all("li"):
         key, sep, value = li.get_text(" ", strip=True).partition(":")
         if sep:
@@ -361,12 +362,14 @@ def _key_values(ul: Tag) -> Dict[str, str]:
     return values
 
 
+# One linear pass over the page; splitting it further would scatter the HTML-to-OSCAL mapping.
+# pylint: disable-next=too-many-locals
 def parse_catalog(
     html_content: bytes | str,
     source_url: str,
-    encoding: Optional[str] = None,
-    last_modified_override: Optional[datetime] = None,
-) -> Dict[str, Any]:
+    encoding: str | None = None,
+    last_modified_override: datetime | None = None,
+) -> dict[str, Any]:
     soup = BeautifulSoup(html_content, "html.parser", from_encoding=encoding)
 
     h1 = soup.find("h1")
@@ -382,7 +385,7 @@ def parse_catalog(
 
     domain = domain_from_url(source_url)
 
-    controls: List[Dict[str, Any]] = []
+    controls: list[dict[str, Any]] = []
     unknown_sections: set[str] = set()
 
     for h2 in soup.find_all("h2"):
@@ -401,14 +404,14 @@ def parse_catalog(
         params = _parse_params(sections.get("Parameters", []))
 
         # Cybersecurity catalogs use "Risk Statement"; DSS catalogs use "Rationale".
-        props: List[Dict[str, str]] = []
+        props: list[dict[str, str]] = []
         if "Risk Statement" in sections or "Rationale" not in sections:
             props.append({"name": "risk-statement", "value": clean_prose(sections.get("Risk Statement", []))})
         if "Rationale" in sections:
             props.append({"name": "rationale", "value": clean_prose(sections["Rationale"])})
         props.append({"name": "last-modified", "value": last_modified})
 
-        control: Dict[str, Any] = {
+        control: dict[str, Any] = {
             "id": ctrl_id,
             "title": title,
             "props": props,
@@ -465,12 +468,14 @@ def _catalog_family(prefix: str) -> str:
     return "cybersecurity"
 
 
+# One linear pass over the page; splitting it further would scatter the HTML-to-OSCAL mapping.
+# pylint: disable-next=too-many-locals,too-many-branches,too-many-statements
 def parse_ssp(
     html_content: bytes | str,
     source_url: str,
-    encoding: Optional[str] = None,
-    last_modified_override: Optional[datetime] = None,
-) -> Dict[str, Any]:
+    encoding: str | None = None,
+    last_modified_override: datetime | None = None,
+) -> dict[str, Any]:
     """Converts an SSP template page into an OSCAL system-security-plan.
 
     The page lists the baseline's selected controls grouped by catalog
@@ -492,7 +497,7 @@ def parse_ssp(
     component_uuid = make_uuid("component-this-system")
 
     # System characteristics: "<h2>System Characteristics</h2><ul><li><b>Name:</b> ...".
-    characteristics: Dict[str, str] = {}
+    characteristics: dict[str, str] = {}
     chars_heading = soup.find("h2", string=lambda t: bool(t) and t.strip() == "System Characteristics")
     if chars_heading:
         preamble, _ = _collect_sections(chars_heading, "h3", frozenset({"h2"}))
@@ -507,13 +512,13 @@ def parse_ssp(
     system_description = characteristics.get("description") or intro or system_name
     sensitivity = characteristics.get("security sensitivity level", "")
 
-    implemented: List[Dict[str, Any]] = []
-    catalog_resources: Dict[str, Dict[str, Any]] = {}
-    expected_counts: Dict[str, int] = {}
-    actual_counts: Dict[str, int] = {}
+    implemented: list[dict[str, Any]] = []
+    catalog_resources: dict[str, dict[str, Any]] = {}
+    expected_counts: dict[str, int] = {}
+    actual_counts: dict[str, int] = {}
     unknown_sections: set[str] = set()
     unknown_meta: set[str] = set()
-    group: Optional[str] = None
+    group: str | None = None
 
     for heading in soup.find_all(["h2", "h3"]):
         text = heading.get_text(strip=True)
@@ -551,7 +556,7 @@ def parse_ssp(
 
         preamble, sections = _collect_sections(heading, "h4", frozenset({"h2", "h3"}))
         _warn_unknown(sections, KNOWN_SECTIONS, unknown_sections, "section", ctrl_id)
-        meta: Dict[str, str] = {}
+        meta: dict[str, str] = {}
         for el in preamble:
             if el.name == "ul":
                 meta.update(_key_values(el))
@@ -577,7 +582,7 @@ def parse_ssp(
         if meta.get("profile level"):
             props.append({"name": "profile-level", "ns": PROP_NS, "value": meta["profile level"]})
 
-        requirement: Dict[str, Any] = {
+        requirement: dict[str, Any] = {
             "uuid": make_uuid(f"requirement-{ctrl_id}"),
             "control-id": ctrl_id,
             "props": props,
@@ -601,7 +606,7 @@ def parse_ssp(
                 _s(grp.upper()), expected, actual_counts.get(grp, 0),
             )
 
-    system_characteristics: Dict[str, Any] = {
+    system_characteristics: dict[str, Any] = {
         "system-ids": [{"identifier-type": "http://ietf.org/rfc/rfc4122", "id": ssp_uuid}],
         "system-name": system_name,
         "description": system_description,
@@ -716,6 +721,8 @@ def _parse_date_arg(value: str) -> datetime:
         raise argparse.ArgumentTypeError("expected YYYY-MM-DD") from e
 
 
+# Mostly argparse setup plus one dispatch per document type.
+# pylint: disable-next=too-many-statements
 def main() -> None:
     parser = argparse.ArgumentParser(
         description="Convert a control catalog or SSP template page into OSCAL JSON format."

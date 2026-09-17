@@ -1,0 +1,12 @@
+# Pylint settings for tool/check.sh.
+[MAIN]
+py-version = 3.10
+
+[FORMAT]
+# The scripts wrap at about 120 columns.
+max-line-length = 125
+
+[MESSAGES CONTROL]
+# The CLI subcommand and helper functions are short and named for what they do;
+# the module docstrings document the commands.
+disable = missing-function-docstring

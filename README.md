@@ -23,6 +23,10 @@ The repo does three things:
 ```
 sg-im8-reform-skill/
 ├── README.md
+├── AGENTS.md                         # rules for coding agents, including running tool/check.sh before done
+├── CLAUDE.md                         # imports AGENTS.md for Claude Code
+├── .pylintrc                         # Python lint settings
+├── .github/workflows/checks.yml      # runs tool/check.sh in GitHub Actions
 ├── package-skill.sh                  # validates the skill and builds im8-controls.zip
 ├── im8-controls.zip                  # build output (git-ignored; regenerate with package-skill.sh)
 │
@@ -37,6 +41,7 @@ sg-im8-reform-skill/
 │                                             # high-risk-cloud, gen-ai, sandbox, dss-others, dss-high
 │
 ├── tool/                             # build tooling; not shipped in the skill
+│   ├── check.sh                      # lint, SAST and SCA checks for all Python and shell scripts
 │   ├── fetch-control-catalog.sh      # regenerates every file in skills/im8-controls/data/
 │   └── extract_oscal/
 │       ├── extract_oscal.py          # converts one standards page to OSCAL JSON
@@ -103,6 +108,31 @@ Before building the zip, the script checks that:
 
 If you add or remove a document in `fetch-control-catalog.sh`, update `EXPECTED_CATALOGS` and `EXPECTED_SSPS` at the top of `package-skill.sh`.
 
+### Check the scripts
+
+After changing any Python or shell script, run:
+
+```sh
+./tool/check.sh
+```
+
+| Check | Tool | Scope |
+|---|---|---|
+| Lint | [pylint](https://pylint.readthedocs.io/) | every tracked `*.py` (settings in `.pylintrc`) |
+| Lint | [shellcheck](https://www.shellcheck.net/) | every tracked `*.sh` |
+| SAST | [bandit](https://bandit.readthedocs.io/) | every tracked `*.py` |
+| SCA | [pip-audit](https://github.com/pypa/pip-audit) | `tool/extract_oscal/requirements.txt` |
+
+The script needs only `uv`, because it runs each tool through `uvx` at a pinned version. pip-audit needs network access. The script exits non-zero if any check fails.
+
+GitHub Actions runs the same script (`.github/workflows/checks.yml`) in these cases:
+
+- on pushes to `main` and on pull requests that change a `.py` or `.sh` file, `.pylintrc` or the extractor requirements;
+- weekly, to catch newly published advisories against the pinned dependencies;
+- on demand.
+
+`AGENTS.md` (which `CLAUDE.md` imports) tells coding agents to run these checks and get them passing before they mark a task as done.
+
 ### 3. Install
 
 | Where | How |
@@ -110,7 +140,7 @@ If you add or remove a document in `fetch-control-catalog.sh`, update `EXPECTED_
 | Claude Code, inside `sg-im8-reform-skill/` | `mkdir -p .claude/skills && ln -s ../../skills/im8-controls .claude/skills/im8-controls` (`.claude/` is git-ignored, so each clone creates the link once) |
 | Claude Code, everywhere | `unzip im8-controls.zip -d ~/.claude/skills/` (or `ln -s "$PWD/skills/im8-controls" ~/.claude/skills/`, which keeps it in step with refreshes) |
 | claude.ai / Claude Desktop | Upload `im8-controls.zip` under Settings → Capabilities → Skills. |
-| chatgpt.com | Go to Plugins → Skills, click Add (+), choose Upload from your computer, and select `im8-controls.zip`. |
+| ChatGPT.com | Go to Plugins → Skills, click Add (+), choose Upload from your computer, and select `im8-controls.zip`. |
 
 Skills are discovered when a session starts, so open a new session after installing.
 

@@ -118,6 +118,53 @@ python3 scripts/im8.py ssp medium-risk-cloud --level 0
 python3 scripts/im8.py compare dss-others dss-high    # controls whose level or presence differs
 ```
 
+### Example
+
+> **User:** Which controls are mandatory for a medium-risk cloud system that uses an LLM?
+
+The agent recognises that this system needs two SSP templates: `medium-risk-cloud` for hosting and `gen-ai` for the LLM. It runs `im8.py ssp medium-risk-cloud --level 0`, `im8.py ssp gen-ai` and `im8.py control ga-1 ga-2 ga-3 ga-4`, then answers:
+
+<details>
+<summary>Sample response</summary>
+
+> A medium-risk cloud system that uses an LLM has **30 mandatory (Level 0) controls**: 26 from `medium-risk-cloud` plus 4 from `gen-ai`. The GenAI template has to be applied alongside the hosting template. The two templates share no controls, so no level conflicts need resolving. Both SSP templates are version 2026.03.24.
+>
+> **From `medium-risk-cloud` (26)**
+>
+> | Area | Level 0 controls |
+> |---|---|
+> | Application Security | as-1 Input Validation · as-3 Output Sanitisation · as-7 Access Control Check Enforcement · as-8 Secrets Management |
+> | Access Control | ac-2 Multi-Factor Authentication (MFA) · ac-3 Inactive and Expired Accounts\* · ac-5 Endpoint Device Hardening · ac-6 Default Credentials |
+> | Logging and Monitoring | lm-3 Network Flow Logging · lm-4 Audit Logging · lm-6 Access Logging · lm-9 Security Monitoring and Alerting · lm-12 Central Security Log Management and Monitoring\* |
+> | Security Testing | st-1 Vulnerability Assessment\* · st-3 Public Vulnerability Disclosure Programme\* · st-4 Security Testing Programme\* |
+> | Network Security | ns-1 Network and System Component Segmentation · ns-5 Network and Application Layer Filtering |
+> | Security Programme Management | pm-3 System Security Plan (SSP) Development · pm-4 Approval of Residual Risks\* · pm-5 Central Submission of Approved System Security Plan (SSP) |
+> | Infrastructure Security | is-11 Central Domain Name Registration · is-14 Singapore SMS Sender ID Registry Registration |
+> | Data Protection | dp-1 Data Residency\* |
+> | Backup and Recovery | br-1 Backup\* |
+> | Secure Development | sd-8 Deployment Environment Segregation |
+>
+> \* The control has parameters, such as time periods, that you set in your own SSP.
+>
+> **From `gen-ai` (4)**
+>
+> Which of these apply depends on how you use the LLM:
+>
+> - **ga-1 Overseas-hosted GenAI API services:** "Use only up to RESTRICTED and SENSITIVE NORMAL data with GenAI API services served by models hosted overseas."
+> - **ga-2 Singapore-hosted GenAI API services:** "Use only up to CONFIDENTIAL and SENSITIVE HIGH data with GenAI API services served by models hosted in Singapore."
+> - **ga-3 Non-logging and non-training Agreement:** "Obtain a legally-binding commitment from the GenAI API service provider that states that they do not log, store, nor retain input and output data, and that no input and output data are used for training GenAI models." Prompt caching is exempt if its time-to-live is 24 hours or less.
+> - **ga-4 Data classification for self-hosted GenAI models:** "Ensure that GenAI models are hosted in an environment that can host the highest data classification of government data contained in the system that the model is deployed in."
+>
+> A medium-risk system handles Confidential / Sensitive High data. Under ga-1 and ga-2, that data can only go to an LLM API hosted in Singapore, not one hosted overseas. If you host the model yourself, ga-4 applies instead of ga-1 and ga-2.
+>
+> The GenAI template also has five Level 1 controls you should assess: dp-8 and ga-5 to ga-8. These cover data classification disclosure, model file formats and loaders, file upload safeguards, output evaluation, and telling users about GenAI risks.
+
+</details>
+
+Every control ID, title and quoted statement comes from the bundled data, not the model's memory. The response is based on data version 2026.03.24, and the exact wording will vary between runs.
+
+### Customising
+
 To change how the agent uses the skill, edit `skills/im8-controls/SKILL.md`. The `description` in its frontmatter decides when the skill is triggered.
 
 ## Source and licensing

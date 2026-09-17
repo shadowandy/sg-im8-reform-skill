@@ -1,0 +1,113 @@
+{
+  "catalog": {
+    "uuid": "4ed8fb55-72f3-5229-8b84-b336c7b4efb2",
+    "metadata": {
+      "title": "Cybersecurity Control Catalog - Datacentre",
+      "last-modified": "2026-03-05T00:00:00+08:00",
+      "version": "2026.03.05",
+      "oscal-version": "1.1.2",
+      "props": [
+        {
+          "name": "keywords",
+          "value": "IM8, GovTech, Singapore, cybersecurity, Datacentre"
+        },
+        {
+          "name": "abbreviation",
+          "value": "DC"
+        },
+        {
+          "name": "source",
+          "value": "https://info.standards.tech.gov.sg/control-catalog/cybersecurity/dc/"
+        }
+      ]
+    },
+    "groups": [
+      {
+        "id": "dc",
+        "title": "Datacentre",
+        "controls": [
+          {
+            "id": "dc-1",
+            "title": "Separate hosting",
+            "props": [
+              {
+                "name": "risk-statement",
+                "value": "Violating this control can subject government data and systems to access risks leading to compromised systems and data."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-05T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#479badb1-6c71-51ca-a5e8-ac269e516535",
+                "rel": "source",
+                "text": "Datacentre Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "dc-1_smt",
+                "name": "statement",
+                "prose": "Physically separate Government resources from non-Government resources."
+              },
+              {
+                "id": "dc-1_gdn",
+                "name": "guidance",
+                "prose": "For on-premise environments, ensure government resources are physically stored and secured separately from non-government resources."
+              }
+            ]
+          },
+          {
+            "id": "dc-2",
+            "title": "Physical Access Controls",
+            "props": [
+              {
+                "name": "risk-statement",
+                "value": "Violating this control can subject government data and systems to access risks leading to compromised systems and data."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-05T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#479badb1-6c71-51ca-a5e8-ac269e516535",
+                "rel": "source",
+                "text": "Datacentre Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "dc-2_smt",
+                "name": "statement",
+                "prose": "Implement physical access controls to prohibit unauthorised access to the hosting environment or network rooms."
+              },
+              {
+                "id": "dc-2_gdn",
+                "name": "guidance",
+                "prose": "Measures to consider include:\na) personnel security clearance and checks\nb) Continuous monitoring\nc) Immediate security response\nd) Strong authentication card access system to regulate and log access of employees, visitors and contractors to the facility;\ne) Guards deployed to guard the facility 24/7;\nf) Restrict items (such as unauthorised computing devices) to be brought into the facility;\ng) Intrusion Detection System installed to detect unauthorised access;\nh) CCTV installed to monitor the facility."
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "back-matter": {
+      "resources": [
+        {
+          "uuid": "479badb1-6c71-51ca-a5e8-ac269e516535",
+          "title": "Datacentre — Singapore Government ICT&SS Policy Reform",
+          "description": "Official Datacentre control catalog page.",
+          "rlinks": [
+            {
+              "href": "https://info.standards.tech.gov.sg/control-catalog/cybersecurity/dc/"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

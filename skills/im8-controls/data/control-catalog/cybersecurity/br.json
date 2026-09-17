@@ -1,0 +1,293 @@
+{
+  "catalog": {
+    "uuid": "093b368b-1ff4-5d8f-905c-0d8059803060",
+    "metadata": {
+      "title": "Cybersecurity Control Catalog - Backup and Recovery",
+      "last-modified": "2026-03-24T00:00:00+08:00",
+      "version": "2026.03.24",
+      "oscal-version": "1.1.2",
+      "props": [
+        {
+          "name": "keywords",
+          "value": "IM8, GovTech, Singapore, cybersecurity, Backup and Recovery"
+        },
+        {
+          "name": "abbreviation",
+          "value": "BR"
+        },
+        {
+          "name": "source",
+          "value": "https://info.standards.tech.gov.sg/control-catalog/cybersecurity/br/"
+        }
+      ]
+    },
+    "groups": [
+      {
+        "id": "br",
+        "title": "Backup and Recovery",
+        "controls": [
+          {
+            "id": "br-1",
+            "title": "Backup",
+            "props": [
+              {
+                "name": "risk-statement",
+                "value": "Without regular backups stored in a secure and separate location, there is an increased risk of data loss, system failures, and extended downtime in the event of accidental deletion, hardware failures, or malicious attacks."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-24T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#f9e765a8-88fc-50e2-aee8-0e33fcae4a19",
+                "rel": "source",
+                "text": "Backup and Recovery Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "br-1_smt",
+                "name": "statement",
+                "prose": "Backup all important data and systems at least every {{ insert: param, br-1_prm_1 }} day(s), and store backups in a secure and separate location."
+              },
+              {
+                "id": "br-1_gdn",
+                "name": "guidance",
+                "prose": "Use default CSP-managed backup services (e.g., AWS Backup, Azure Backup, GCP Backup and DR Service). Consider alternative backup services only when default CSP services cannot be used. Store backups and snapshots separately to primary data storage with data encrypted-at-rest. For SaaS, ensure that SaaS provider is able to restore last backup."
+              }
+            ],
+            "params": [
+              {
+                "id": "br-1_prm_1",
+                "class": "int",
+                "label": "time period (days)",
+                "guidelines": [
+                  {
+                    "prose": "The time period in days for backup."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "br-2",
+            "title": "Recovery Testing",
+            "props": [
+              {
+                "name": "risk-statement",
+                "value": "Failure to regularly test recovery processes may result in ineffective response during actual incidents, increasing the risk of prolonged downtime, data loss, and compromised business continuity in the event of a disaster or system failure."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-24T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#f9e765a8-88fc-50e2-aee8-0e33fcae4a19",
+                "rel": "source",
+                "text": "Backup and Recovery Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "br-2_smt",
+                "name": "statement",
+                "prose": "Conduct testing of recovery processes at least every {{ insert: param, br-2_prm_1 }} day(s) to ensure their effectiveness."
+              },
+              {
+                "id": "br-2_gdn",
+                "name": "guidance",
+                "prose": "Ensure each test verifies the system's ability to fully restore all data and services."
+              }
+            ],
+            "params": [
+              {
+                "id": "br-2_prm_1",
+                "class": "int",
+                "label": "time period (days)",
+                "guidelines": [
+                  {
+                    "prose": "The time period in days for recovery testing."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "br-3",
+            "title": "Backup Retention",
+            "props": [
+              {
+                "name": "risk-statement",
+                "value": "Lack of prevention measures against the modification or deletion of backups for the specified duration increases the risk of data loss, unauthorised alterations, and potential inability to recover from incidents, compromising the integrity and availability of critical information."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-24T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#f9e765a8-88fc-50e2-aee8-0e33fcae4a19",
+                "rel": "source",
+                "text": "Backup and Recovery Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "br-3_smt",
+                "name": "statement",
+                "prose": "Prevent backups from being modified or deleted for {{ insert: param, br-3_prm_1 }} day(s) or as stipulated in the agency's data retention policies."
+              },
+              {
+                "id": "br-3_gdn",
+                "name": "guidance",
+                "prose": "Use S3 Object Lock or Azure Blob Storage with immutability enabled to enforce time-based retention policies."
+              }
+            ],
+            "params": [
+              {
+                "id": "br-3_prm_1",
+                "class": "int",
+                "label": "time period (days)",
+                "guidelines": [
+                  {
+                    "prose": "The time period in days of backup retention."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "br-4",
+            "title": "Disaster Recovery Plan",
+            "props": [
+              {
+                "name": "risk-statement",
+                "value": "Absence of a comprehensive disaster recovery plan increases the risk of prolonged system downtime, data loss, and inability to maintain business continuity in the event of a disaster, potentially leading to significant financial losses and damage to organisational reputation."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-24T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#f9e765a8-88fc-50e2-aee8-0e33fcae4a19",
+                "rel": "source",
+                "text": "Backup and Recovery Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "br-4_smt",
+                "name": "statement",
+                "prose": "Develop, maintain, and regularly test a disaster recovery plan that ensures critical functions and data can be restored within the Recovery Time Objective (RTO) and Recovery Point Objective (RPO) as determined by business requirements and risk assessments."
+              },
+              {
+                "id": "br-4_gdn",
+                "name": "guidance",
+                "prose": "The disaster recovery plan should include clearly defined roles and responsibilities, step-by-step recovery procedures, communication protocols during a disaster, and integration with the overall business continuity plan. Assess the effectiveness of the existing disaster recovery plan during disaster recovery exercises."
+              }
+            ]
+          },
+          {
+            "id": "br-5",
+            "title": "Business Continuity Plan",
+            "props": [
+              {
+                "name": "risk-statement",
+                "value": "Failure to develop a Business Continuity Plan may result in prolonged system downtime, loss of critical data, and diminished organisational resilience during disruptive events, increasing the risk of financial and reputational damage."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-24T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#f9e765a8-88fc-50e2-aee8-0e33fcae4a19",
+                "rel": "source",
+                "text": "Backup and Recovery Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "br-5_smt",
+                "name": "statement",
+                "prose": "Develop a business continuity plan."
+              },
+              {
+                "id": "br-5_gdn",
+                "name": "guidance",
+                "prose": "Refer to the Cyber Security Agency's Cybersecurity Toolkit for IT Teams for a business continuity plan template."
+              }
+            ]
+          },
+          {
+            "id": "br-6",
+            "title": "Business Continuity Exercise",
+            "props": [
+              {
+                "name": "risk-statement",
+                "value": "Failure to conduct regular business continuity exercises may lead to unpreparedness during an actual disruption, increasing response times, operational impact, and the risk of ineffective recovery, ultimately jeopardising business operations and stakeholder trust."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-24T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#f9e765a8-88fc-50e2-aee8-0e33fcae4a19",
+                "rel": "source",
+                "text": "Backup and Recovery Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "br-6_smt",
+                "name": "statement",
+                "prose": "Conduct a business continuity exercise at least every {{ insert: param, br-6_prm_1 }} day(s) to test the effectiveness of the business continuity plan."
+              },
+              {
+                "id": "br-6_gdn",
+                "name": "guidance",
+                "prose": "Conduct testing based on the business continuity plan which can include checklists, tabletop exercises, and simulations."
+              }
+            ],
+            "params": [
+              {
+                "id": "br-6_prm_1",
+                "class": "int",
+                "label": "time period (days)",
+                "guidelines": [
+                  {
+                    "prose": "The time period in days of business continuity exercise frequency."
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "back-matter": {
+      "resources": [
+        {
+          "uuid": "f9e765a8-88fc-50e2-aee8-0e33fcae4a19",
+          "title": "Backup and Recovery — Singapore Government ICT&SS Policy Reform",
+          "description": "Official Backup and Recovery control catalog page.",
+          "rlinks": [
+            {
+              "href": "https://info.standards.tech.gov.sg/control-catalog/cybersecurity/br/"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

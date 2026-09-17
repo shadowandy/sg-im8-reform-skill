@@ -1,0 +1,596 @@
+{
+  "catalog": {
+    "uuid": "57e0d077-e82e-5f6b-9986-e032eaa33876",
+    "metadata": {
+      "title": "Cybersecurity Control Catalog - Application Security",
+      "last-modified": "2026-03-24T00:00:00+08:00",
+      "version": "2026.03.24",
+      "oscal-version": "1.1.2",
+      "props": [
+        {
+          "name": "keywords",
+          "value": "IM8, GovTech, Singapore, cybersecurity, Application Security"
+        },
+        {
+          "name": "abbreviation",
+          "value": "AS"
+        },
+        {
+          "name": "source",
+          "value": "https://info.standards.tech.gov.sg/control-catalog/cybersecurity/as/"
+        }
+      ]
+    },
+    "groups": [
+      {
+        "id": "as",
+        "title": "Application Security",
+        "controls": [
+          {
+            "id": "as-1",
+            "title": "Input Validation",
+            "props": [
+              {
+                "name": "risk-statement",
+                "value": "Without input validation, there's a heightened risk of injection attacks, data manipulation, or system crashes due to unexpected input, potentially leading to unauthorised access or disruption of services."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-24T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#c3b6221a-44e3-514a-ad4e-4e1b5a9a318d",
+                "rel": "source",
+                "text": "Application Security Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "as-1_smt",
+                "name": "statement",
+                "prose": "Validate all application inputs to ensure that they match the expected type, structure, or format."
+              },
+              {
+                "id": "as-1_gdn",
+                "name": "guidance",
+                "prose": "Strictly validating inputs against a comprehensive schema prevents injection attacks caused by inserting special characters or content that would cause the application to perform incorrect operations."
+              }
+            ]
+          },
+          {
+            "id": "as-2",
+            "title": "Parameterised Interfaces",
+            "props": [
+              {
+                "name": "risk-statement",
+                "value": "Failure to use parameterised interfaces increases the vulnerability to SQL injection or command injection attacks, posing a significant risk of unauthorised access, data manipulation, or even potential system compromise."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-24T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#c3b6221a-44e3-514a-ad4e-4e1b5a9a318d",
+                "rel": "source",
+                "text": "Application Security Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "as-2_smt",
+                "name": "statement",
+                "prose": "Use parameterised interfaces for database queries or system commands."
+              },
+              {
+                "id": "as-2_gdn",
+                "name": "guidance",
+                "prose": "Parameterised interfaces such Object-Relational Mapping (ORM) libraries ensure that parameters used in database queries or system commands are properly sanitised and prevent injection attacks."
+              }
+            ]
+          },
+          {
+            "id": "as-3",
+            "title": "Output Sanitisation",
+            "props": [
+              {
+                "name": "risk-statement",
+                "value": "Lack of sanitisation for application outputs used in rendering HTML documents exposes the system to the risk of cross-site scripting (XSS) attacks, allowing malicious code execution in browsers."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-24T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#c3b6221a-44e3-514a-ad4e-4e1b5a9a318d",
+                "rel": "source",
+                "text": "Application Security Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "as-3_smt",
+                "name": "statement",
+                "prose": "Sanitise all application outputs that will be used to render a HTML document."
+              },
+              {
+                "id": "as-3_gdn",
+                "name": "guidance",
+                "prose": "Any application outputs that are returned to the requester and used to render a HTML document can lead to cross-site scripting (XSS) attacks if they contain special characters that change the rendering of the HTML document by the browser."
+              }
+            ]
+          },
+          {
+            "id": "as-4",
+            "title": "Authentication Mechanism Rate-Limiting",
+            "props": [
+              {
+                "name": "risk-statement",
+                "value": "Without rate-limiting, there's an increased risk of unauthorised access as attackers may exploit weak credentials through repeated login attempts."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-24T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#c3b6221a-44e3-514a-ad4e-4e1b5a9a318d",
+                "rel": "source",
+                "text": "Application Security Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "as-4_smt",
+                "name": "statement",
+                "prose": "Apply rate-limiting on all authentication mechanisms to deter brute-force attacks."
+              },
+              {
+                "id": "as-4_gdn",
+                "name": "guidance",
+                "prose": "Consider rate-limiting to a maximum of 3 consecutive failed authentication attempts within 15 minutes or other reasonable rate limits. Time delays between log-on attempts reduce the risk of successful brute-forcing attacks. Bot mitigation tools such as CAPTCHA can further reduce this risk."
+              }
+            ]
+          },
+          {
+            "id": "as-5",
+            "title": "Password Requirements",
+            "props": [
+              {
+                "name": "risk-statement",
+                "value": "Short or commonly used passwords increase the vulnerability to unauthorised access, potentially leading to compromised accounts and unauthorised activities on the system."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-24T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#c3b6221a-44e3-514a-ad4e-4e1b5a9a318d",
+                "rel": "source",
+                "text": "Application Security Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "as-5_smt",
+                "name": "statement",
+                "prose": "Where SSO or passwordless is not supported, verify that {{ insert: param, as-5_prm_3 }} passwords are at least {{ insert: param, as-5_prm_1 }} characters in length and {{ insert: param, as-5_prm_2 }}."
+              },
+              {
+                "id": "as-5_gdn",
+                "name": "guidance",
+                "prose": "Latest NIST SP 800-63B guidelines found that password length is a primary factor in determining the strength of a password while composition and complexity rules provide marginal security benefits."
+              }
+            ],
+            "params": [
+              {
+                "id": "as-5_prm_1",
+                "class": "int",
+                "label": "number of characters",
+                "guidelines": [
+                  {
+                    "prose": "The minimum length of a password."
+                  }
+                ]
+              },
+              {
+                "id": "as-5_prm_2",
+                "class": "str",
+                "label": "policy",
+                "guidelines": [
+                  {
+                    "prose": "The password policy."
+                  }
+                ]
+              },
+              {
+                "id": "as-5_prm_3",
+                "class": "str",
+                "label": "type",
+                "guidelines": [
+                  {
+                    "prose": "The type of password."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "as-6",
+            "title": "Password Salting and Hashing",
+            "props": [
+              {
+                "name": "risk-statement",
+                "value": "Without salting and hashing, in case of a data breach, exposed passwords can be easily extracted, leading to potential compromise of accounts and sensitive information."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-24T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#c3b6221a-44e3-514a-ad4e-4e1b5a9a318d",
+                "rel": "source",
+                "text": "Application Security Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "as-6_smt",
+                "name": "statement",
+                "prose": "Store passwords as salted hashes using a password hashing scheme that is resistant to offline attacks such as those described in NIST SP 800-63b. The salt should be:\n* Generated using a cryptographically secure pseudo-random number generator in accordance with industry standards;\n* At least 32 bits long; and\n* Randomly generated for each account."
+              },
+              {
+                "id": "as-6_gdn",
+                "name": "guidance",
+                "prose": "Refer to NIST SP 800-90Ar1 for suitable pseudo-random number generators. Refer to NIST SP 800-63b Memorized Secret Verifiers section for suitable hashing schemes, including Argon2, scrypt, and PBKDF2. For application source code, use a cryptographically secure pseudo-random number generator function instead of an insecure one, such as crypto.randomBytes instead of Math.random in Node.js and java.security.SecureRandom.nextBytes instead of java.util.Random in Java."
+              }
+            ]
+          },
+          {
+            "id": "as-7",
+            "title": "Access Control Check Enforcement",
+            "props": [
+              {
+                "name": "risk-statement",
+                "value": "Failure to perform access control checks on authenticated requests increases the risk of unauthorised access to sensitive data or functionalities, potentially leading to data breaches and misuse of system resources."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-24T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#c3b6221a-44e3-514a-ad4e-4e1b5a9a318d",
+                "rel": "source",
+                "text": "Application Security Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "as-7_smt",
+                "name": "statement",
+                "prose": "Perform access control checks on all authenticated requests."
+              },
+              {
+                "id": "as-7_gdn",
+                "name": "guidance",
+                "prose": "Utilise authorisation filters or middleware to force all authenticated requests to undergo access control checks."
+              }
+            ]
+          },
+          {
+            "id": "as-8",
+            "title": "Secrets Management",
+            "props": [
+              {
+                "name": "risk-statement",
+                "value": "Exposure of sensitive information and unauthorised access to system credentials may occur if application secrets are stored insecurely or hard-coded in source code."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-24T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#c3b6221a-44e3-514a-ad4e-4e1b5a9a318d",
+                "rel": "source",
+                "text": "Application Security Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "as-8_smt",
+                "name": "statement",
+                "prose": "Securely store secrets in an appropriate secrets management solution with access control enforcement, encryption, and monitoring."
+              },
+              {
+                "id": "as-8_gdn",
+                "name": "guidance",
+                "prose": "Secrets include API keys, access keys, and other static credentials. Do not store secrets unencrypted in source code or configuration files. Store secrets in cloud-native solutions like AWS Secrets Manager and Azure Key Vault or cloud-agnostic solutions like HashiCorp Vault and CyberArk Conjur. For SaaS or platforms, ensure that secrets are stored in an appropriate solution. For example, use GitHub Actions secrets instead of variables."
+              }
+            ]
+          },
+          {
+            "id": "as-9",
+            "title": "Content Security Policy (CSP)",
+            "props": [
+              {
+                "name": "risk-statement",
+                "value": "Without minimally permissive Content Security Policy (CSP) headers, the risk of cross-site scripting attacks, leading to unauthorised script execution and potential data theft, is increased."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-24T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#c3b6221a-44e3-514a-ad4e-4e1b5a9a318d",
+                "rel": "source",
+                "text": "Application Security Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "as-9_smt",
+                "name": "statement",
+                "prose": "Set minimally permissive CSP response headers to mitigate cross-site scripting attacks."
+              },
+              {
+                "id": "as-9_gdn",
+                "name": "guidance",
+                "prose": "Utilise the relevant fetch directives such as default-src, script-src, style-src, connect-src, img-src, media-src and object-src to prevent loading of scripts from malicious sources. Refer to the OWASP Secure Headers Project Best Practices for recommended header values."
+              }
+            ]
+          },
+          {
+            "id": "as-10",
+            "title": "HTTP Strict Transport Security (HSTS)",
+            "props": [
+              {
+                "name": "risk-statement",
+                "value": "Failure to implement HTTP Strict Transport Security (HSTS) with a sufficient maximum age may expose the system to protocol downgrade attacks, compromising the security of communication channels."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-24T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#c3b6221a-44e3-514a-ad4e-4e1b5a9a318d",
+                "rel": "source",
+                "text": "Application Security Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "as-10_smt",
+                "name": "statement",
+                "prose": "Set HTTP Strict Transport Security (HSTS) response headers with a maximum age value of at least 1 year (31536000 seconds) to mitigate protocol downgrade attacks."
+              },
+              {
+                "id": "as-10_gdn",
+                "name": "guidance",
+                "prose": "Refer to the OWASP Secure Headers Project Best Practices for recommended header values."
+              }
+            ]
+          },
+          {
+            "id": "as-11",
+            "title": "Session Management",
+            "props": [
+              {
+                "name": "risk-statement",
+                "value": "Not re-authenticating regularly and at suitable checkpoints could allow someone who has access to the account to carry out unauthorised actions."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-24T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#c3b6221a-44e3-514a-ad4e-4e1b5a9a318d",
+                "rel": "source",
+                "text": "Application Security Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "as-11_smt",
+                "name": "statement",
+                "prose": "Require {{ insert: param, as-11_prm_2 }} to re-authenticate after their session exceeds {{ insert: param, as-11_prm_1 }} hour(s) or terminate the session."
+              },
+              {
+                "id": "as-11_gdn",
+                "name": "guidance",
+                "prose": "NIST SP 800-63B recommends re-authentication once per 30 days for Authenticator Assurance Level 1, 12 hours or 30 minutes inactivity for Authenticator Assurance Level 2, and 12 hours or 15 minutes inactivity for Authenticator Assurance Level 3. In addition to time period, system can consider re-authentication when roles, authenticators or credentials change or when the execution of privileged functions occurs."
+              }
+            ],
+            "params": [
+              {
+                "id": "as-11_prm_1",
+                "class": "int",
+                "label": "time period (hours)",
+                "guidelines": [
+                  {
+                    "prose": "The maximum time period in hours of a user's session."
+                  }
+                ]
+              },
+              {
+                "id": "as-11_prm_2",
+                "class": "str",
+                "label": "type",
+                "guidelines": [
+                  {
+                    "prose": "The type of session."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "as-12",
+            "title": "Malware Scanning of Uploaded Files",
+            "props": [
+              {
+                "name": "risk-statement",
+                "value": "Without scanning uploaded files for malware, there's an increased risk of exploits or infection for consumers of the files."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-24T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#c3b6221a-44e3-514a-ad4e-4e1b5a9a318d",
+                "rel": "source",
+                "text": "Application Security Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "as-12_smt",
+                "name": "statement",
+                "prose": "Scan file uploads for malware before further processing by the system."
+              },
+              {
+                "id": "as-12_gdn",
+                "name": "guidance",
+                "prose": "Consider uploading the files to temporary storage for malware scanning on ephemeral compute like serverless functions before moving safe files to another storage for further processing or unsafe files to quarantine storage."
+              }
+            ]
+          },
+          {
+            "id": "as-13",
+            "title": "Exposure of Internal System Details",
+            "props": [
+              {
+                "name": "risk-statement",
+                "value": "Disclosure of internal system details or debug stack traces can expose vulnerabilities, software versions, and system architecture, potentially leading to targeted attacks, exploitation of known vulnerabilities, and unauthorised access to sensitive systems or data."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-24T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#c3b6221a-44e3-514a-ad4e-4e1b5a9a318d",
+                "rel": "source",
+                "text": "Application Security Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "as-13_smt",
+                "name": "statement",
+                "prose": "Prevent the unnecessary disclosure of internal system details to Public Users."
+              },
+              {
+                "id": "as-13_gdn",
+                "name": "guidance",
+                "prose": "Ensure all system messages and notifications are informative yet secure. These messages should be contextually appropriate, providing relevant information without exposing internal system details such as debug information, stack traces, or software versioning."
+              }
+            ]
+          },
+          {
+            "id": "as-14",
+            "title": "Secure Cryptographic Libraries",
+            "props": [
+              {
+                "name": "risk-statement",
+                "value": "Using insecure cryptographic libraries and functions can expose applications to significant security risks, such as data breaches and unauthorised access, compromising sensitive information."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-24T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#c3b6221a-44e3-514a-ad4e-4e1b5a9a318d",
+                "rel": "source",
+                "text": "Application Security Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "as-14_smt",
+                "name": "statement",
+                "prose": "Use reputable and secure cryptographic libraries and functions to handle cryptographic operations."
+              },
+              {
+                "id": "as-14_gdn",
+                "name": "guidance",
+                "prose": "Follow the OWASP Cryptographic Storage Cheat Sheet for best practices in securely implementing cryptographic operations. Regularly update libraries and prefer widely recognised ones such as OpenSSL. Consider using libraries that are FIPS 140-2 or FIPS 140-3 compliant for enhanced security assurance."
+              }
+            ]
+          },
+          {
+            "id": "as-15",
+            "title": "Password Change",
+            "props": [
+              {
+                "name": "risk-statement",
+                "value": "Failure to enforce password changes upon suspected account compromise increases the risk of prolonged unauthorised access, leading to potential data breaches and exploitation of systems."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-24T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#c3b6221a-44e3-514a-ad4e-4e1b5a9a318d",
+                "rel": "source",
+                "text": "Application Security Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "as-15_smt",
+                "name": "statement",
+                "prose": "Enforce password change upon suspected account compromise."
+              },
+              {
+                "id": "as-15_gdn",
+                "name": "guidance",
+                "prose": "Implement mechanisms to detect signs of account compromise, such as unusual login activity or multiple failed login attempts. Notify users promptly to change their passwords and provide guidance on creating strong, unique passwords. Consider integrating multi-factor authentication to enhance security."
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "back-matter": {
+      "resources": [
+        {
+          "uuid": "c3b6221a-44e3-514a-ad4e-4e1b5a9a318d",
+          "title": "Application Security — Singapore Government ICT&SS Policy Reform",
+          "description": "Official Application Security control catalog page.",
+          "rlinks": [
+            {
+              "href": "https://info.standards.tech.gov.sg/control-catalog/cybersecurity/as/"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

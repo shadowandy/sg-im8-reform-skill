@@ -1,0 +1,170 @@
+{
+  "catalog": {
+    "uuid": "2dc2065f-7ccb-576e-8fe2-682a9e45ba02",
+    "metadata": {
+      "title": "Cybersecurity Control Catalog - Resiliency",
+      "last-modified": "2026-03-24T00:00:00+08:00",
+      "version": "2026.03.24",
+      "oscal-version": "1.1.2",
+      "props": [
+        {
+          "name": "keywords",
+          "value": "IM8, GovTech, Singapore, cybersecurity, Resiliency"
+        },
+        {
+          "name": "abbreviation",
+          "value": "RS"
+        },
+        {
+          "name": "source",
+          "value": "https://info.standards.tech.gov.sg/control-catalog/cybersecurity/rs/"
+        }
+      ]
+    },
+    "groups": [
+      {
+        "id": "rs",
+        "title": "Resiliency",
+        "controls": [
+          {
+            "id": "rs-1",
+            "title": "Multi-AZ Deployment",
+            "props": [
+              {
+                "name": "risk-statement",
+                "value": "Failure to deploy services across multiple availability zones increases the risk of extended service outages due to a single point of failure."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-24T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#a06f1b03-c59a-51b5-a5b1-2a9443142a42",
+                "rel": "source",
+                "text": "Resiliency Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "rs-1_smt",
+                "name": "statement",
+                "prose": "Deploy the system in {{ insert: param, rs-1_prm_1 }} availability zones (AZs) within the region."
+              },
+              {
+                "id": "rs-1_gdn",
+                "name": "guidance",
+                "prose": "Utilise cloud-native services for load-balancing and auto-scaling across multiple AZs. Implement health checks and automated failover mechanisms to redirect traffic. Ensure data is replicated across multiple AZs."
+              }
+            ],
+            "params": [
+              {
+                "id": "rs-1_prm_1",
+                "class": "str",
+                "label": "number of zones",
+                "guidelines": [
+                  {
+                    "prose": "The number of availability zones to deploy to."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "rs-2",
+            "title": "Dynamic Resource Scaling",
+            "props": [
+              {
+                "name": "risk-statement",
+                "value": "Failure to implement dynamic resource scaling may lead to inefficient resource utilisation and potential service degradation during spikes in demand. This can lead to system outages during peak loads, reducing overall system performance and reliability."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-24T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#a06f1b03-c59a-51b5-a5b1-2a9443142a42",
+                "rel": "source",
+                "text": "Resiliency Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "rs-2_smt",
+                "name": "statement",
+                "prose": "Implement and utilise dynamic resource scaling techniques in the system."
+              },
+              {
+                "id": "rs-2_gdn",
+                "name": "guidance",
+                "prose": "Resource optimisation techniques such as load balancing and auto-scaling should be employed to maximise resource utilisation and minimise idle resources by adjusting to real-time demand fluctuations.\nRefer to the AWS Well-Architected Framework's 'Reliability' pillar for further guidance on implementing resilient systems."
+              }
+            ]
+          },
+          {
+            "id": "rs-3",
+            "title": "Load Testing",
+            "props": [
+              {
+                "name": "risk-statement",
+                "value": "Inadequate load testing may lead to unexpected system failures during periods of high demand, leading to service interruptions."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-24T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#a06f1b03-c59a-51b5-a5b1-2a9443142a42",
+                "rel": "source",
+                "text": "Resiliency Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "rs-3_smt",
+                "name": "statement",
+                "prose": "Perform load testing every {{ insert: param, rs-3_prm_1 }} days."
+              },
+              {
+                "id": "rs-3_gdn",
+                "name": "guidance",
+                "prose": "Load testing should be conducted on a replica of the production system. The load should mimic real user traffic."
+              }
+            ],
+            "params": [
+              {
+                "id": "rs-3_prm_1",
+                "class": "int",
+                "label": "time period (days)",
+                "guidelines": [
+                  {
+                    "prose": "The frequency at which load testing should be performed."
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "back-matter": {
+      "resources": [
+        {
+          "uuid": "a06f1b03-c59a-51b5-a5b1-2a9443142a42",
+          "title": "Resiliency — Singapore Government ICT&SS Policy Reform",
+          "description": "Official Resiliency control catalog page.",
+          "rlinks": [
+            {
+              "href": "https://info.standards.tech.gov.sg/control-catalog/cybersecurity/rs/"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,674 @@
+{
+  "catalog": {
+    "uuid": "7b5cb3a0-69af-5bb9-90f8-4b11cebed7f3",
+    "metadata": {
+      "title": "Digital Service Standards Control Catalog - WCAG : Perceivable",
+      "last-modified": "2026-03-05T00:00:00+08:00",
+      "version": "2026.03.05",
+      "oscal-version": "1.1.2",
+      "props": [
+        {
+          "name": "keywords",
+          "value": "IM8, GovTech, Singapore, digital service standards, WCAG : Perceivable"
+        },
+        {
+          "name": "abbreviation",
+          "value": "WP"
+        },
+        {
+          "name": "source",
+          "value": "https://info.standards.tech.gov.sg/control-catalog/dss/wp/"
+        }
+      ]
+    },
+    "groups": [
+      {
+        "id": "wp",
+        "title": "WCAG : Perceivable",
+        "controls": [
+          {
+            "id": "wp-1",
+            "title": "Text Alternatives for Non-Text content",
+            "props": [
+              {
+                "name": "rationale",
+                "value": "Ensures that equivalent information is conveyed to all end users by allowing assistive technologies to read and communicate essential non-text content."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-05T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#9e4eafe0-5e0a-5382-9594-b6f06bd3e2e2",
+                "rel": "source",
+                "text": "WCAG : Perceivable Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "wp-1_smt",
+                "name": "statement",
+                "prose": "Provide text alternatives for essential non-text content."
+              },
+              {
+                "id": "wp-1_gdn",
+                "name": "guidance",
+                "prose": "Provide accurate, concise alt text or a relevant textual description for non-text content (images, charts, media).\nImplement purely decorative non-text content in a way that can be ignored by assistive technology."
+              }
+            ]
+          },
+          {
+            "id": "wp-2",
+            "title": "Captions for Prerecorded Media",
+            "props": [
+              {
+                "name": "rationale",
+                "value": "Ensures that individuals with hearing impairments can access and understand the material. Captions also help people engage better with content and allow people to access the content without audio."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-05T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#9e4eafe0-5e0a-5382-9594-b6f06bd3e2e2",
+                "rel": "source",
+                "text": "WCAG : Perceivable Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "wp-2_smt",
+                "name": "statement",
+                "prose": "Provide captions for prerecorded video or audio content."
+              },
+              {
+                "id": "wp-2_gdn",
+                "name": "guidance",
+                "prose": "Use transcribing or captioning tools to generate captions. Ensure captions are aligned with audio and are readable.\nNot required when the content is a media alternative for text and is clearly labeled as such."
+              }
+            ]
+          },
+          {
+            "id": "wp-3",
+            "title": "Text or Audio Alternatives for Prerecorded Media",
+            "props": [
+              {
+                "name": "rationale",
+                "value": "Ensures information conveyed by prerecorded audio and video content is available to all end users."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-05T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#9e4eafe0-5e0a-5382-9594-b6f06bd3e2e2",
+                "rel": "source",
+                "text": "WCAG : Perceivable Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "wp-3_smt",
+                "name": "statement",
+                "prose": "Provide alternatives for all prerecorded audio and video media."
+              },
+              {
+                "id": "wp-3_gdn",
+                "name": "guidance",
+                "prose": "Provide text transcripts for audio-only content. Provide text alternatives or audio descriptions for video-only content and synchronised media (audio and video).\nNot required when the content is a media alternative for text and is clearly labeled as such."
+              }
+            ]
+          },
+          {
+            "id": "wp-4",
+            "title": "Live Captions",
+            "props": [
+              {
+                "name": "rationale",
+                "value": "Live captions make live audio and video content accessible to end users who are deaf or hard of hearing."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-05T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#9e4eafe0-5e0a-5382-9594-b6f06bd3e2e2",
+                "rel": "source",
+                "text": "WCAG : Perceivable Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "wp-4_smt",
+                "name": "statement",
+                "prose": "Provide captions for live audio and video content."
+              },
+              {
+                "id": "wp-4_gdn",
+                "name": "guidance",
+                "prose": "Use automated or live captioning services for content like livestream and webinars. Ensure that the service or tool is sufficiently accurate."
+              }
+            ]
+          },
+          {
+            "id": "wp-5",
+            "title": "Audio Description for Prerecorded Video Content",
+            "props": [
+              {
+                "name": "rationale",
+                "value": "Ensures that individuals who have visual impairments can better experience video content. This involves both information conveyed through the audio track and also descriptions of visual information such as actions, signs and facial expressions."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-05T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#9e4eafe0-5e0a-5382-9594-b6f06bd3e2e2",
+                "rel": "source",
+                "text": "WCAG : Perceivable Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "wp-5_smt",
+                "name": "statement",
+                "prose": "Provided an audio description for all prerecorded video content."
+              },
+              {
+                "id": "wp-5_gdn",
+                "name": "guidance",
+                "prose": "Provide user-selectable audio tracks focusing on critical visual elements necessary for understanding.\nThis is an extension of wp-3 which recommends but does not prescribe audio descriptions."
+              }
+            ]
+          },
+          {
+            "id": "wp-6",
+            "title": "Presentation of Info and Relationships",
+            "props": [
+              {
+                "name": "rationale",
+                "value": "Ensures that the structure and organisation of content are clear to all end users, including those who use assistive technologies."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-05T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#9e4eafe0-5e0a-5382-9594-b6f06bd3e2e2",
+                "rel": "source",
+                "text": "WCAG : Perceivable Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "wp-6_smt",
+                "name": "statement",
+                "prose": "Present the structure, order and relationships of information on a page in a way that can be programmatically determined by assistive technology."
+              },
+              {
+                "id": "wp-6_gdn",
+                "name": "guidance",
+                "prose": "Apply techniques such as correct use of semantic HTML elements (e.g., headings, lists, tables), text descriptions and where necessary, ARIA markups. Do not overuse ARIA as it creates clutter and overwhelm end users."
+              }
+            ]
+          },
+          {
+            "id": "wp-7",
+            "title": "Meaningful Content Order",
+            "props": [
+              {
+                "name": "rationale",
+                "value": "Allows assistive technology to present content in the intended reading order needed to understand the meaning."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-05T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#9e4eafe0-5e0a-5382-9594-b6f06bd3e2e2",
+                "rel": "source",
+                "text": "WCAG : Perceivable Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "wp-7_smt",
+                "name": "statement",
+                "prose": "Ensure that the logical reading order of content can be programmatically determined by software."
+              },
+              {
+                "id": "wp-7_gdn",
+                "name": "guidance",
+                "prose": "Ensure code is structured to preserve the logical reading order of content. Validate with screen reader testing to confirm that end users can navigate content in a logical sequence."
+              }
+            ]
+          },
+          {
+            "id": "wp-8",
+            "title": "Describing Displayed Controls",
+            "props": [
+              {
+                "name": "rationale",
+                "value": "Reliance of specific sensory characteristics may make descriptions or instructions inaccessible to some users with specific disabilities. E.g. Colour and shape may not perceivable by blind users."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-05T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#9e4eafe0-5e0a-5382-9594-b6f06bd3e2e2",
+                "rel": "source",
+                "text": "WCAG : Perceivable Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "wp-8_smt",
+                "name": "statement",
+                "prose": "Do not rely only on sensory characteristics such shape, colour, size, visual location, orientation, or sound when describing controls."
+              },
+              {
+                "id": "wp-8_gdn",
+                "name": "guidance",
+                "prose": "Describe controls by name.\nAvoid using expressions like \"click the blue button\" \"or\" \"Select an option after the beep\" when describing or referring to controls. Instead use clear, obvious and meaningful instructions like \"Click the 'next' button to continue with the survey\", \"When you have finished filling in your application form, click 'Submit' to complete your submission\""
+              }
+            ]
+          },
+          {
+            "id": "wp-9",
+            "title": "Display Orientation",
+            "props": [
+              {
+                "name": "rationale",
+                "value": "To ensure that content displays in the orientation (portrait or landscape) preferred by the end user. Users with dexterity impairments such as those in wheelchairs may have devices mounted in a particular orientation."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-05T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#9e4eafe0-5e0a-5382-9594-b6f06bd3e2e2",
+                "rel": "source",
+                "text": "WCAG : Perceivable Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "wp-9_smt",
+                "name": "statement",
+                "prose": "Do not restrict content to a single display orientation."
+              },
+              {
+                "id": "wp-9_gdn",
+                "name": "guidance",
+                "prose": "Avoid locking orientation to a particular view. Ensure content can adapt to various orientations such as landscape and portrait without layout or functionality issues.\nNot required if a specific display orientation is necessary to provide the content in an accurate and functional manner."
+              }
+            ]
+          },
+          {
+            "id": "wp-10",
+            "title": "Identify Input Purpose",
+            "props": [
+              {
+                "name": "rationale",
+                "value": "Ensures that both regular end users and users of assistive technology can clearly discern the purpose of an input function."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-05T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#9e4eafe0-5e0a-5382-9594-b6f06bd3e2e2",
+                "rel": "source",
+                "text": "WCAG : Perceivable Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "wp-10_smt",
+                "name": "statement",
+                "prose": "Use labels and code to clearly specify the purpose and format of common inputs."
+              },
+              {
+                "id": "wp-10_gdn",
+                "name": "guidance",
+                "prose": "Clearly distinguish similar fields such as billing address and shipping address. Specify the exact format of input fields that may have multiple valid interpretations such as dates."
+              }
+            ]
+          },
+          {
+            "id": "wp-11",
+            "title": "Use of Color",
+            "props": [
+              {
+                "name": "rationale",
+                "value": "Using multiple modes in addition to colour, ensures that crucial information and state changes are well communicated to end users, especially those with colour vision deficiencies."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-05T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#9e4eafe0-5e0a-5382-9594-b6f06bd3e2e2",
+                "rel": "source",
+                "text": "WCAG : Perceivable Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "wp-11_smt",
+                "name": "statement",
+                "prose": "Avoid using colour as the only visual means of conveying information, indicating an action, prompting a response, or distinguishing a visual element."
+              },
+              {
+                "id": "wp-11_gdn",
+                "name": "guidance",
+                "prose": "Use a mix of shape (icons, symbols), colour and text for essential content such as error messages."
+              }
+            ]
+          },
+          {
+            "id": "wp-12",
+            "title": "Audio Control",
+            "props": [
+              {
+                "name": "rationale",
+                "value": "To prevent unexpected or disruptive audio from affecting users' experience, particularly those with cognitive or hearing impairments. Background audio also interferes with narration by screen reading software."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-05T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#9e4eafe0-5e0a-5382-9594-b6f06bd3e2e2",
+                "rel": "source",
+                "text": "WCAG : Perceivable Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "wp-12_smt",
+                "name": "statement",
+                "prose": "Providing options to pause, stop or adjust the volume of audio that automatically plays for more than 3 seconds."
+              },
+              {
+                "id": "wp-12_gdn",
+                "name": "guidance",
+                "prose": "Only play sounds on user request or provide the user with functions to pause, stop or adjust the volume near the beginning of the digital service so it is easily and quickly discovered."
+              }
+            ]
+          },
+          {
+            "id": "wp-13",
+            "title": "Minimum Contrast",
+            "props": [
+              {
+                "name": "rationale",
+                "value": "Adequate contrast between text and background is essential for good readability and usability, especially for end users with low vision or colour vision deficiencies."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-05T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#9e4eafe0-5e0a-5382-9594-b6f06bd3e2e2",
+                "rel": "source",
+                "text": "WCAG : Perceivable Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "wp-13_smt",
+                "name": "statement",
+                "prose": "Ensure a minimum contrast ratio of 4.5:1 between text and its background.\nLarge text (at least 18 point or 14 point bold) can have a reduced contrast ratio of at least 3:1."
+              },
+              {
+                "id": "wp-13_gdn",
+                "name": "guidance",
+                "prose": "Use tools like WebAIM's Contrast Checker or Oobee to verify that text and images of text meet the minimum contrast ratio.\nNot required for\na) Text that is decorative, conveys no meaningful information\nb) Part of a component in an inactive state"
+              }
+            ]
+          },
+          {
+            "id": "wp-14",
+            "title": "Text Scaling",
+            "props": [
+              {
+                "name": "rationale",
+                "value": "Resizable text makes digital content accessible to a wide range of end users with different visual capabilities, particularly those without access to screen magnification tools."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-05T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#9e4eafe0-5e0a-5382-9594-b6f06bd3e2e2",
+                "rel": "source",
+                "text": "WCAG : Perceivable Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "wp-14_smt",
+                "name": "statement",
+                "prose": "Ensure text can be scaled up to 200% without loss of content or functionality."
+              },
+              {
+                "id": "wp-14_gdn",
+                "name": "guidance",
+                "prose": "Use relative units like REM. Ensure at least one one browser or platform text scaling mechanism can be used. This includes zoom (of the entire page's content), magnification, and text-only resizing. Test to confirm that no content is clipped, truncated, or obscured after resizing.\nThis excludes captions and images of text."
+              }
+            ]
+          },
+          {
+            "id": "wp-15",
+            "title": "Images of Text",
+            "props": [
+              {
+                "name": "rationale",
+                "value": "Text in images are not accessible, especially for end users with visual impairments or reading disabilities. Users cannot adjust the size or font for better readability and the text is not readable by common screen reader technology."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-05T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#9e4eafe0-5e0a-5382-9594-b6f06bd3e2e2",
+                "rel": "source",
+                "text": "WCAG : Perceivable Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "wp-15_smt",
+                "name": "statement",
+                "prose": "Use text instead of images of text."
+              },
+              {
+                "id": "wp-15_gdn",
+                "name": "guidance",
+                "prose": "Avoid using images of text except when essential, such as for logos. Where text in images are necessary, ensure that alternative text or captions provide the same information."
+              }
+            ]
+          },
+          {
+            "id": "wp-16",
+            "title": "Content Reflow",
+            "props": [
+              {
+                "name": "rationale",
+                "value": "Enabling reflowing of content allows users who rely on large fonts, including those using devices with smaller screens to be able to view and navigate digital content without scrolling horizontally even when text size is increased."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-05T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#9e4eafe0-5e0a-5382-9594-b6f06bd3e2e2",
+                "rel": "source",
+                "text": "WCAG : Perceivable Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "wp-16_smt",
+                "name": "statement",
+                "prose": "Enable lines of text and content to reflow across different viewports."
+              },
+              {
+                "id": "wp-16_gdn",
+                "name": "guidance",
+                "prose": "Use responsive design frameworks like CSS Flexbox or Grid and test on a variety of devices to confirm that content remains legible and usable without excessive scrolling even when text is resized.\nNot required for content that requires two-dimensional layout for understanding or functionality, such as maps, complex data tables or data visualisations."
+              }
+            ]
+          },
+          {
+            "id": "wp-17",
+            "title": "Non-text Contrast",
+            "props": [
+              {
+                "name": "rationale",
+                "value": "Sufficient contrast helps end users better perceive and identify non-text user interface components and key graphical objects, improving usability."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-05T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#9e4eafe0-5e0a-5382-9594-b6f06bd3e2e2",
+                "rel": "source",
+                "text": "WCAG : Perceivable Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "wp-17_smt",
+                "name": "statement",
+                "prose": "Ensure a minimum contrast ratio of 3:1 between colours of user interface components and graphical objects that convey important information, and their respective backgrounds."
+              },
+              {
+                "id": "wp-17_gdn",
+                "name": "guidance",
+                "prose": "Use tools like WebAIM's Contrast Checker to test contrast. Focus on elements critical for interaction, such as buttons and form inputs."
+              }
+            ]
+          },
+          {
+            "id": "wp-18",
+            "title": "Text Spacing",
+            "props": [
+              {
+                "name": "rationale",
+                "value": "Ensures that end users, in particular those with low vision or dyslexia are: a) Not restricted from overriding default text spacing through the use of assistive technology, stylesheets or extensions. b) Content or functionality is not lost and the content remains legible and functional."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-05T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#9e4eafe0-5e0a-5382-9594-b6f06bd3e2e2",
+                "rel": "source",
+                "text": "WCAG : Perceivable Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "wp-18_smt",
+                "name": "statement",
+                "prose": "Ensure that text implemented using markup languages can be adjusted to the following text style properties with no loss of content or functionality:\n* a) Line height to 1.5 times the font size\n* b) Paragraph spacing to 2 times the font size\n* c) Letter spacing to 0.12 times the font size\n* d) Word spacing to 0.16 times the font size"
+              },
+              {
+                "id": "wp-18_gdn",
+                "name": "guidance",
+                "prose": "Allow for text spacing override by assistive technology and test with tools that simulate the spacing configurations specified.\nText content does not need to use these text spacing values as defaults, and there is no need to implement controls for users to adjust text properties within the digital service."
+              }
+            ]
+          },
+          {
+            "id": "wp-19",
+            "title": "Content on Hover or Focus",
+            "props": [
+              {
+                "name": "rationale",
+                "value": "Elements that appear on hover or focus can be difficult to manage. End users with limited motor control may have trouble keeping their pointer steady, and keyboard-only users need a reliable way to dismiss such content."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-05T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#9e4eafe0-5e0a-5382-9594-b6f06bd3e2e2",
+                "rel": "source",
+                "text": "WCAG : Perceivable Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "wp-19_smt",
+                "name": "statement",
+                "prose": "Ensure content appearing on hover or focus\n* a) Appears long enough to be read and interacted with\n* b) Does not disappear unexpectedly\n* c) Can be easily dismissed using a pointer device or keyboard"
+              },
+              {
+                "id": "wp-19_gdn",
+                "name": "guidance",
+                "prose": "Design custom tooltips, sub-menus and other non-modal popups which display on hover and focus to be perceivable and dismissible without disrupting the overall user experience."
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "back-matter": {
+      "resources": [
+        {
+          "uuid": "9e4eafe0-5e0a-5382-9594-b6f06bd3e2e2",
+          "title": "WCAG : Perceivable — Singapore Government ICT&SS Policy Reform",
+          "description": "Official WCAG : Perceivable control catalog page.",
+          "rlinks": [
+            {
+              "href": "https://info.standards.tech.gov.sg/control-catalog/dss/wp/"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

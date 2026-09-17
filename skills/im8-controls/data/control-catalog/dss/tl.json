@@ -1,0 +1,245 @@
+{
+  "catalog": {
+    "uuid": "a43bfb57-c9fa-5bb7-a37e-b0fecc431e3d",
+    "metadata": {
+      "title": "Digital Service Standards Control Catalog - Trust and Legitimacy",
+      "last-modified": "2026-03-05T00:00:00+08:00",
+      "version": "2026.03.05",
+      "oscal-version": "1.1.2",
+      "props": [
+        {
+          "name": "keywords",
+          "value": "IM8, GovTech, Singapore, digital service standards, Trust and Legitimacy"
+        },
+        {
+          "name": "abbreviation",
+          "value": "TL"
+        },
+        {
+          "name": "source",
+          "value": "https://info.standards.tech.gov.sg/control-catalog/dss/tl/"
+        }
+      ]
+    },
+    "groups": [
+      {
+        "id": "tl",
+        "title": "Trust and Legitimacy",
+        "controls": [
+          {
+            "id": "tl-1",
+            "title": "Official Government Domain",
+            "props": [
+              {
+                "name": "rationale",
+                "value": "Helps end users easily recognise that they are interacting with an authentic government source, reducing the risk of fraud, phishing, or misinformation."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-05T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#3789187d-0242-5fd6-a256-27fa1d846c40",
+                "rel": "source",
+                "text": "Trust and Legitimacy Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "tl-1_smt",
+                "name": "statement",
+                "prose": "Use .gov.sg domain for web-based digital services. Education Institutions may use .edu.sg. domain."
+              },
+              {
+                "id": "tl-1_gdn",
+                "name": "guidance",
+                "prose": "Register .gov.sg and .edu.sg domain names on the Whole of Government Domain Name Server (DNS) portal on the IT Service Management (ITSM) portal."
+              }
+            ]
+          },
+          {
+            "id": "tl-2",
+            "title": "Agency or Initiative Logo",
+            "props": [
+              {
+                "name": "rationale",
+                "value": "Provides reassurance about the legitimacy of the service."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-05T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#3789187d-0242-5fd6-a256-27fa1d846c40",
+                "rel": "source",
+                "text": "Trust and Legitimacy Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "tl-2_smt",
+                "name": "statement",
+                "prose": "Display the agency/initiative logo on the top left of every page of web-based digital services; Hyperlink the logo to the homepage."
+              },
+              {
+                "id": "tl-2_gdn",
+                "name": "guidance",
+                "prose": "The logo should render clearly without distortion or pixellation to maintain trust and reinforce brand reputation."
+              }
+            ]
+          },
+          {
+            "id": "tl-3",
+            "title": "Official Government Banner",
+            "props": [
+              {
+                "name": "rationale",
+                "value": "Helps end users easily recognize that they are interacting with an authentic government service, reducing the risk of fraud, phishing, or misinformation."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-05T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#3789187d-0242-5fd6-a256-27fa1d846c40",
+                "rel": "source",
+                "text": "Trust and Legitimacy Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "tl-3_smt",
+                "name": "statement",
+                "prose": "Display the Official Government Banner on every page of web-based .gov.sg digital services."
+              },
+              {
+                "id": "tl-3_gdn",
+                "name": "guidance",
+                "prose": "The Official Government banner must be the topmost component of the web service. Use the Singapore Government Design System (SGDS) ‘Official Government Banner’ component.\nNot required for SaaS and COTS products that do not allow customisation."
+              }
+            ]
+          },
+          {
+            "id": "tl-4",
+            "title": "Official Government Footer",
+            "props": [
+              {
+                "name": "rationale",
+                "value": "Provides consistency across government digital services and ensures that end users have access to consistently placed important utility links."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-05T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#3789187d-0242-5fd6-a256-27fa1d846c40",
+                "rel": "source",
+                "text": "Trust and Legitimacy Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "tl-4_smt",
+                "name": "statement",
+                "prose": "Adopt the Official Global Footer on every page of .gov.sg web-based services."
+              },
+              {
+                "id": "tl-4_gdn",
+                "name": "guidance",
+                "prose": "Use the basic footer provided by SGDS. The footer must contain\nA) The following footer links in this order\ni) Contact / Contact Us\nii) Feedback\niii) FAQ (if any)\niv) Sitemap (if any)\nv) Report Vulnerability\nvi) Privacy Statement\nvii) Terms of Use\nB) Copyright Statement in the format\n'© [current year in YYYY], Government of Singapore’\nDigital services owned by statutory boards may use the agency’s name instead of 'Government of Singapore'. Not required for pages that are part of transactional services."
+              }
+            ]
+          },
+          {
+            "id": "tl-5",
+            "title": "Mobile App Ownership and Distribution",
+            "props": [
+              {
+                "name": "rationale",
+                "value": "Minimise the risk of end users downloading unauthorised versions of Government apps. Owning the IP rights provides agencies with a legal basis to request third-party app stores or websites to remove unauthorised versions of Government mobile applications."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-05T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#3789187d-0242-5fd6-a256-27fa1d846c40",
+                "rel": "source",
+                "text": "Trust and Legitimacy Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "tl-5_smt",
+                "name": "statement",
+                "prose": "Distribute government mobile applications through official app stores and retain IP rights."
+              },
+              {
+                "id": "tl-5_gdn",
+                "name": "guidance",
+                "prose": "Retain full ownership of all intellectual property rights, including copyright. Avoid releasing mobile applications under licenses that permit free distribution. Ensure compliance with platform guidelines for official government endorsement.\nDistribute apps only through the following platforms:\n* Apple App Store\n* Google Play Store\n* Huawei AppGallery"
+              }
+            ]
+          },
+          {
+            "id": "tl-6",
+            "title": "Application Store Listings",
+            "props": [
+              {
+                "name": "rationale",
+                "value": "Having clear and properly named developer accounts reassures end users of the legitimacy of the mobile app."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-05T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#3789187d-0242-5fd6-a256-27fa1d846c40",
+                "rel": "source",
+                "text": "Trust and Legitimacy Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "tl-6_smt",
+                "name": "statement",
+                "prose": "Ensure that the agency name is used as the application store developer account name when publishing mobile applications."
+              },
+              {
+                "id": "tl-6_gdn",
+                "name": "guidance",
+                "prose": "Use the full agency name"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "back-matter": {
+      "resources": [
+        {
+          "uuid": "3789187d-0242-5fd6-a256-27fa1d846c40",
+          "title": "Trust and Legitimacy — Singapore Government ICT&SS Policy Reform",
+          "description": "Official Trust and Legitimacy control catalog page.",
+          "rlinks": [
+            {
+              "href": "https://info.standards.tech.gov.sg/control-catalog/dss/tl/"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,5 @@
+# Direct dependencies with security floors. Regenerate the lock with:
+#   uv pip compile --generate-hashes requirements.in -o requirements.txt
+requests>=2.32.4        # CVE-2024-47081 (.netrc credential leak), CVE-2024-35195
+urllib3>=2.5.0          # CVE-2025-50181, CVE-2025-50182
+beautifulsoup4>=4.12

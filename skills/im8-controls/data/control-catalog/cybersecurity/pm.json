@@ -1,0 +1,477 @@
+{
+  "catalog": {
+    "uuid": "b1f6c1f0-63e5-5dc4-98fc-47375c17809f",
+    "metadata": {
+      "title": "Cybersecurity Control Catalog - Security Programme Management",
+      "last-modified": "2026-03-24T00:00:00+08:00",
+      "version": "2026.03.24",
+      "oscal-version": "1.1.2",
+      "props": [
+        {
+          "name": "keywords",
+          "value": "IM8, GovTech, Singapore, cybersecurity, Security Programme Management"
+        },
+        {
+          "name": "abbreviation",
+          "value": "PM"
+        },
+        {
+          "name": "source",
+          "value": "https://info.standards.tech.gov.sg/control-catalog/cybersecurity/pm/"
+        }
+      ]
+    },
+    "groups": [
+      {
+        "id": "pm",
+        "title": "Security Programme Management",
+        "controls": [
+          {
+            "id": "pm-1",
+            "title": "Cybersecurity Incident Management Plan",
+            "props": [
+              {
+                "name": "risk-statement",
+                "value": "Lack of a cybersecurity incident management plan increases the risk of ineffective response to cybersecurity incidents, hindering the ability to contain, mitigate, and recover from security breaches, potentially leading to extended downtime and data compromise."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-24T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#ed2055ac-213e-5e2b-bacf-41249fb73100",
+                "rel": "source",
+                "text": "Security Programme Management Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "pm-1_smt",
+                "name": "statement",
+                "prose": "Develop, document, and disseminate an organisation-level cybersecurity incident management plan to respond to cybersecurity incidents."
+              },
+              {
+                "id": "pm-1_gdn",
+                "name": "guidance",
+                "prose": "Refer to the NIST SP 800-61 Computer Security Incident Handling Guide for guidelines on incident planning and handling."
+              }
+            ]
+          },
+          {
+            "id": "pm-2",
+            "title": "Risk Assessment",
+            "props": [
+              {
+                "name": "risk-statement",
+                "value": "Without developing and documenting risk assessment before the initial full release, there's an increased risk of overlooking potential security threats, vulnerabilities, and regulatory compliance issues, compromising the overall security posture of the system."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-24T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#ed2055ac-213e-5e2b-bacf-41249fb73100",
+                "rel": "source",
+                "text": "Security Programme Management Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "pm-2_smt",
+                "name": "statement",
+                "prose": "Develop and document a risk assessment by {{ insert: param, pm-2_prm_1 }} and get it approved by {{ insert: param, pm-2_prm_2 }} prior to {{ insert: param, pm-2_prm_3 }} and conduct a review every {{ insert: param, pm-2_prm_4 }} day(s)."
+              },
+              {
+                "id": "pm-2_gdn",
+                "name": "guidance",
+                "prose": "The Risk Assessment should cover Cyber Risk, Data Risk, Resiliency Risk, Business Risk, Project Risk, Offshore Risk and other types of risk where applicable."
+              }
+            ],
+            "params": [
+              {
+                "id": "pm-2_prm_1",
+                "class": "str",
+                "label": "system owner",
+                "guidelines": [
+                  {
+                    "prose": "The owner of the system."
+                  }
+                ]
+              },
+              {
+                "id": "pm-2_prm_2",
+                "class": "str",
+                "label": "risk assessment approver",
+                "guidelines": [
+                  {
+                    "prose": "The approver of the risk assessment."
+                  }
+                ]
+              },
+              {
+                "id": "pm-2_prm_3",
+                "class": "str",
+                "label": "risk assessment use case",
+                "guidelines": [
+                  {
+                    "prose": "The use case of the risk assessment."
+                  }
+                ]
+              },
+              {
+                "id": "pm-2_prm_4",
+                "class": "int",
+                "label": "time period (days)",
+                "guidelines": [
+                  {
+                    "prose": "The time period in days for risk assessment."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "pm-3",
+            "title": "System Security Plan (SSP) Development",
+            "props": [
+              {
+                "name": "risk-statement",
+                "value": "Failure to develop a comprehensive SSP can result in inadequate documentation and security controls, leading to increased vulnerability to cyber threats and non-compliance with regulatory requirements."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-24T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#ed2055ac-213e-5e2b-bacf-41249fb73100",
+                "rel": "source",
+                "text": "Security Programme Management Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "pm-3_smt",
+                "name": "statement",
+                "prose": "Develop and maintain a comprehensive System Security Plan (SSP) that accurately reflects the system characteristics and security controls in place for the organisation's systems and environments."
+              },
+              {
+                "id": "pm-3_gdn",
+                "name": "guidance",
+                "prose": "The SSP should be detailed, covering all aspects of security controls, roles, responsibilities, and operational processes. Regular updates are necessary to reflect changes in the security landscape and system evolution."
+              }
+            ]
+          },
+          {
+            "id": "pm-4",
+            "title": "Approval of Residual Risks",
+            "props": [
+              {
+                "name": "risk-statement",
+                "value": "Failure to seek the right level of authority to accept and approve the residual risks regularly can lead to misalignment of the business implications and trade-offs from the controls set in the SSP with the Agency IDSC direction."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-24T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#ed2055ac-213e-5e2b-bacf-41249fb73100",
+                "rel": "source",
+                "text": "Security Programme Management Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "pm-4_smt",
+                "name": "statement",
+                "prose": "Get acceptance and approval of the residual risks from agency's {{ insert: param, pm-4_prm_1 }}, and review and seek approval every {{ insert: param, pm-4_prm_2 }} days."
+              },
+              {
+                "id": "pm-4_gdn",
+                "name": "guidance",
+                "prose": "Agencies should seek acceptance and approval from their {{ insert: param, pm-4_prm_1 }} on the residual risks based on the SSP and inform GovTech of the approval."
+              }
+            ],
+            "params": [
+              {
+                "id": "pm-4_prm_1",
+                "class": "str",
+                "label": "approving authority",
+                "guidelines": [
+                  {
+                    "prose": "The authority for approval of residual risks."
+                  }
+                ]
+              },
+              {
+                "id": "pm-4_prm_2",
+                "class": "int",
+                "label": "review frequency",
+                "guidelines": [
+                  {
+                    "prose": "The frequency of risk review requirement."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "pm-5",
+            "title": "Central Submission of Approved System Security Plan (SSP)",
+            "props": [
+              {
+                "name": "risk-statement",
+                "value": "Inconsistent or decentralised submission of the SSP can lead to decreased visibility of security and compliance adoption across Government."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-24T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#ed2055ac-213e-5e2b-bacf-41249fb73100",
+                "rel": "source",
+                "text": "Security Programme Management Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "pm-5_smt",
+                "name": "statement",
+                "prose": "Submit approved SSPs centrally to maintain a unified and up-to-date repository of security plans and practices."
+              },
+              {
+                "id": "pm-5_gdn",
+                "name": "guidance",
+                "prose": "Use a central submission channel for SSPs."
+              }
+            ]
+          },
+          {
+            "id": "pm-6",
+            "title": "System Documentation",
+            "props": [
+              {
+                "name": "risk-statement",
+                "value": "Comprehensive documentation of system architecture, components, configurations, and dependencies is essential for effective management, troubleshooting, and security auditing."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-24T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#ed2055ac-213e-5e2b-bacf-41249fb73100",
+                "rel": "source",
+                "text": "Security Programme Management Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "pm-6_smt",
+                "name": "statement",
+                "prose": "Maintain detailed, up-to-date documentation of all system information and architecture."
+              },
+              {
+                "id": "pm-6_gdn",
+                "name": "guidance",
+                "prose": "Example system documentation includes architecture and network diagrams, architecture decision records, hardware and software inventories, data flows, and configurations. This documentation should be regularly reviewed and updated to reflect changes in the environment. Documentation should be accessible to relevant personnel while ensuring sensitive information is protected. Adopt documentation-as-code practices and machine-readable formats (such as Markdown, JSON, YAML, etc), to facilitate version control, collaboration, and automation in maintaining documentation."
+              }
+            ]
+          },
+          {
+            "id": "pm-7",
+            "title": "Certification",
+            "props": [
+              {
+                "name": "risk-statement",
+                "value": "Third-party certification provides assurance that security controls have been properly implemented in the Software as a Service (SaaS) provider."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-24T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#ed2055ac-213e-5e2b-bacf-41249fb73100",
+                "rel": "source",
+                "text": "Security Programme Management Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "pm-7_smt",
+                "name": "statement",
+                "prose": "Ensure that the Software as a Service (SaaS) provider is certified with {{ insert: param, pm-7_prm_1 }}."
+              },
+              {
+                "id": "pm-7_gdn",
+                "name": "guidance",
+                "prose": "Ensure that the certification is up-to-date. Avoid certifications that are only attestations without a pass/fail element."
+              }
+            ],
+            "params": [
+              {
+                "id": "pm-7_prm_1",
+                "class": "str",
+                "label": "certifications",
+                "guidelines": [
+                  {
+                    "prose": "The required certifications."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "pm-8",
+            "title": "SaaS Whitelisting",
+            "props": [
+              {
+                "name": "risk-statement",
+                "value": "Failing to whitelist the SaaS may potentially expose sensitive data (e.g., Confidential (Cloud-Eligible) or SENSITIVE-HIGH data) to the risk of data breaches."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-24T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#ed2055ac-213e-5e2b-bacf-41249fb73100",
+                "rel": "source",
+                "text": "Security Programme Management Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "pm-8_smt",
+                "name": "statement",
+                "prose": "Maintain and enforce a whitelist of authorised software and services."
+              },
+              {
+                "id": "pm-8_gdn",
+                "name": "guidance",
+                "prose": "Refer to a centrally-maintained whitelist or {{ insert: param, pm-8_prm_1 }} for authorised SaaS."
+              }
+            ],
+            "params": [
+              {
+                "id": "pm-8_prm_1",
+                "class": "str",
+                "label": "whitelisting authority",
+                "guidelines": [
+                  {
+                    "prose": "The whitelisting authority."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "pm-9",
+            "title": "Cybersecurity Incident Response Testing",
+            "props": [
+              {
+                "name": "risk-statement",
+                "value": "Lack of regular incident response testing may lead to ineffective or delayed responses during actual security incidents, potentially increasing the impact and damage of such events."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-24T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#ed2055ac-213e-5e2b-bacf-41249fb73100",
+                "rel": "source",
+                "text": "Security Programme Management Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "pm-9_smt",
+                "name": "statement",
+                "prose": "Conduct incident response testing and exercises at least every {{ insert: param, pm-9_prm_1 }} day(s) to evaluate the effectiveness of incident response plans and procedures."
+              },
+              {
+                "id": "pm-9_gdn",
+                "name": "guidance",
+                "prose": "Include tabletop exercises, simulations, and full-scale drills in testing. Involve all relevant stakeholders. Document lessons learned and use them to improve incident response capabilities. Consider engaging third-party services for objective assessment."
+              }
+            ],
+            "params": [
+              {
+                "id": "pm-9_prm_1",
+                "class": "int",
+                "label": "time period (days)",
+                "guidelines": [
+                  {
+                    "prose": "The time period in days for cybersecurity incident response testing."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "pm-10",
+            "title": "Cybersecurity Leadership and Oversight",
+            "props": [
+              {
+                "name": "risk-statement",
+                "value": "Lack of cybersecurity expertise at the board and senior management levels may lead to inadequate oversight and management of cybersecurity risks, potentially resulting in increased vulnerability to cyber threats and ineffective risk management strategies."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-24T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#ed2055ac-213e-5e2b-bacf-41249fb73100",
+                "rel": "source",
+                "text": "Security Programme Management Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "pm-10_smt",
+                "name": "statement",
+                "prose": "Ensure that the board of directors (or equivalent body) and senior management team includes at least one member that has knowledge and awareness of cybersecurity matters to have oversight of cybersecurity risks."
+              },
+              {
+                "id": "pm-10_gdn",
+                "name": "guidance",
+                "prose": "Regularly assess and document the cybersecurity expertise of board members and senior management. Provide ongoing cybersecurity training and briefings to maintain and enhance their knowledge. Consider appointing a dedicated Chief Information Security Officer (CISO) or equivalent role at the senior management level. Ensure clear communication channels between the board, senior management, and cybersecurity teams."
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "back-matter": {
+      "resources": [
+        {
+          "uuid": "ed2055ac-213e-5e2b-bacf-41249fb73100",
+          "title": "Security Programme Management — Singapore Government ICT&SS Policy Reform",
+          "description": "Official Security Programme Management control catalog page.",
+          "rlinks": [
+            {
+              "href": "https://info.standards.tech.gov.sg/control-catalog/cybersecurity/pm/"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,410 @@
+{
+  "system-security-plan": {
+    "uuid": "ecc70a6b-c1d1-5ac2-b9e7-e8c4c7062a54",
+    "metadata": {
+      "title": "System Security Plan - Generative AI",
+      "last-modified": "2026-03-24T00:00:00+08:00",
+      "version": "2026.03.24",
+      "oscal-version": "1.1.2",
+      "props": [
+        {
+          "name": "keywords",
+          "value": "IM8, GovTech, Singapore, SSP, Generative AI"
+        },
+        {
+          "name": "source",
+          "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+          "value": "https://info.standards.tech.gov.sg/ssp/gen-ai/"
+        }
+      ],
+      "roles": [
+        {
+          "id": "system-owner",
+          "title": "System Owner"
+        }
+      ],
+      "remarks": "The Generative AI System Security Plan template includes Level 0 and Level 1 baseline controls that are recommended as the default controls for systems that utilise generative AI models. Agencies may customise this template to create their own system-specific System Security Plan or use it as a default System Security Plan for generic Generative AI systems."
+    },
+    "import-profile": {
+      "href": "#85873833-10fe-5296-bbdc-4c5d8f5e12d4",
+      "remarks": "No OSCAL profile is published for this baseline; the selected controls are listed on the source page and resolve against the catalogs in back-matter."
+    },
+    "system-characteristics": {
+      "system-ids": [
+        {
+          "identifier-type": "http://ietf.org/rfc/rfc4122",
+          "id": "ecc70a6b-c1d1-5ac2-b9e7-e8c4c7062a54"
+        }
+      ],
+      "system-name": "Generative AI System",
+      "description": "A generic system that utilises generative AI models.",
+      "security-sensitivity-level": "Up to Confidential, Sensitive High",
+      "system-information": {
+        "information-types": [
+          {
+            "uuid": "c19a49e2-a6aa-5cda-9988-067585644394",
+            "title": "Information classified Up to Confidential, Sensitive High",
+            "description": "Placeholder information type from the template; replace with the system's actual information types and impact levels.",
+            "confidentiality-impact": {
+              "base": "low"
+            },
+            "integrity-impact": {
+              "base": "low"
+            },
+            "availability-impact": {
+              "base": "low"
+            }
+          }
+        ]
+      },
+      "status": {
+        "state": "other",
+        "remarks": "Template baseline; agencies customise it into a system-specific SSP."
+      },
+      "authorization-boundary": {
+        "description": "Not defined by the template; agencies must describe the system's authorisation boundary."
+      }
+    },
+    "system-implementation": {
+      "users": [
+        {
+          "uuid": "dbb7228c-6b25-5fcc-9020-4cdc204a171b",
+          "title": "System Owner",
+          "role-ids": [
+            "system-owner"
+          ]
+        }
+      ],
+      "components": [
+        {
+          "uuid": "8d1b2364-fe07-5e39-bbb0-e2e388fedaae",
+          "type": "this-system",
+          "title": "Generative AI System",
+          "description": "A generic system that utilises generative AI models.",
+          "status": {
+            "state": "other",
+            "remarks": "Template component."
+          }
+        }
+      ]
+    },
+    "control-implementation": {
+      "description": "The Generative AI System Security Plan template includes Level 0 and Level 1 baseline controls that are recommended as the default controls for systems that utilise generative AI models. Agencies may customise this template to create their own system-specific System Security Plan or use it as a default System Security Plan for generic Generative AI systems.",
+      "implemented-requirements": [
+        {
+          "uuid": "13abef6d-483d-583b-ba58-91e0cca9239a",
+          "control-id": "dp-8",
+          "props": [
+            {
+              "name": "control-title",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "Data Classification Disclosure"
+            },
+            {
+              "name": "profile-level",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "1"
+            }
+          ],
+          "links": [
+            {
+              "href": "#a8374315-ddb7-5ba6-ac00-03321fd56845",
+              "rel": "reference"
+            }
+          ],
+          "by-components": [
+            {
+              "component-uuid": "8d1b2364-fe07-5e39-bbb0-e2e388fedaae",
+              "uuid": "82e6eb30-d1fe-535c-8657-545b3d4c008a",
+              "description": "For internal applications serving public officers, specify the highest permitted security and sensitivity classification for input data, such as text, audio, or multimedia/file uploads, in the system's user interface and guides."
+            }
+          ],
+          "remarks": "Control Recommendations:\nIndicate with a clear message, either at or near the input field, the relevant data classification that may be used with the system.\n\nRisk Statement:\nUsers who are not informed of the maximum allowed data classification may submit sensitive information the system is not permitted to process, risking data breaches, legal violations, and reputational harm."
+        },
+        {
+          "uuid": "c262dc15-dce3-517b-b92a-687ac2c0c55f",
+          "control-id": "ga-1",
+          "props": [
+            {
+              "name": "control-title",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "Overseas-hosted GenAI API services"
+            },
+            {
+              "name": "profile-level",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "0"
+            }
+          ],
+          "links": [
+            {
+              "href": "#58340218-a22d-5559-9fa2-c8ebe53a4421",
+              "rel": "reference"
+            }
+          ],
+          "by-components": [
+            {
+              "component-uuid": "8d1b2364-fe07-5e39-bbb0-e2e388fedaae",
+              "uuid": "3bea668a-681f-5729-8cc7-39f290b2d5b1",
+              "description": "Use only up to RESTRICTED and SENSITIVE NORMAL data with GenAI API services served by models hosted overseas."
+            }
+          ],
+          "remarks": "Control Recommendations:\nVerify data classification with data owner before using the data with overseas GenAI API services. Ensure that these API services are accessed only via environments authorised for up to RESTRICTED and SENSITIVE NORMAL data.\n\nRisk Statement:\nPrimary data is at greater legal, privacy, and exfiltration risk when in transit and processed by GenAI API services hosted in other countries."
+        },
+        {
+          "uuid": "c09b5d81-415f-59dd-8110-82d60b367380",
+          "control-id": "ga-2",
+          "props": [
+            {
+              "name": "control-title",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "Singapore-hosted GenAI API services"
+            },
+            {
+              "name": "profile-level",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "0"
+            }
+          ],
+          "links": [
+            {
+              "href": "#58340218-a22d-5559-9fa2-c8ebe53a4421",
+              "rel": "reference"
+            }
+          ],
+          "by-components": [
+            {
+              "component-uuid": "8d1b2364-fe07-5e39-bbb0-e2e388fedaae",
+              "uuid": "c3927d70-a291-5bf7-bd4a-b45c72c67ff9",
+              "description": "Use only up to CONFIDENTIAL and SENSITIVE HIGH data with GenAI API services served by models hosted in Singapore."
+            }
+          ],
+          "remarks": "Control Recommendations:\nVerify data classification with data owner before using the data with Singapore-hosted GenAI API services. Ensure that these API services are accessed only via environments authorised for up to CONFIDENTIAL and SENSITIVE HIGH data. Check documentation for whether cross-region inferencing or overseas processing occurs under certain conditions.\n\nRisk Statement:\nPrimary data carries legal, privacy, and exfiltration risk when in transit and processed by GenAI API services hosted in Singapore."
+        },
+        {
+          "uuid": "fdcde9b0-98ae-5d5a-9b46-ec6d66dbe2ef",
+          "control-id": "ga-3",
+          "props": [
+            {
+              "name": "control-title",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "Non-logging and non-training Agreement"
+            },
+            {
+              "name": "profile-level",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "0"
+            }
+          ],
+          "links": [
+            {
+              "href": "#58340218-a22d-5559-9fa2-c8ebe53a4421",
+              "rel": "reference"
+            }
+          ],
+          "by-components": [
+            {
+              "component-uuid": "8d1b2364-fe07-5e39-bbb0-e2e388fedaae",
+              "uuid": "e9062838-275c-5c51-abfc-64be06138c78",
+              "description": "Obtain a legally-binding commitment from the GenAI API service provider that states that they do not log, store, nor retain input and output data, and that no input and output data are used for training GenAI models. Prompt caching (i.e. temporarily storing responses to frequently used prompts) is exempt from the above restriction on logging, storing, or retaining data, provided the cache time-to-live (TTL) is ≤ 24 hours."
+            }
+          ],
+          "remarks": "Control Recommendations:\nEnsure that the agreement covers all endpoints, parameters, outputs and models in use. Using GenAI API services provided by GCC 2.0 satisfies this control.\n\nRisk Statement:\nWithout a legally binding agreement, the GenAI service provider can access primary data or logs through automated or manual checks that can expose classified data, or they may use the data for further training of their GenAI models."
+        },
+        {
+          "uuid": "384c00ec-f460-5d01-9078-9c030338aec0",
+          "control-id": "ga-4",
+          "props": [
+            {
+              "name": "control-title",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "Data classification for self-hosted GenAI models"
+            },
+            {
+              "name": "profile-level",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "0"
+            }
+          ],
+          "links": [
+            {
+              "href": "#58340218-a22d-5559-9fa2-c8ebe53a4421",
+              "rel": "reference"
+            }
+          ],
+          "by-components": [
+            {
+              "component-uuid": "8d1b2364-fe07-5e39-bbb0-e2e388fedaae",
+              "uuid": "0da6e8ed-41cc-5a20-b7bc-8c200c33ca56",
+              "description": "Ensure that GenAI models are hosted in an environment that can host the highest data classification of government data contained in the system that the model is deployed in."
+            }
+          ],
+          "remarks": "Control Recommendations:\nRefer to relevant IM8 SSPs for controls that need to be met before hosting government data of a given data classification in that environment (e.g. in a Singapore-hosted GCC environment.)\n\nRisk Statement:\nUsing GenAI models with data that is more classified than what its environment is permitted to hold may open up cybersecurity vulnerabilities for attackers to exfiltrate classified data."
+        },
+        {
+          "uuid": "aace3bb2-b2e5-56a8-85ab-cecfac8d47ba",
+          "control-id": "ga-5",
+          "props": [
+            {
+              "name": "control-title",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "GenAI model formats and loaders"
+            },
+            {
+              "name": "profile-level",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "1"
+            }
+          ],
+          "links": [
+            {
+              "href": "#58340218-a22d-5559-9fa2-c8ebe53a4421",
+              "rel": "reference"
+            }
+          ],
+          "by-components": [
+            {
+              "component-uuid": "8d1b2364-fe07-5e39-bbb0-e2e388fedaae",
+              "uuid": "e018a62d-47f9-5292-bbbb-c1a8f1a679aa",
+              "description": "Use approved formats (such as {{ insert: param, ga-5_prm_1 }}) when using any open-weights GenAI models. Use approved loaders (such as {{ insert: param, ga-5_prm_2 }}) to load open-weights GenAI models."
+            }
+          ],
+          "remarks": "Control Recommendations:\nUpdate GenAI model loaders frequently to hinder attacks.\n\nRisk Statement:\nInsecure model formats or loaders have been shown to be potential threat vectors that may allow for arbitrary code execution. Failure to use more secure formats or loaders may result in potential unauthorised access to the system.\n\nParameters to set:\n* ga-5_prm_1\n* ga-5_prm_2"
+        },
+        {
+          "uuid": "8eefd189-e918-5564-b492-6bfb457fd7ba",
+          "control-id": "ga-6",
+          "props": [
+            {
+              "name": "control-title",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "File upload safeguards"
+            },
+            {
+              "name": "profile-level",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "1"
+            }
+          ],
+          "links": [
+            {
+              "href": "#58340218-a22d-5559-9fa2-c8ebe53a4421",
+              "rel": "reference"
+            }
+          ],
+          "by-components": [
+            {
+              "component-uuid": "8d1b2364-fe07-5e39-bbb0-e2e388fedaae",
+              "uuid": "652d237b-47e9-5a89-ab7f-e0c842c8dce4",
+              "description": "Implement file upload safeguards if file uploads are enabled in the system."
+            }
+          ],
+          "remarks": "Control Recommendations:\nExamples of safeguards include but are not limited to: (1) Implementing Data Loss Protection (“DLP”) tools to monitor document uploads, (2) Disabling bulk or batch file uploads, such as by preventing users from selecting multiple files with a single action, or by requiring users to confirm the data security/sensitivity classification of each file individually before uploading, (3) Prompting users who upload excessively large files to review file contents and their collective data security/sensitivity classification.\n\nRisk Statement:\nEnabling file uploads in a generative AI application creates two key risks: (a) the possibility of sensitive data leaks if models are prompted to reveal information from uploaded files, and (b) the risk of exceeding permitted data classification levels — either by uploading multiple files without reassessing their collective classification, or by inadvertently uploading documents with a higher classification level due to human error."
+        },
+        {
+          "uuid": "855eb25a-9362-5030-9912-2494053bed07",
+          "control-id": "ga-7",
+          "props": [
+            {
+              "name": "control-title",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "Evaluation of GenAI accuracy, safety, and output quality"
+            },
+            {
+              "name": "profile-level",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "1"
+            }
+          ],
+          "links": [
+            {
+              "href": "#58340218-a22d-5559-9fa2-c8ebe53a4421",
+              "rel": "reference"
+            }
+          ],
+          "by-components": [
+            {
+              "component-uuid": "8d1b2364-fe07-5e39-bbb0-e2e388fedaae",
+              "uuid": "50bd1d7d-ac03-54c2-971c-5e979fbf2edd",
+              "description": "Test the accuracy, safety, and quality of the GenAI application's outputs, with clearly defined metrics, test scenarios, and criteria."
+            }
+          ],
+          "remarks": "Control Recommendations:\nDetermine the adequate level of accuracy, safety, and output quality for your application. Develop tests to assess outputs on these dimensions. The complexity and structure of these tests should be tailored to the risk profile of your application. Document this approach and measure & monitor results after relevant model, prompt, and dependency updates.\n\nRisk Statement:\nFailure to evaluate models, prompts, and their dependencies (such as tool integrations and retrieval-augmented generation (RAG) systems) can result in low-quality outputs after updates or configuration changes."
+        },
+        {
+          "uuid": "72180585-e05f-5493-8d02-4fc98857e0db",
+          "control-id": "ga-8",
+          "props": [
+            {
+              "name": "control-title",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "Inform users about GenAI risks and limitations"
+            },
+            {
+              "name": "profile-level",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "1"
+            }
+          ],
+          "links": [
+            {
+              "href": "#58340218-a22d-5559-9fa2-c8ebe53a4421",
+              "rel": "reference"
+            }
+          ],
+          "by-components": [
+            {
+              "component-uuid": "8d1b2364-fe07-5e39-bbb0-e2e388fedaae",
+              "uuid": "40cb51e2-31dc-55c5-95a0-2bfa7b79dbd9",
+              "description": "Require users to explicitly acknowledge the risk of inaccurate or fabricated outputs (hallucinations), such as selecting a checkbox or clicking on an 'I Agree' button before the application can be accessed."
+            }
+          ],
+          "remarks": "Control Recommendations:\nInclude clauses about the risk of inaccurate / fabricated outputs in your Terms of Use. Indicate prominently in your application about the possibility of inaccurate or fabricated outputs. Ensure that educational materials, such as documentation, guides, playbooks, or workshops, highlight responsible use and best practices for users of the GenAI system.\n\nRisk Statement:\nUninformed users may trust inaccurate model-generated outputs."
+        }
+      ]
+    },
+    "back-matter": {
+      "resources": [
+        {
+          "uuid": "85873833-10fe-5296-bbdc-4c5d8f5e12d4",
+          "title": "Generative AI System Security Plan template",
+          "description": "Official Generative AI SSP template page.",
+          "rlinks": [
+            {
+              "href": "https://info.standards.tech.gov.sg/ssp/gen-ai/",
+              "media-type": "text/html"
+            }
+          ]
+        },
+        {
+          "uuid": "a8374315-ddb7-5ba6-ac00-03321fd56845",
+          "title": "Data Protection Control Catalog",
+          "rlinks": [
+            {
+              "href": "../control-catalog/cybersecurity/dp.json",
+              "media-type": "application/json"
+            },
+            {
+              "href": "https://info.standards.tech.gov.sg/control-catalog/cybersecurity/dp/",
+              "media-type": "text/html"
+            }
+          ]
+        },
+        {
+          "uuid": "58340218-a22d-5559-9fa2-c8ebe53a4421",
+          "title": "Generative AI Control Catalog",
+          "rlinks": [
+            {
+              "href": "../control-catalog/cybersecurity/ga.json",
+              "media-type": "application/json"
+            },
+            {
+              "href": "https://info.standards.tech.gov.sg/control-catalog/cybersecurity/ga/",
+              "media-type": "text/html"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

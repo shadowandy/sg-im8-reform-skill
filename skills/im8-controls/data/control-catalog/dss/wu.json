@@ -1,0 +1,509 @@
+{
+  "catalog": {
+    "uuid": "bc091ac4-b59b-5771-98b4-8df807268ac6",
+    "metadata": {
+      "title": "Digital Service Standards Control Catalog - WCAG : Understandable",
+      "last-modified": "2026-03-05T00:00:00+08:00",
+      "version": "2026.03.05",
+      "oscal-version": "1.1.2",
+      "props": [
+        {
+          "name": "keywords",
+          "value": "IM8, GovTech, Singapore, digital service standards, WCAG : Understandable"
+        },
+        {
+          "name": "abbreviation",
+          "value": "WU"
+        },
+        {
+          "name": "source",
+          "value": "https://info.standards.tech.gov.sg/control-catalog/dss/wu/"
+        }
+      ]
+    },
+    "groups": [
+      {
+        "id": "wu",
+        "title": "WCAG : Understandable",
+        "controls": [
+          {
+            "id": "wu-1",
+            "title": "Language of Page",
+            "props": [
+              {
+                "name": "rationale",
+                "value": "Specifying the language ensures that assistive technology can present content to end users using the correct language settings. This includes pronunciation rules and rendering of display characters and scripts."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-05T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#c9cef06b-8c79-5270-a8eb-620fa03327a8",
+                "rel": "source",
+                "text": "WCAG : Understandable Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "wu-1_smt",
+                "name": "statement",
+                "prose": "Ensure that the primary language on a page is programmatically determined."
+              },
+              {
+                "id": "wu-1_gdn",
+                "name": "guidance",
+                "prose": "For websites, specify the primary language of each webpage using the lang attribute in the HTML tag.\nFor mobile apps, set the language of the app content using the platform's appropriate language or accessibility attribute such the accessibilityLanguage attribute for iOS.\nFor PDFs, use the /Lang entry to specify the language of the document or section."
+              }
+            ]
+          },
+          {
+            "id": "wu-2",
+            "title": "Language of Parts",
+            "props": [
+              {
+                "name": "rationale",
+                "value": "Allows assistive technology to identify language changes and properly present content in the correct intonation and proper pronunciation to end users."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-05T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#c9cef06b-8c79-5270-a8eb-620fa03327a8",
+                "rel": "source",
+                "text": "WCAG : Understandable Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "wu-2_smt",
+                "name": "statement",
+                "prose": "Ensure the language of words or sections that differ from the page's primary language is programmatically determined."
+              },
+              {
+                "id": "wu-2_gdn",
+                "name": "guidance",
+                "prose": "Specify the language of text that differs from the primary language of the page using the lang attribute in HTML elements or the platform’s equivalent language tagging feature."
+              }
+            ]
+          },
+          {
+            "id": "wu-3",
+            "title": "Unusual Words",
+            "props": [
+              {
+                "name": "rationale",
+                "value": "Slang, jargon, metaphors, and figures of speech may not be understood by some groups of end users. Identifying and providing relevance guidance make such content more accessible to everyone."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-05T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#c9cef06b-8c79-5270-a8eb-620fa03327a8",
+                "rel": "source",
+                "text": "WCAG : Understandable Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "wu-3_smt",
+                "name": "statement",
+                "prose": "Provide definitions for technical jargon and unusual terms."
+              },
+              {
+                "id": "wu-3_gdn",
+                "name": "guidance",
+                "prose": "Avoid jargon and unusual terms where possible. If absolutely necessary, provide contextual help such as inline explanations, tooltips, or glossaries."
+              }
+            ]
+          },
+          {
+            "id": "wu-4",
+            "title": "Abbreviations",
+            "props": [
+              {
+                "name": "rationale",
+                "value": "Abbreviations or acronyms may not be understood by some end users, especially when used for the first time in a page or section."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-05T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#c9cef06b-8c79-5270-a8eb-620fa03327a8",
+                "rel": "source",
+                "text": "WCAG : Understandable Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "wu-4_smt",
+                "name": "statement",
+                "prose": "Provide the expanded form of abbreviations."
+              },
+              {
+                "id": "wu-4_gdn",
+                "name": "guidance",
+                "prose": "Provide expanded forms of abbreviations the first time they appear on a page or flow, or provide contextual help such as inline explanations, tooltips, or glossaries.\nNot required for common abbreviations such as PDF and SMS where presenting the expanded form is unnecessary for understanding of meaning, and may negatively affect the reading experience."
+              }
+            ]
+          },
+          {
+            "id": "wu-5",
+            "title": "Changes On Focus",
+            "props": [
+              {
+                "name": "rationale",
+                "value": "Unexpected changes of context triggered by focus change can be disorienting to users of assistive technology. Ensuring that context changes are predictable helps end users feel secure and in control while navigating a site."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-05T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#c9cef06b-8c79-5270-a8eb-620fa03327a8",
+                "rel": "source",
+                "text": "WCAG : Understandable Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "wu-5_smt",
+                "name": "statement",
+                "prose": "Avoid changing the context when a user interface component receives focus"
+              },
+              {
+                "id": "wu-5_gdn",
+                "name": "guidance",
+                "prose": "If a component triggers an event when it receives focus, the context should not be changed.\nAvoid actions such as form submissions, opening a new window and changing focus to another component when a component receives focus."
+              }
+            ]
+          },
+          {
+            "id": "wu-6",
+            "title": "Changes On Input",
+            "props": [
+              {
+                "name": "rationale",
+                "value": "Unexpected changes of context triggered by input can be disorienting to users of assistive technology. Ensuring that context changes are predictable helps users feel secure and in control while navigating a site."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-05T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#c9cef06b-8c79-5270-a8eb-620fa03327a8",
+                "rel": "source",
+                "text": "WCAG : Understandable Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "wu-6_smt",
+                "name": "statement",
+                "prose": "Provide advance warning when input causes a change of context."
+              },
+              {
+                "id": "wu-6_gdn",
+                "name": "guidance",
+                "prose": "Clicking on links or buttons are not considered inputs or changing the setting of that control in the context of this control.\nExplicitly inform end users if provision of input like checking a checkbox or entering text into a text field results in a change in context. Changes in context include responses like navigation to a new page or section, submission, or opening a new window.\nAlternatively, provide controls such as buttons that allow end users to intentionally trigger actions like confirming a selection or submission."
+              }
+            ]
+          },
+          {
+            "id": "wu-7",
+            "title": "Consistent Navigation",
+            "props": [
+              {
+                "name": "rationale",
+                "value": "Unexpected changes of context triggered by focus change can be disorienting to end users with sensory or cognitive impairment, or users of assistive technology."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-05T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#c9cef06b-8c79-5270-a8eb-620fa03327a8",
+                "rel": "source",
+                "text": "WCAG : Understandable Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "wu-7_smt",
+                "name": "statement",
+                "prose": "Implement a primary or main navigation panel that\n* Is placed at or near the top of the website\n* Is not hidden or collapsed within an icon on desktop for websites\n* Presents navigation links in the same relative order on each page"
+              },
+              {
+                "id": "wu-7_gdn",
+                "name": "guidance",
+                "prose": "Test the top navigation component with users to ensure it is usable and accessible."
+              }
+            ]
+          },
+          {
+            "id": "wu-8",
+            "title": "Consistent Identification",
+            "props": [
+              {
+                "name": "rationale",
+                "value": "Allows end users to quickly learn and understand navigation, design and interaction patterns within the digital service. This reduces cognitive load and increase efficiency of task completion."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-05T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#c9cef06b-8c79-5270-a8eb-620fa03327a8",
+                "rel": "source",
+                "text": "WCAG : Understandable Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "wu-8_smt",
+                "name": "statement",
+                "prose": "Identify and label repeated or related components consistently within the digital service."
+              },
+              {
+                "id": "wu-8_gdn",
+                "name": "guidance",
+                "prose": "Ensure that text used to identify a component such as label, name, or text alternatives are identical for each user interface component with the same function within the digital service."
+              }
+            ]
+          },
+          {
+            "id": "wu-9",
+            "title": "Consistent Help",
+            "props": [
+              {
+                "name": "rationale",
+                "value": "Help and assistance are key aspects of a digital service. Consistent placement makes it easy for end users, especially those who may struggle with complex or unfamiliar interfaces to find help and support mechanisms."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-05T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#c9cef06b-8c79-5270-a8eb-620fa03327a8",
+                "rel": "source",
+                "text": "WCAG : Understandable Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "wu-9_smt",
+                "name": "statement",
+                "prose": "Place help and support mechanisms consistently across multiple pages."
+              },
+              {
+                "id": "wu-9_gdn",
+                "name": "guidance",
+                "prose": "Implementing the tl-4: Official Government Footer ensures consistent placement of contact and FAQ across multiple pages.\nEnsure that other help and support mechanisms such as messaging systems or chatbots are also consistently placed across multiple pages."
+              }
+            ]
+          },
+          {
+            "id": "wu-10",
+            "title": "Error Identification",
+            "props": [
+              {
+                "name": "rationale",
+                "value": "Helping end users easily and quickly identify, locate and understand errors minimises the frustration of encountering and resolving errors."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-05T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#c9cef06b-8c79-5270-a8eb-620fa03327a8",
+                "rel": "source",
+                "text": "WCAG : Understandable Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "wu-10_smt",
+                "name": "statement",
+                "prose": "Indicate input errors by:\n* a) Visually and audibly identifying the component or section that generated the error\n* b) Providing a text description of the error"
+              },
+              {
+                "id": "wu-10_gdn",
+                "name": "guidance",
+                "prose": "Clearly associate error messages with the source component or section. Ensure the error is easily identifiable and noticeable visually and for users of screen readers by using techniques such as ARIA attributes and requirements in wp-11."
+              }
+            ]
+          },
+          {
+            "id": "wu-11",
+            "title": "Error Suggestion",
+            "props": [
+              {
+                "name": "rationale",
+                "value": "Error messages that are not clear or do not provide useful and actionable information prevent end users from completing their tasks and lead to frustration."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-05T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#c9cef06b-8c79-5270-a8eb-620fa03327a8",
+                "rel": "source",
+                "text": "WCAG : Understandable Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "wu-11_smt",
+                "name": "statement",
+                "prose": "Ensure that error messages:\n* a) Explain what went wrong in non-technical language.\n* b) Explain how to correct the issue or provide alternative actions (If suggestions for correction are known)"
+              },
+              {
+                "id": "wu-11_gdn",
+                "name": "guidance",
+                "prose": "Write error messages in plain language that is understood by end users of different backgrounds, and helps the user understand or resolve the issue. This applies to all error messages including inline form errors and system error pages such as 404, 500 errors."
+              }
+            ]
+          },
+          {
+            "id": "wu-12",
+            "title": "Error Prevention",
+            "props": [
+              {
+                "name": "rationale",
+                "value": "Providing ways for end users to confirm, correct, or reverse important submissions reduces the chance of errors."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-05T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#c9cef06b-8c79-5270-a8eb-620fa03327a8",
+                "rel": "source",
+                "text": "WCAG : Understandable Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "wu-12_smt",
+                "name": "statement",
+                "prose": "Prevent errors by:\n* a) Checking user-entered data for errors and/or providing a mechanism to review, confirm, and correct information before final submission\n* b) Allow submissions to be reversed (if feasible)"
+              },
+              {
+                "id": "wu-12_gdn",
+                "name": "guidance",
+                "prose": "Implement proper error validation.\nProvide a summary page or section for users to review and correct their inputs/information before submission. This is essential for multi-page forms which are difficult to review, and transactions with significant consequences such as those involving payments or having legal implications."
+              }
+            ]
+          },
+          {
+            "id": "wu-13",
+            "title": "Redundant Entry",
+            "props": [
+              {
+                "name": "rationale",
+                "value": "Repetitive data entry requires unnecessary effort especially for end users with cognitive or motor impairments who may struggle with entering information."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-05T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#c9cef06b-8c79-5270-a8eb-620fa03327a8",
+                "rel": "source",
+                "text": "WCAG : Understandable Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "wu-13_smt",
+                "name": "statement",
+                "prose": "Avoid requiring re-entry of information already provided within the same process."
+              },
+              {
+                "id": "wu-13_gdn",
+                "name": "guidance",
+                "prose": "Either auto-populate or allow the end user to select information that was already provided.\nThis is not required if the information is required to ensure the security of the content (E.g. Confirm password) or if the previously entered information is no longer valid."
+              }
+            ]
+          },
+          {
+            "id": "wu-14",
+            "title": "Accessible Authentication (Minimum)",
+            "props": [
+              {
+                "name": "rationale",
+                "value": "End users with cognitive impairments have difficulties recalling or performing cognitively demanding actions."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-05T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#c9cef06b-8c79-5270-a8eb-620fa03327a8",
+                "rel": "source",
+                "text": "WCAG : Understandable Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "wu-14_smt",
+                "name": "statement",
+                "prose": "Provide accessible authentication alternatives that do not require recalling, solving, or transcribing information."
+              },
+              {
+                "id": "wu-14_gdn",
+                "name": "guidance",
+                "prose": "Provide at least 1 non-password authentication such as Singpass QR login or text/email based one-time codes."
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "back-matter": {
+      "resources": [
+        {
+          "uuid": "c9cef06b-8c79-5270-a8eb-620fa03327a8",
+          "title": "WCAG : Understandable — Singapore Government ICT&SS Policy Reform",
+          "description": "Official WCAG : Understandable control catalog page.",
+          "rlinks": [
+            {
+              "href": "https://info.standards.tech.gov.sg/control-catalog/dss/wu/"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,113 @@
+{
+  "catalog": {
+    "uuid": "1e8abc3d-d2aa-5332-9274-de50fff5d899",
+    "metadata": {
+      "title": "Digital Service Standards Control Catalog - WCAG : Robust",
+      "last-modified": "2026-03-05T00:00:00+08:00",
+      "version": "2026.03.05",
+      "oscal-version": "1.1.2",
+      "props": [
+        {
+          "name": "keywords",
+          "value": "IM8, GovTech, Singapore, digital service standards, WCAG : Robust"
+        },
+        {
+          "name": "abbreviation",
+          "value": "WR"
+        },
+        {
+          "name": "source",
+          "value": "https://info.standards.tech.gov.sg/control-catalog/dss/wr/"
+        }
+      ]
+    },
+    "groups": [
+      {
+        "id": "wr",
+        "title": "WCAG : Robust",
+        "controls": [
+          {
+            "id": "wr-1",
+            "title": "Name, Role, Value",
+            "props": [
+              {
+                "name": "rationale",
+                "value": "Enables end users of assistive technology to properly understand and interact with custom components."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-05T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#a830fa2d-0ff4-51fe-b43a-4d3fd7c5624d",
+                "rel": "source",
+                "text": "WCAG : Robust Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "wr-1_smt",
+                "name": "statement",
+                "prose": "Ensure that essential information of custom components and controls can be identified and read by assistive technologies."
+              },
+              {
+                "id": "wr-1_gdn",
+                "name": "guidance",
+                "prose": "Essential information including name, roles, properties, values, states, and state changes are provided using techniques like ARIA labels.\nStandard HTML controls should already meet this criterion when used according to specification. (example: text input field)"
+              }
+            ]
+          },
+          {
+            "id": "wr-2",
+            "title": "Status Messages",
+            "props": [
+              {
+                "name": "rationale",
+                "value": "Allows screen readers to identify and announce changes to content that may otherwise be missed by users of assistive technologies. This benefits users with visual impairments who unlike sighted users may not notice changes outside of their area of focus."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-05T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#a830fa2d-0ff4-51fe-b43a-4d3fd7c5624d",
+                "rel": "source",
+                "text": "WCAG : Robust Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "wr-2_smt",
+                "name": "statement",
+                "prose": "Ensure that assistive technology can identify and announce system status changes that don't receive focus."
+              },
+              {
+                "id": "wr-2_gdn",
+                "name": "guidance",
+                "prose": "Use ARIA roles and properties to inform users of status changes, such as when an incorrect text in an input is entered and a status message appears above."
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "back-matter": {
+      "resources": [
+        {
+          "uuid": "a830fa2d-0ff4-51fe-b43a-4d3fd7c5624d",
+          "title": "WCAG : Robust — Singapore Government ICT&SS Policy Reform",
+          "description": "Official WCAG : Robust control catalog page.",
+          "rlinks": [
+            {
+              "href": "https://info.standards.tech.gov.sg/control-catalog/dss/wr/"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

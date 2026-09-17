@@ -1,0 +1,344 @@
+{
+  "catalog": {
+    "uuid": "80fc1ffa-19fd-55f9-bdce-6c7891e54076",
+    "metadata": {
+      "title": "Cybersecurity Control Catalog - Software Supply Chain",
+      "last-modified": "2026-03-04T00:00:00+08:00",
+      "version": "2026.03.04",
+      "oscal-version": "1.1.2",
+      "props": [
+        {
+          "name": "keywords",
+          "value": "IM8, GovTech, Singapore, cybersecurity, Software Supply Chain"
+        },
+        {
+          "name": "abbreviation",
+          "value": "SC"
+        },
+        {
+          "name": "source",
+          "value": "https://info.standards.tech.gov.sg/control-catalog/cybersecurity/sc/"
+        }
+      ]
+    },
+    "groups": [
+      {
+        "id": "sc",
+        "title": "Software Supply Chain",
+        "controls": [
+          {
+            "id": "sc-1",
+            "title": "Code Repository",
+            "props": [
+              {
+                "name": "risk-statement",
+                "value": "Absence of centralised code repository and version control increases the risk of code inconsistencies, loss of code history, and difficulties in collaboration, potentially leading to errors and security vulnerabilities."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-04T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#73ae6b6d-1779-5c2a-a31b-0eac70295f66",
+                "rel": "source",
+                "text": "Software Supply Chain Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "sc-1_smt",
+                "name": "statement",
+                "prose": "Manage the codebase in a central code repository with version control."
+              },
+              {
+                "id": "sc-1_gdn",
+                "name": "guidance",
+                "prose": "Use common internal platforms that provide Git repository services."
+              }
+            ]
+          },
+          {
+            "id": "sc-2",
+            "title": "Commit Signing",
+            "props": [
+              {
+                "name": "risk-statement",
+                "value": "Allowing unsigned commits in the code repository introduces the risk of unauthorised or malicious code changes, compromising the integrity and security of the software development process."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-04T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#73ae6b6d-1779-5c2a-a31b-0eac70295f66",
+                "rel": "source",
+                "text": "Software Supply Chain Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "sc-2_smt",
+                "name": "statement",
+                "prose": "Configure the code repository to reject unsigned commits."
+              },
+              {
+                "id": "sc-2_gdn",
+                "name": "guidance",
+                "prose": "Use GitLab's push rules, GitHub's branch protection rules or similar code repository controls to reject unsigned commits on push."
+              }
+            ]
+          },
+          {
+            "id": "sc-3",
+            "title": "Peer Review",
+            "props": [
+              {
+                "name": "risk-statement",
+                "value": "Without peer review and approval before merging, there is an increased risk of introducing undetected coding errors, security vulnerabilities, and maintaining codebase consistency may become challenging."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-04T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#73ae6b6d-1779-5c2a-a31b-0eac70295f66",
+                "rel": "source",
+                "text": "Software Supply Chain Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "sc-3_smt",
+                "name": "statement",
+                "prose": "Require peer review and approval by a designated reviewer before merging into the default branch."
+              },
+              {
+                "id": "sc-3_gdn",
+                "name": "guidance",
+                "prose": "Use GitLab's protected branch and merge request settings, GitHub's branch protection settings or similar code repository controls to enforce this."
+              }
+            ]
+          },
+          {
+            "id": "sc-4",
+            "title": "Dependency Manifest Version Pinning",
+            "props": [
+              {
+                "name": "risk-statement",
+                "value": "Failure to pin direct and transitive dependency versions in the application's manifest may lead to version drift, introducing compatibility issues, security vulnerabilities, and unpredictability in the software environment."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-04T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#73ae6b6d-1779-5c2a-a31b-0eac70295f66",
+                "rel": "source",
+                "text": "Software Supply Chain Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "sc-4_smt",
+                "name": "statement",
+                "prose": "Pin direct and transitive dependency versions in the application's dependency manifest."
+              },
+              {
+                "id": "sc-4_gdn",
+                "name": "guidance",
+                "prose": "Dependency manifests such as package-lock.json for npm and Pipfile.lock for pipenv allow you to pin dependency versions."
+              }
+            ]
+          },
+          {
+            "id": "sc-5",
+            "title": "Build and Release Process",
+            "props": [
+              {
+                "name": "risk-statement",
+                "value": "Inconsistent and unmanaged releases may lead to configuration drift, increased likelihood of errors, and unapproved changes to releases."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-04T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#73ae6b6d-1779-5c2a-a31b-0eac70295f66",
+                "rel": "source",
+                "text": "Software Supply Chain Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "sc-5_smt",
+                "name": "statement",
+                "prose": "Use a consistent build and release process that generates a record of how the release artefact was built and deployed."
+              },
+              {
+                "id": "sc-5_gdn",
+                "name": "guidance",
+                "prose": "Consider automated build and deploy tools such as CI/CD Pipelines, Infrastructure as Code (IaC) and other scripts, which allow for signing and validation of build artefacts. If automation is not possible, develop and implement release management processes."
+              }
+            ]
+          },
+          {
+            "id": "sc-6",
+            "title": "Dependency Installation during Deployment",
+            "props": [
+              {
+                "name": "risk-statement",
+                "value": "Failure to install only pinned versions of dependencies during deployment increases the risk of introducing unforeseen changes, compatibility issues, and potential security vulnerabilities into the deployed environment."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-04T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#73ae6b6d-1779-5c2a-a31b-0eac70295f66",
+                "rel": "source",
+                "text": "Software Supply Chain Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "sc-6_smt",
+                "name": "statement",
+                "prose": "Only install pinned versions in the manifest when installing dependencies during deployment."
+              },
+              {
+                "id": "sc-6_gdn",
+                "name": "guidance",
+                "prose": "Use package manager commands such as npm ci for npm and pipenv sync for pipenv that ensure only versions specified in the manifest are installed rather than the latest version."
+              }
+            ]
+          },
+          {
+            "id": "sc-7",
+            "title": "Software Artefact Signing",
+            "props": [
+              {
+                "name": "risk-statement",
+                "value": "Unsigned code and container images pose a risk of tampering, impersonation, and the injection of malicious code during the build process, compromising the integrity and security of the deployed software."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-04T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#73ae6b6d-1779-5c2a-a31b-0eac70295f66",
+                "rel": "source",
+                "text": "Software Supply Chain Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "sc-7_smt",
+                "name": "statement",
+                "prose": "Sign software artefacts such as code and container images using a trusted source during build."
+              },
+              {
+                "id": "sc-7_gdn",
+                "name": "guidance",
+                "prose": "Use tools or services like Cosign or AWS Signer to sign and verify code."
+              }
+            ]
+          },
+          {
+            "id": "sc-8",
+            "title": "Software Artefact Signature Verification",
+            "props": [
+              {
+                "name": "risk-statement",
+                "value": "Without verifying the signatures of code and artefacts before deployment or runtime, there's an increased risk of deploying tampered or malicious software, compromising the integrity and security of the system."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-04T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#73ae6b6d-1779-5c2a-a31b-0eac70295f66",
+                "rel": "source",
+                "text": "Software Supply Chain Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "sc-8_smt",
+                "name": "statement",
+                "prose": "Verify the signatures of code and artefacts before deployment or runtime."
+              },
+              {
+                "id": "sc-8_gdn",
+                "name": "guidance",
+                "prose": "Implement a signature verification step such as a pipeline stage or Kubernetes Admission Controller."
+              }
+            ]
+          },
+          {
+            "id": "sc-9",
+            "title": "Internal Code Collaboration and Sharing",
+            "props": [
+              {
+                "name": "risk-statement",
+                "value": "Restricting code repositories to closed source can result in duplicated efforts, hinder collaborative learning, and lead to missed bugs or vulnerabilities."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-04T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#73ae6b6d-1779-5c2a-a31b-0eac70295f66",
+                "rel": "source",
+                "text": "Software Supply Chain Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "sc-9_smt",
+                "name": "statement",
+                "prose": "Share source code internally to enhance code quality, accelerate innovation, and improve problem-solving efficiency."
+              },
+              {
+                "id": "sc-9_gdn",
+                "name": "guidance",
+                "prose": "Adopt InnerSource practices for internal collaboration, utilising Git platforms to manage and share code repositories internally. Source code should be evaluated for suitability for InnerSourcing, such as the use of confidential algorithms or embedded sensitive data. The InnerSource guidelines published in the Singapore Government Developer Portal provide a useful framework for code sharing."
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "back-matter": {
+      "resources": [
+        {
+          "uuid": "73ae6b6d-1779-5c2a-a31b-0eac70295f66",
+          "title": "Software Supply Chain — Singapore Government ICT&SS Policy Reform",
+          "description": "Official Software Supply Chain control catalog page.",
+          "rlinks": [
+            {
+              "href": "https://info.standards.tech.gov.sg/control-catalog/cybersecurity/sc/"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,641 @@
+{
+  "catalog": {
+    "uuid": "0594ad6c-8328-55cf-b820-624ce83c828e",
+    "metadata": {
+      "title": "Digital Service Standards Control Catalog - WCAG : Operable",
+      "last-modified": "2026-03-05T00:00:00+08:00",
+      "version": "2026.03.05",
+      "oscal-version": "1.1.2",
+      "props": [
+        {
+          "name": "keywords",
+          "value": "IM8, GovTech, Singapore, digital service standards, WCAG : Operable"
+        },
+        {
+          "name": "abbreviation",
+          "value": "WO"
+        },
+        {
+          "name": "source",
+          "value": "https://info.standards.tech.gov.sg/control-catalog/dss/wo/"
+        }
+      ]
+    },
+    "groups": [
+      {
+        "id": "wo",
+        "title": "WCAG : Operable",
+        "controls": [
+          {
+            "id": "wo-1",
+            "title": "Keyboard equivalent",
+            "props": [
+              {
+                "name": "rationale",
+                "value": "Ensures that there is no loss of functionality for users who rely on keyboards such as those with motor impairments."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-05T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#ac6b62e1-4920-5c94-887d-1320c61262ac",
+                "rel": "source",
+                "text": "WCAG : Operable Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "wo-1_smt",
+                "name": "statement",
+                "prose": "Ensure any action done using a pointer device can also be done using a keyboard."
+              },
+              {
+                "id": "wo-1_gdn",
+                "name": "guidance",
+                "prose": "Provide keyboard operation for all the functionality of the page unless the function requires path-dependent input such as handwriting.\nAvoid requiring specific timings for individual keystrokes such as requirements to repeat or execute multiple keystrokes within a short period of time."
+              }
+            ]
+          },
+          {
+            "id": "wo-2",
+            "title": "No Keyboard Trap",
+            "props": [
+              {
+                "name": "rationale",
+                "value": "A keyboard trap happens when keyboard focus is moved to a component or subsection of the digital service without a way of the end user navigating back out using a keyboard interface. End users who who rely on exclusive keyboard interface usage such as people with vision and physical disabilities get stuck and are unable to proceed to other parts of the service or complete a critical transaction."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-05T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#ac6b62e1-4920-5c94-887d-1320c61262ac",
+                "rel": "source",
+                "text": "WCAG : Operable Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "wo-2_smt",
+                "name": "statement",
+                "prose": "Ensure that keyboard users can move keyboard focus away or out from a component or section of the digital service."
+              },
+              {
+                "id": "wo-2_gdn",
+                "name": "guidance",
+                "prose": "Test forms, widgets, and custom elements with keyboard-only navigation to confirm end users can exit all components using standard keys (like Tab and Shift+Tab).\nIf the key functionality of the component restricts the focus to a subsection of the content, communicate clearly to users how to leave that state and \"untrap\" the focus."
+              }
+            ]
+          },
+          {
+            "id": "wo-3",
+            "title": "Character Key Shortcuts",
+            "props": [
+              {
+                "name": "rationale",
+                "value": "Reduces the risk of accidental activation of keyboard shortcuts for keyboard users and speech input users, whose dictation is interpreted as strings of letters."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-05T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#ac6b62e1-4920-5c94-887d-1320c61262ac",
+                "rel": "source",
+                "text": "WCAG : Operable Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "wo-3_smt",
+                "name": "statement",
+                "prose": "Provide a mechanism to disable or remap shortcuts that are activated using only one character key press."
+              },
+              {
+                "id": "wo-3_gdn",
+                "name": "guidance",
+                "prose": "If character key shortcuts are used, provide end users with the ability to disable or remap them. Implement keyboard settings within the interface for customisation, ensuring shortcuts do not interfere with common keyboard interactions."
+              }
+            ]
+          },
+          {
+            "id": "wo-4",
+            "title": "Adjustable Timings",
+            "props": [
+              {
+                "name": "rationale",
+                "value": "Persons with disabilities may need more time to complete complex tasks such as filling out lengthy grant forms. Designing functions that are not time-dependent or allow for adjustable timings will help everyone, especially people with disabilities, succeed at completing these tasks."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-05T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#ac6b62e1-4920-5c94-887d-1320c61262ac",
+                "rel": "source",
+                "text": "WCAG : Operable Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "wo-4_smt",
+                "name": "statement",
+                "prose": "Allow time limits to be turned off, adjusted, or extended."
+              },
+              {
+                "id": "wo-4_gdn",
+                "name": "guidance",
+                "prose": "Avoid time-dependent functions unless absolutely necessary. Ensure timers are non-disruptive and adjustable or extendable.\nNot required when the time limit is:\na) Mandatory from a legal point of view\nb) Required as part of a real-time event where extensions would invalidate the activity\nc) Longer than 20 hours"
+              }
+            ]
+          },
+          {
+            "id": "wo-5",
+            "title": "Pause, Stop, Hide",
+            "props": [
+              {
+                "name": "rationale",
+                "value": "Content that moves or auto-updates can be a barrier to anyone who has trouble reading stationary text quickly, tracking moving objects or noticing page changes easily. It can also cause problems for screen readers."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-05T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#ac6b62e1-4920-5c94-887d-1320c61262ac",
+                "rel": "source",
+                "text": "WCAG : Operable Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "wo-5_smt",
+                "name": "statement",
+                "prose": "Provide a function to pause, stop, hide or control the frequency of moving, blinking, scrolling or auto-updating content that occur in parallel with other content."
+              },
+              {
+                "id": "wo-5_gdn",
+                "name": "guidance",
+                "prose": "Content changes refer to, but are not exclusive to, auto-updating information, animations containing essential information or similar components.\nAllow users to pause, stop, or hide content that automatically moves, blinks, scrolls or auto-updates for more than 5 seconds."
+              }
+            ]
+          },
+          {
+            "id": "wo-6",
+            "title": "Reduce Flash Triggers",
+            "props": [
+              {
+                "name": "rationale",
+                "value": "Flashing content can trigger seizures in end users with photosensitive epilepsy leading to serious health risks for these users."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-05T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#ac6b62e1-4920-5c94-887d-1320c61262ac",
+                "rel": "source",
+                "text": "WCAG : Operable Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "wo-6_smt",
+                "name": "statement",
+                "prose": "Avoid content that flashes more than three times per second or provide a warning and the option to skip such content."
+              },
+              {
+                "id": "wo-6_gdn",
+                "name": "guidance",
+                "prose": "Provide a clearly displayed warning message such as \"This video may potentially trigger seizures for people with photosensitive epilepsy. Viewer discretion is advised.\"\nExcludes flashes contained in a small area, are low contrast or include a small amount of the colour red."
+              }
+            ]
+          },
+          {
+            "id": "wo-7",
+            "title": "Bypass Repeating Content",
+            "props": [
+              {
+                "name": "rationale",
+                "value": "End users who navigate sequentially with keyboards or screen readers often encounter repeated content such as headers and navigation links across multiple pages. Providing a mechanism to bypass these repetitive sections enables users to access the main content more efficiently."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-05T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#ac6b62e1-4920-5c94-887d-1320c61262ac",
+                "rel": "source",
+                "text": "WCAG : Operable Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "wo-7_smt",
+                "name": "statement",
+                "prose": "Provide a means of skipping repetitive blocks of content that appear across multiple pages."
+              },
+              {
+                "id": "wo-7_gdn",
+                "name": "guidance",
+                "prose": "Implement visible and keyboard accessible link(s) for end users to skip repeated content blocks and/or group blocks of repeated material in a way that can be skipped through the use of ARIA landmarks or heading markup."
+              }
+            ]
+          },
+          {
+            "id": "wo-8",
+            "title": "Page Title And Purpose",
+            "props": [
+              {
+                "name": "rationale",
+                "value": "Clear, descriptive titles provide quick context, enabling all end users (including users of assistive technologies) to quickly understand where they are without having to scan page content. They also facilitate efficient navigation in site maps and search results, allowing rapid identification of relevant information."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-05T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#ac6b62e1-4920-5c94-887d-1320c61262ac",
+                "rel": "source",
+                "text": "WCAG : Operable Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "wo-8_smt",
+                "name": "statement",
+                "prose": "Provide a page title describing the purpose of every web page or distinct Single-Page Application view served from the same Uniform Resource Identifier (URI)."
+              },
+              {
+                "id": "wo-8_gdn",
+                "name": "guidance",
+                "prose": "Provide a clear and succinct page title that describes the purpose of the page. For example, \"Budget 2024 Support Schemes Calculator\" is a clear title stating the page contains a calculator for Support Schemes from Budget 2024."
+              }
+            ]
+          },
+          {
+            "id": "wo-9",
+            "title": "Sequential Focus Order",
+            "props": [
+              {
+                "name": "rationale",
+                "value": "Allows keyboard users to navigate in a sequence that reflects the content's logical structure, preventing disorientation from unexpected tabbing focus. This approach accommodates various valid navigation patterns while preserving content coherence. Implementing this improves accessibility, often results in cleaner markup, and can enhance SEO, benefiting all users."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-05T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#ac6b62e1-4920-5c94-887d-1320c61262ac",
+                "rel": "source",
+                "text": "WCAG : Operable Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "wo-9_smt",
+                "name": "statement",
+                "prose": "Ensure focusable components receive focus in an order that preserves meaning and operability when the navigation sequences affect meaning or operation."
+              },
+              {
+                "id": "wo-9_gdn",
+                "name": "guidance",
+                "prose": "When a user triggers a focusable element like a modal dialog via an element (button or link), the keyboard focus should be set to within the modal and limited to the elements of modal until dismissed.\nWhen the modal is dismissed, the keyboard focus should logically return to the original trigger element to minimise confusion for the user."
+              }
+            ]
+          },
+          {
+            "id": "wo-10",
+            "title": "Link Text And Purpose",
+            "props": [
+              {
+                "name": "rationale",
+                "value": "Descriptive and meaningful link text helps users understand the content and purpose of each link without needing to read the surrounding text. This is especially important for screen reader users who often navigate web pages by jumping from one link to another. It also improves the SEO value of a page and helps all users find the information they need more efficiently."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-05T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#ac6b62e1-4920-5c94-887d-1320c61262ac",
+                "rel": "source",
+                "text": "WCAG : Operable Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "wo-10_smt",
+                "name": "statement",
+                "prose": "Ensure that link text identifies the purpose of the link and can be interpreted easily on its own."
+              },
+              {
+                "id": "wo-10_gdn",
+                "name": "guidance",
+                "prose": "Avoid using vague link text such as \"click here\" or \"read more\"."
+              }
+            ]
+          },
+          {
+            "id": "wo-11",
+            "title": "Multiple Ways",
+            "props": [
+              {
+                "name": "rationale",
+                "value": "Providing multiple ways to access content allows end users to locate content in ways that best meet their needs. Users may find one navigation path easier or more comprehensible than another, improving both the user experience of the service and the discoverability of content."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-05T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#ac6b62e1-4920-5c94-887d-1320c61262ac",
+                "rel": "source",
+                "text": "WCAG : Operable Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "wo-11_smt",
+                "name": "statement",
+                "prose": "Provide at least two ways to reach the same content."
+              },
+              {
+                "id": "wo-11_gdn",
+                "name": "guidance",
+                "prose": "Focus on information architecture and implement multiple ways to reach content such as clear and logical navigation structures, search function and shortcuts."
+              }
+            ]
+          },
+          {
+            "id": "wo-12",
+            "title": "Headings and Labels",
+            "props": [
+              {
+                "name": "rationale",
+                "value": "Allows end users to quickly identify which element or control has keyboard focus. This is especially important for users relying exclusively on keyboards to navigate."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-05T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#ac6b62e1-4920-5c94-887d-1320c61262ac",
+                "rel": "source",
+                "text": "WCAG : Operable Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "wo-12_smt",
+                "name": "statement",
+                "prose": "Provide descriptive headers and labels that identify the context of surrounding text and the component's purpose."
+              },
+              {
+                "id": "wo-12_gdn",
+                "name": "guidance",
+                "prose": "Do not disable platform or user-agent default visual focus indicators. If default focus indicators are not available or do not meet other accessible guidelines like colour contrast, modify the background colour or border of the element with focus.\nEnsure that 'floating' components like widgets and sticky headers do not cover elements receiving focus."
+              }
+            ]
+          },
+          {
+            "id": "wo-13",
+            "title": "Focus Visible and Not Obscured",
+            "props": [
+              {
+                "name": "rationale",
+                "value": "Allows end users to quickly identify which element or control has keyboard focus. This is especially important for users relying exclusively on keyboards to navigate."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-05T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#ac6b62e1-4920-5c94-887d-1320c61262ac",
+                "rel": "source",
+                "text": "WCAG : Operable Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "wo-13_smt",
+                "name": "statement",
+                "prose": "Ensure components receiving focus have distinguishable indicators and are not obscured by other elements."
+              },
+              {
+                "id": "wo-13_gdn",
+                "name": "guidance",
+                "prose": "Do not disable platform or user-agent default visual focus indicators. If default focus indicators are not available or do not meet other accessible guidelines like colour contrast, modify the background colour or border of the element with focus.\nEnsure that 'floating' components like widgets and sticky headers do not cover elements receiving focus."
+              }
+            ]
+          },
+          {
+            "id": "wo-14",
+            "title": "Simple Pointer Alternatives",
+            "props": [
+              {
+                "name": "rationale",
+                "value": "Interactions that involve complicated gestures or precise movements such as dragging or pinching can be challenging or impossible for end users with mobility disabilities, elderly users, or those using adaptive input devices."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-05T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#ac6b62e1-4920-5c94-887d-1320c61262ac",
+                "rel": "source",
+                "text": "WCAG : Operable Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "wo-14_smt",
+                "name": "statement",
+                "prose": "Provide single-point alternatives to multipoint or path-based interactions or gestures."
+              },
+              {
+                "id": "wo-14_gdn",
+                "name": "guidance",
+                "prose": "If multipoint or path-based gestures such as sliders and drag-and-drop functions are used, provide alternative options to perform the same interaction through simple single-point alternatives."
+              }
+            ]
+          },
+          {
+            "id": "wo-15",
+            "title": "Pointer Cancellation",
+            "props": [
+              {
+                "name": "rationale",
+                "value": "People with various disabilities can accidentally initiate touch or mouse events. Allowing such end users to easily recover from such unintended pointer actions minimises unintended consequences such as accidental submissions."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-05T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#ac6b62e1-4920-5c94-887d-1320c61262ac",
+                "rel": "source",
+                "text": "WCAG : Operable Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "wo-15_smt",
+                "name": "statement",
+                "prose": "Provide a predictable and consistent way to cancel or undo pointer interactions."
+              },
+              {
+                "id": "wo-15_gdn",
+                "name": "guidance",
+                "prose": "Implement clear and accessible methods to cancel critical actions such as an \"undo\" function. Confirmation dialogs can be used as a secondary confirmation for critical actions.\nUnless absolutely necessary, only execute a function when the click or touch is released (up-event) instead of when the click or touch is made (down-event). This gives end users the opportunity to cancel the activation after by moving their pointer or finger away from the target before releasing."
+              }
+            ]
+          },
+          {
+            "id": "wo-16",
+            "title": "Label In Name",
+            "props": [
+              {
+                "name": "rationale",
+                "value": "Matching visible text labels with the programmatic component supports the use of assistive technologies such as allowing speech-input users to navigate by speaking the visible text labels of components."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-05T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#ac6b62e1-4920-5c94-887d-1320c61262ac",
+                "rel": "source",
+                "text": "WCAG : Operable Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "wo-16_smt",
+                "name": "statement",
+                "prose": "Ensure that visible text labels of user interface components match or are contained within their programmatic or accessible names."
+              },
+              {
+                "id": "wo-16_gdn",
+                "name": "guidance",
+                "prose": "Ensure that accessibility labels meaningfully describe the equivalent visual UI element by containing both the visible text label and other contextual descriptors that help assistive technology users fully understand the purpose and interaction."
+              }
+            ]
+          },
+          {
+            "id": "wo-17",
+            "title": "Motion Actuation",
+            "props": [
+              {
+                "name": "rationale",
+                "value": "End users with motor impairments may have difficulty holding or moving a device steadily, which can prevent them from using motion-operated features and may cause accidental triggering of functions."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-05T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#ac6b62e1-4920-5c94-887d-1320c61262ac",
+                "rel": "source",
+                "text": "WCAG : Operable Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "wo-17_smt",
+                "name": "statement",
+                "prose": "Provide an option to disable motion control for motion-operated features, and provide alternative means to operate such features."
+              },
+              {
+                "id": "wo-17_gdn",
+                "name": "guidance",
+                "prose": "When implementing motion-operated features, provide a way to disable motion actuation and offer alternative means to operate these features through user interface components.\nNot required when motion is essential to the function, such as in pedometers that require device motion to count steps."
+              }
+            ]
+          },
+          {
+            "id": "wo-18",
+            "title": "Minimum Pointer Target Size",
+            "props": [
+              {
+                "name": "rationale",
+                "value": "End users with physical and fine motor disabilities require more effort to accurately activate small targets or targets that are close to each other. Ensuring pointer inputs are large enough with sufficient spacing between targets reduces the likelihood of errors from accidentally activating the wrong control."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-05T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#ac6b62e1-4920-5c94-887d-1320c61262ac",
+                "rel": "source",
+                "text": "WCAG : Operable Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "wo-18_smt",
+                "name": "statement",
+                "prose": "Ensure that interactive areas for pointer input are at least 24 by 24 CSS pixels."
+              },
+              {
+                "id": "wo-18_gdn",
+                "name": "guidance",
+                "prose": "Use min-height and min-width to ensure sufficient target spacing.\nIf targets have to be smaller than 24-pixels, they must be spaced so that a 24-pixel area around each target does not overlap adjacent targets.\nFollow platform guidelines and consider larger target sizes for mobile applications and mobile web browsing where touch is the input mechanism.\nNot required if the size of the interactive area is constrained by the line-height of non-interactive text such as text links within a body of text."
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "back-matter": {
+      "resources": [
+        {
+          "uuid": "ac6b62e1-4920-5c94-887d-1320c61262ac",
+          "title": "WCAG : Operable — Singapore Government ICT&SS Policy Reform",
+          "description": "Official WCAG : Operable control catalog page.",
+          "rlinks": [
+            {
+              "href": "https://info.standards.tech.gov.sg/control-catalog/dss/wo/"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

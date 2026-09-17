@@ -1,0 +1,310 @@
+{
+  "catalog": {
+    "uuid": "0078d18f-fa83-53cc-bed0-08a9f485f3e7",
+    "metadata": {
+      "title": "Cybersecurity Control Catalog - Security Testing",
+      "last-modified": "2026-03-24T00:00:00+08:00",
+      "version": "2026.03.24",
+      "oscal-version": "1.1.2",
+      "props": [
+        {
+          "name": "keywords",
+          "value": "IM8, GovTech, Singapore, cybersecurity, Security Testing"
+        },
+        {
+          "name": "abbreviation",
+          "value": "ST"
+        },
+        {
+          "name": "source",
+          "value": "https://info.standards.tech.gov.sg/control-catalog/cybersecurity/st/"
+        }
+      ]
+    },
+    "groups": [
+      {
+        "id": "st",
+        "title": "Security Testing",
+        "controls": [
+          {
+            "id": "st-1",
+            "title": "Vulnerability Assessment",
+            "props": [
+              {
+                "name": "risk-statement",
+                "value": "Without regular vulnerability assessment scans, hosts remain exposed to undetected security vulnerabilities or misconfigurations, increasing the risk of exploitation and unauthorised access to critical systems."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-24T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#2929db13-b0b0-5dc5-ad51-4d1a5f5ccd4b",
+                "rel": "source",
+                "text": "Security Testing Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "st-1_smt",
+                "name": "statement",
+                "prose": "Run regular {{ insert: param, st-1_prm_1 }} vulnerability assessment scans for eligible hosts at least every {{ insert: param, st-1_prm_2 }} day(s)."
+              },
+              {
+                "id": "st-1_gdn",
+                "name": "guidance",
+                "prose": "Select agent-based or network-based scans as necessary. Implement authenticated scans where possible for greater coverage. Use scanners such as Amazon Inspector or Microsoft Defender for Cloud for continuous scanning of cloud systems. For on-premises systems or systems that require periodic scans, subscribe to Vulnerability Management System (VMS). For SaaS, refer to past vulnerability scanning reports done by the SaaS provider, if any."
+              }
+            ],
+            "params": [
+              {
+                "id": "st-1_prm_1",
+                "class": "str",
+                "label": "type",
+                "guidelines": [
+                  {
+                    "prose": "The type of vulnerability assessment scanning."
+                  }
+                ]
+              },
+              {
+                "id": "st-1_prm_2",
+                "class": "int",
+                "label": "time period (days)",
+                "guidelines": [
+                  {
+                    "prose": "The time period in days for vulnerability assessment scans."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "st-2",
+            "title": "Cloud Security Posture Management",
+            "props": [
+              {
+                "name": "risk-statement",
+                "value": "Lack of continuous configuration scans through cloud security posture management increases the risk of misconfigurations in cloud assets, leading to security vulnerabilities, data breaches, and unauthorised access."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-24T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#2929db13-b0b0-5dc5-ad51-4d1a5f5ccd4b",
+                "rel": "source",
+                "text": "Security Testing Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "st-2_smt",
+                "name": "statement",
+                "prose": "Set up cloud security posture management that performs continuous configuration scans on cloud assets."
+              },
+              {
+                "id": "st-2_gdn",
+                "name": "guidance",
+                "prose": "Use cloud security posture management tools such as AWS Security Hub, Azure Defender for Cloud, and Google Security Command Center."
+              }
+            ]
+          },
+          {
+            "id": "st-3",
+            "title": "Public Vulnerability Disclosure Programme",
+            "props": [
+              {
+                "name": "risk-statement",
+                "value": "Lack of a reporting channel for vulnerabilities increases the risk of undetected and unmitigated vulnerabilities."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-24T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#2929db13-b0b0-5dc5-ad51-4d1a5f5ccd4b",
+                "rel": "source",
+                "text": "Security Testing Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "st-3_smt",
+                "name": "statement",
+                "prose": "Establish a public reporting channel for disclosing vulnerabilities in public-facing systems via {{ insert: param, st-3_prm_1 }}."
+              },
+              {
+                "id": "st-3_gdn",
+                "name": "guidance",
+                "prose": "Use the security.txt standard or add a link to the vulnerability reporting channel on all pages, such as in the footer."
+              }
+            ],
+            "params": [
+              {
+                "id": "st-3_prm_1",
+                "class": "str",
+                "label": "type",
+                "guidelines": [
+                  {
+                    "prose": "The type of public vulnerability reporting channel."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "st-4",
+            "title": "Security Testing Programme",
+            "props": [
+              {
+                "name": "risk-statement",
+                "value": "Without undergoing security testing, there's an increased risk of undetected security weaknesses, leaving the application susceptible to exploitation, data breaches, and unauthorised access."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-24T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#2929db13-b0b0-5dc5-ad51-4d1a5f5ccd4b",
+                "rel": "source",
+                "text": "Security Testing Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "st-4_smt",
+                "name": "statement",
+                "prose": "Conduct and document a {{ insert: param, st-4_prm_1 }} by internal teams or independent external parties every {{ insert: param, st-4_prm_2 }} day(s)."
+              },
+              {
+                "id": "st-4_gdn",
+                "name": "guidance",
+                "prose": "Refer to the WOG Security Testing Guidelines for recommendations on the conduct of security testing engagements. For systems that are permitted to use Government Bug Bounty Programme as an alternative, obtain a passing rating based on the Agency Readiness Scorecard. For SaaS, refer to past penetration testing reports done by the SaaS provider, if any."
+              }
+            ],
+            "params": [
+              {
+                "id": "st-4_prm_1",
+                "class": "str",
+                "label": "type",
+                "guidelines": [
+                  {
+                    "prose": "The type of security testing programme."
+                  }
+                ]
+              },
+              {
+                "id": "st-4_prm_2",
+                "class": "int",
+                "label": "time period (days)",
+                "guidelines": [
+                  {
+                    "prose": "The time period in days of penetration testing frequency."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "st-5",
+            "title": "Vulnerability Management",
+            "props": [
+              {
+                "name": "risk-statement",
+                "value": "Failure to promptly remediate vulnerabilities increases the risk of potential exploits, security breaches, and prolonged exposure to known vulnerabilities in the system."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-24T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#2929db13-b0b0-5dc5-ad51-4d1a5f5ccd4b",
+                "rel": "source",
+                "text": "Security Testing Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "st-5_smt",
+                "name": "statement",
+                "prose": "Triage, prioritise and then remediate or risk accept vulnerabilities that materially impact security within the following timeframe based on severity:\n* Critical: {{ insert: param, st-5_prm_1 }} day(s)\n* High: {{ insert: param, st-5_prm_2 }} day(s)\n* Medium: {{ insert: param, st-5_prm_3 }} day(s)\n* Low: {{ insert: param, st-5_prm_4 }} day(s)"
+              },
+              {
+                "id": "st-5_gdn",
+                "name": "guidance",
+                "prose": "Vulnerabilities that materially impact security include vulnerabilities that have a high likelihood of exploitability, or are known to be exploited. Refer to resources such as the Known Exploited Vulnerabilities Catalog to prioritise vulnerabilities that should be remediated. Seek approval from the appropriate approving authority for risk acceptance. Document the actions taken."
+              }
+            ],
+            "params": [
+              {
+                "id": "st-5_prm_1",
+                "class": "int",
+                "label": "time period (days)",
+                "guidelines": [
+                  {
+                    "prose": "The time period in days to remediate or risk accept critical vulnerability findings."
+                  }
+                ]
+              },
+              {
+                "id": "st-5_prm_2",
+                "class": "int",
+                "label": "time period (days)",
+                "guidelines": [
+                  {
+                    "prose": "The time period in days to remediate or risk accept high vulnerability findings."
+                  }
+                ]
+              },
+              {
+                "id": "st-5_prm_3",
+                "class": "int",
+                "label": "time period (days)",
+                "guidelines": [
+                  {
+                    "prose": "The time period in days to remediate or risk accept medium vulnerability findings."
+                  }
+                ]
+              },
+              {
+                "id": "st-5_prm_4",
+                "class": "int",
+                "label": "time period (days)",
+                "guidelines": [
+                  {
+                    "prose": "The time period in days to remediate or risk accept low vulnerability findings."
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "back-matter": {
+      "resources": [
+        {
+          "uuid": "2929db13-b0b0-5dc5-ad51-4d1a5f5ccd4b",
+          "title": "Security Testing — Singapore Government ICT&SS Policy Reform",
+          "description": "Official Security Testing control catalog page.",
+          "rlinks": [
+            {
+              "href": "https://info.standards.tech.gov.sg/control-catalog/cybersecurity/st/"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

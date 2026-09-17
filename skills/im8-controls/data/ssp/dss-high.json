@@ -1,0 +1,2998 @@
+{
+  "system-security-plan": {
+    "uuid": "97d6c1f7-111b-59d5-a08e-1796d3821cad",
+    "metadata": {
+      "title": "System Security Plan - Digital Services (High Impact)",
+      "last-modified": "2026-03-26T00:00:00+08:00",
+      "version": "2026.03.26",
+      "oscal-version": "1.1.2",
+      "props": [
+        {
+          "name": "keywords",
+          "value": "IM8, GovTech, Singapore, SSP, Digital Services (High Impact)"
+        },
+        {
+          "name": "source",
+          "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+          "value": "https://info.standards.tech.gov.sg/ssp/dss-high/"
+        }
+      ],
+      "roles": [
+        {
+          "id": "system-owner",
+          "title": "System Owner"
+        }
+      ],
+      "remarks": "Digital Service (also known as Government Digital Service) refers to any public service that is delivered digitally. It is used to convey the Government’s position, provide information, and/or deliver services to the public.\nDigital Services (High impact) refer to Digital services with at least 1 million visits per year (note: this will be determined based on WOGAA statistics)."
+    },
+    "import-profile": {
+      "href": "#e231cdb4-53ae-5e76-9bb4-540f491eadc5",
+      "remarks": "No OSCAL profile is published for this baseline; the selected controls are listed on the source page and resolve against the catalogs in back-matter."
+    },
+    "system-characteristics": {
+      "system-ids": [
+        {
+          "identifier-type": "http://ietf.org/rfc/rfc4122",
+          "id": "97d6c1f7-111b-59d5-a08e-1796d3821cad"
+        }
+      ],
+      "system-name": "High Impact Services System",
+      "description": "A system that has digital services with high impact.",
+      "security-sensitivity-level": "NA",
+      "system-information": {
+        "information-types": [
+          {
+            "uuid": "d5eae34a-ed25-52b3-9054-efcb109981f0",
+            "title": "Information classified NA",
+            "description": "Placeholder information type from the template; replace with the system's actual information types and impact levels.",
+            "confidentiality-impact": {
+              "base": "low"
+            },
+            "integrity-impact": {
+              "base": "low"
+            },
+            "availability-impact": {
+              "base": "low"
+            }
+          }
+        ]
+      },
+      "status": {
+        "state": "other",
+        "remarks": "Template baseline; agencies customise it into a system-specific SSP."
+      },
+      "authorization-boundary": {
+        "description": "Not defined by the template; agencies must describe the system's authorisation boundary."
+      }
+    },
+    "system-implementation": {
+      "users": [
+        {
+          "uuid": "bf32df21-34f6-59e3-bcaf-b8592b07a0e7",
+          "title": "System Owner",
+          "role-ids": [
+            "system-owner"
+          ]
+        }
+      ],
+      "components": [
+        {
+          "uuid": "e7017a17-3b6e-5737-bfa1-72665fb3d13c",
+          "type": "this-system",
+          "title": "High Impact Services System",
+          "description": "A system that has digital services with high impact.",
+          "status": {
+            "state": "other",
+            "remarks": "Template component."
+          }
+        }
+      ]
+    },
+    "control-implementation": {
+      "description": "Digital Service (also known as Government Digital Service) refers to any public service that is delivered digitally. It is used to convey the Government’s position, provide information, and/or deliver services to the public.\nDigital Services (High impact) refer to Digital services with at least 1 million visits per year (note: this will be determined based on WOGAA statistics).",
+      "implemented-requirements": [
+        {
+          "uuid": "962056bf-1f95-585a-8605-cd162c1193fd",
+          "control-id": "uu-1",
+          "props": [
+            {
+              "name": "control-title",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "Understand user needs"
+            },
+            {
+              "name": "profile-level",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "1"
+            }
+          ],
+          "links": [
+            {
+              "href": "#01608fdf-0b3e-5b82-977a-3364420cc24f",
+              "rel": "reference"
+            }
+          ],
+          "by-components": [
+            {
+              "component-uuid": "e7017a17-3b6e-5737-bfa1-72665fb3d13c",
+              "uuid": "cea89919-5739-5911-957e-44f6602fb9f2",
+              "description": "Understand and document Public Users' needs and context when creating a new digital service, redesigning existing services or introducing major features."
+            }
+          ],
+          "remarks": "Control Recommendations:\nTake steps to understand end user context, needs, and problems before deciding on a solution.\nThis includes activities such as:\na) conducting user research (e.g. surveys, interviews, ethnographic studies)\nb) analysing end user feedback\nc) using web analytics and other relevant data.\n\nRationale:\nUnderstanding end user context, goals, behaviour and mindsets allows you to design solutions that truly meet their needs. Better-aligned digital services effective meet user needs from the start, improving user satisfaction, and reducing costly rework."
+        },
+        {
+          "uuid": "783ffdf2-beb3-54c7-9d55-515428e84f16",
+          "control-id": "uu-2",
+          "props": [
+            {
+              "name": "control-title",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "Test with users"
+            },
+            {
+              "name": "profile-level",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "1"
+            }
+          ],
+          "links": [
+            {
+              "href": "#01608fdf-0b3e-5b82-977a-3364420cc24f",
+              "rel": "reference"
+            }
+          ],
+          "by-components": [
+            {
+              "component-uuid": "e7017a17-3b6e-5737-bfa1-72665fb3d13c",
+              "uuid": "3fde93f1-2d8c-51fc-80e0-656654d3d8fa",
+              "description": "Conduct and document usability testing with representative Public Users when creating a new digital service, redesigning existing services or introducing major features. Remediate or risk accept findings within {{ insert: param, uu-2_prm_1 }} day(s)."
+            }
+          ],
+          "remarks": "Control Recommendations:\nConduct usability testing at key milestones such as prior to public release. Identify key end user tasks based on real scenarios and create prototypes to test them.\nDocument findings in a structured report, prioritising issues based on severity.\nWhile structured usability testing is recommended, lightweight methods—such as guerrilla testing with a small number of users—are acceptable if they still yield actionable insights.\nUsability testing is not user acceptance testing.\n\nRationale:\nTesting with end users allows early identification of usability issues at various points in the design and development process. This ensures the product is intuitive and usable, and reduces the risk of costly fixes later.\n\nParameters to set:\n* uu-2_prm_1"
+        },
+        {
+          "uuid": "847a0d43-fa96-5c0f-b7f9-ef839e7003ce",
+          "control-id": "bd-1",
+          "props": [
+            {
+              "name": "control-title",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "Responsive Web Design"
+            },
+            {
+              "name": "profile-level",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "1"
+            }
+          ],
+          "links": [
+            {
+              "href": "#1d867980-af0e-5aa9-a10c-97376d125fa6",
+              "rel": "reference"
+            }
+          ],
+          "by-components": [
+            {
+              "component-uuid": "e7017a17-3b6e-5737-bfa1-72665fb3d13c",
+              "uuid": "b9bb3a8b-9cc5-54ba-ad79-408872c0d8ac",
+              "description": "Adopt Responsive Web Design for web-based digital services.\nIf specific content is deemed unsuitable for mobile devices, disable mobile device access, and clearly explain why the content or service is disabled and how it can be accessed."
+            }
+          ],
+          "remarks": "Control Recommendations:\nImplement Responsive Web Design techniques to ensure web-based digital services are optimised for various devices and screen sizes. Test and resolve any layout or functionality issues.\n\nRationale:\nA significant amount of web traffic comes from mobile devices. Responsive Web Design allows for optimised browsing experience on devices with different screen sizes."
+        },
+        {
+          "uuid": "febeeb73-3bd4-5a47-97a1-57bb00029979",
+          "control-id": "bd-2",
+          "props": [
+            {
+              "name": "control-title",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "Site Search"
+            },
+            {
+              "name": "profile-level",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "1"
+            }
+          ],
+          "links": [
+            {
+              "href": "#1d867980-af0e-5aa9-a10c-97376d125fa6",
+              "rel": "reference"
+            }
+          ],
+          "by-components": [
+            {
+              "component-uuid": "e7017a17-3b6e-5737-bfa1-72665fb3d13c",
+              "uuid": "c738d478-d0b5-511d-bad3-bda840175a89",
+              "description": "Provide a site search function for multi-page websites."
+            }
+          ],
+          "remarks": "Control Recommendations:\nImplement a site search function like SearchSG. Make it easily accessible and discoverable. Regularly review search analytics to optimise the search functionality based on user behaviour and needs.\nNot required for\na) Mobile applications\nb) Transactional services\nc) Websites where search is the service offered (e.g. CDCGoWhere).\n\nRationale:\nSearch is a known and effective alternative to navigation for users who know what they are looking for."
+        },
+        {
+          "uuid": "a913e8c5-1274-59d7-bc84-1c80efee8c5a",
+          "control-id": "bd-3",
+          "props": [
+            {
+              "name": "control-title",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "Support multiple languages"
+            },
+            {
+              "name": "profile-level",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "2"
+            }
+          ],
+          "links": [
+            {
+              "href": "#1d867980-af0e-5aa9-a10c-97376d125fa6",
+              "rel": "reference"
+            }
+          ],
+          "by-components": [
+            {
+              "component-uuid": "e7017a17-3b6e-5737-bfa1-72665fb3d13c",
+              "uuid": "6eff9294-73f6-5bb1-8356-7cb293237649",
+              "description": "Provide content in multiple languages to accommodate language preferences."
+            }
+          ],
+          "remarks": "Control Recommendations:\nImplement language selection mechanisms at key entry points, such as login or homepage, or select language based on device setting. Ensure that end users can easily switch between languages at any time.\n\nRationale:\nAllowing end users to select their preferred language enhances usability and inclusivity, allowing broader access and understanding."
+        },
+        {
+          "uuid": "a8e2c86a-e768-5188-acdb-89ee3305ed8d",
+          "control-id": "bd-4",
+          "props": [
+            {
+              "name": "control-title",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "Clear and Concise Content"
+            },
+            {
+              "name": "profile-level",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "2"
+            }
+          ],
+          "links": [
+            {
+              "href": "#1d867980-af0e-5aa9-a10c-97376d125fa6",
+              "rel": "reference"
+            }
+          ],
+          "by-components": [
+            {
+              "component-uuid": "e7017a17-3b6e-5737-bfa1-72665fb3d13c",
+              "uuid": "5261ceae-8d6d-540d-b97e-5b5569f033ba",
+              "description": "Write in a clear and concise manner that is easy to read and understand; Choose simple words that most people can understand."
+            }
+          ],
+          "remarks": "Control Recommendations:\nConduct user testing to validate that content is clear and accessible to your target audience.\nReadability formulas such as Flesch Reading Ease or Flesch-Kincaid grade level provide an indication of the difficulty of text and identify areas for simplification.\n\nRationale:\nWriting in a simple and concise manner allows more users with different backgrounds and language proficiency to understand your content."
+        },
+        {
+          "uuid": "bf5950f9-07fb-5816-99b6-051eb26336c7",
+          "control-id": "bd-5",
+          "props": [
+            {
+              "name": "control-title",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "Search Engine Optimisation"
+            },
+            {
+              "name": "profile-level",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "2"
+            }
+          ],
+          "links": [
+            {
+              "href": "#1d867980-af0e-5aa9-a10c-97376d125fa6",
+              "rel": "reference"
+            }
+          ],
+          "by-components": [
+            {
+              "component-uuid": "e7017a17-3b6e-5737-bfa1-72665fb3d13c",
+              "uuid": "708a37bc-a285-58f8-8730-7ef26f2b7a9f",
+              "description": "Implement Search Engine Optimisation (SEO) best practices to improve website search engine rankings and results."
+            }
+          ],
+          "remarks": "Control Recommendations:\nFill out all metadata fields and optimise your website's meta tags. Check that information presented on the search engine results page such as page titles and abstracts are informative and relevant.\nNot required for digital services that are restricted to a specific audience and accessed directly, and experimental or beta services.\n\nRationale:\nSEO increases the findability and reach of web content by helping search platforms effectively crawl your content and optimising the content displayed in search listings. Good SEO practices are essential for end users who access your pages via search."
+        },
+        {
+          "uuid": "7b2e7794-1391-5412-84bf-746692210d61",
+          "control-id": "bd-6",
+          "props": [
+            {
+              "name": "control-title",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "Consistent UI Design"
+            },
+            {
+              "name": "profile-level",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "1"
+            }
+          ],
+          "links": [
+            {
+              "href": "#1d867980-af0e-5aa9-a10c-97376d125fa6",
+              "rel": "reference"
+            }
+          ],
+          "by-components": [
+            {
+              "component-uuid": "e7017a17-3b6e-5737-bfa1-72665fb3d13c",
+              "uuid": "006764bf-8e5a-5ea1-b0de-2ec1294669a6",
+              "description": "Use a design system or style guide to maintain a consistent user interface design throughout the entire service."
+            }
+          ],
+          "remarks": "Control Recommendations:\nUse a design system such as the Singapore Government Design System (SGDS).\n\nRationale:\nConsistent design and placement of interface components improves usability by allowing end users to quickly learn interface patterns. Design systems or style guides help with consistency and scalability by consolidating reusable designs and components."
+        },
+        {
+          "uuid": "89824699-4498-5f93-8d36-f33a2def962a",
+          "control-id": "bd-7",
+          "props": [
+            {
+              "name": "control-title",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "Mandatory and Optional Fields"
+            },
+            {
+              "name": "profile-level",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "1"
+            }
+          ],
+          "links": [
+            {
+              "href": "#1d867980-af0e-5aa9-a10c-97376d125fa6",
+              "rel": "reference"
+            }
+          ],
+          "by-components": [
+            {
+              "component-uuid": "e7017a17-3b6e-5737-bfa1-72665fb3d13c",
+              "uuid": "2312ff8f-2c5b-57da-8c24-fc90075c3021",
+              "description": "Indicate if input fields are mandatory or optional."
+            }
+          ],
+          "remarks": "Control Recommendations:\nUse consistent visual indicators, such as asterisks (*) for mandatory fields. Providing an 'optional' label for optional fields is a good alternative if majority of the fields are mandatory. Ensure these indicators are accessible to screen readers.\nNot required for login pages asking for unique identifier (username) and password.\n\nRationale:\nReduces completion time by allowing end users to skip unnecessary fields and increases completion rates by helping end users understand the effort required."
+        },
+        {
+          "uuid": "0fa6ca50-f809-563e-ab68-eb8f7cb473af",
+          "control-id": "bd-8",
+          "props": [
+            {
+              "name": "control-title",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "Log-in Indication"
+            },
+            {
+              "name": "profile-level",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "1"
+            }
+          ],
+          "links": [
+            {
+              "href": "#1d867980-af0e-5aa9-a10c-97376d125fa6",
+              "rel": "reference"
+            }
+          ],
+          "by-components": [
+            {
+              "component-uuid": "e7017a17-3b6e-5737-bfa1-72665fb3d13c",
+              "uuid": "8f8b3c36-2e27-569c-94dd-c381f3ecc38f",
+              "description": "Prominently display the name or identifier of the individual associated with the account after login."
+            }
+          ],
+          "remarks": "Control Recommendations:\nDisplay the end user's name or identifier in a clear, accessible location, such as the header or near the top of the page.\n\nRationale:\nProvides a clear indication that the end user is logged into the right account. This is especially important for shared devices."
+        },
+        {
+          "uuid": "f4f76c92-d15a-51f8-923b-094d1ebce0b8",
+          "control-id": "bd-9",
+          "props": [
+            {
+              "name": "control-title",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "Contact Channels"
+            },
+            {
+              "name": "profile-level",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "1"
+            }
+          ],
+          "links": [
+            {
+              "href": "#1d867980-af0e-5aa9-a10c-97376d125fa6",
+              "rel": "reference"
+            }
+          ],
+          "by-components": [
+            {
+              "component-uuid": "e7017a17-3b6e-5737-bfa1-72665fb3d13c",
+              "uuid": "531a97fe-20e8-5efc-99d9-b7112442a3ac",
+              "description": "Provide at least one contact channel for help or assistance."
+            }
+          ],
+          "remarks": "Control Recommendations:\nImplement contact channels such as phone numbers, email, contact forms, live chat.\nTL-4: Official Government Footer requires a link to contact channels within the footer and WU-9: Consistent Help requires consistent placement of help and support mechanisms across pages.\n\nRationale:\nAllow end users to contact the relevant parties if they require help or assistance. Reassures users by providing a clear method to acquire information or resolve issues."
+        },
+        {
+          "uuid": "1cb3406a-2ae8-5383-9328-94cb71735a22",
+          "control-id": "tx-1",
+          "props": [
+            {
+              "name": "control-title",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "Digital-First Approach"
+            },
+            {
+              "name": "profile-level",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "1"
+            }
+          ],
+          "links": [
+            {
+              "href": "#103f5d72-122c-5399-8272-433c44aafb75",
+              "rel": "reference"
+            }
+          ],
+          "by-components": [
+            {
+              "component-uuid": "e7017a17-3b6e-5737-bfa1-72665fb3d13c",
+              "uuid": "6ed68840-36da-5e57-9736-e843163e861a",
+              "description": "Design digital transactions to be fully digital from start to finish, unless otherwise stated in legal regulations."
+            }
+          ],
+          "remarks": "Control Recommendations:\nAvoid requiring non-digital interactions such as physical signatures, paper-based approvals, or in-person submissions as part of a digital service.\nImplement digital signature solutions such as Singpass, and enable common digital payment methods like credit card and Paynow.\n\nRationale:\nA transaction that is not fully digital diminishes the convenience of being able to transact anywhere and anytime."
+        },
+        {
+          "uuid": "6e6eb76e-7254-54d3-a693-368537974e92",
+          "control-id": "tx-2",
+          "props": [
+            {
+              "name": "control-title",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "Transaction Prerequisites"
+            },
+            {
+              "name": "profile-level",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "1"
+            }
+          ],
+          "links": [
+            {
+              "href": "#103f5d72-122c-5399-8272-433c44aafb75",
+              "rel": "reference"
+            }
+          ],
+          "by-components": [
+            {
+              "component-uuid": "e7017a17-3b6e-5737-bfa1-72665fb3d13c",
+              "uuid": "52e6adf2-a228-5fa0-aac4-9144f52ca93f",
+              "description": "Provide all information required to complete the transaction before the start of the transaction."
+            }
+          ],
+          "remarks": "Control Recommendations:\nInformation to include where applicable:\na) Prerequisites or eligibility criteria\nb) Estimated completion time/time range\nc) Required documents and accepted file formats\nd) Cost and payment modes available\n\nRationale:\nKnowing the information and documents required allows end users to assess their readiness and ability to complete the transaction before committing to it."
+        },
+        {
+          "uuid": "584d4192-cb5d-559c-9285-356cd682d71e",
+          "control-id": "tx-3",
+          "props": [
+            {
+              "name": "control-title",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "Break Down Long Transactions"
+            },
+            {
+              "name": "profile-level",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "2"
+            }
+          ],
+          "links": [
+            {
+              "href": "#103f5d72-122c-5399-8272-433c44aafb75",
+              "rel": "reference"
+            }
+          ],
+          "by-components": [
+            {
+              "component-uuid": "e7017a17-3b6e-5737-bfa1-72665fb3d13c",
+              "uuid": "7f979502-dc3e-5541-b8eb-e510aa2132d6",
+              "description": "Break long transactions down into logical steps or sections."
+            }
+          ],
+          "remarks": "Control Recommendations:\nGroup related input fields together to reduce cognitive load and streamline data entry.\n\nRationale:\nMakes long or multi-step tasks feel more manageable."
+        },
+        {
+          "uuid": "5f80f24b-ef07-5142-8398-2d601f67339c",
+          "control-id": "tx-4",
+          "props": [
+            {
+              "name": "control-title",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "Progress Indicators"
+            },
+            {
+              "name": "profile-level",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "2"
+            }
+          ],
+          "links": [
+            {
+              "href": "#103f5d72-122c-5399-8272-433c44aafb75",
+              "rel": "reference"
+            }
+          ],
+          "by-components": [
+            {
+              "component-uuid": "e7017a17-3b6e-5737-bfa1-72665fb3d13c",
+              "uuid": "27c65156-6d4e-5ffe-ba9c-e1c7f03c9c31",
+              "description": "Provide progress indicators for multi-step transactions."
+            }
+          ],
+          "remarks": "Control Recommendations:\nUse a clear and intuitive design to visually convey the process and progress.\n\nRationale:\nProgress indicators can help end users estimate time required for a task, and know their progress within a transaction or flow."
+        },
+        {
+          "uuid": "1dfe6c7f-4f87-58d0-ba0e-2c35d677d82e",
+          "control-id": "tx-5",
+          "props": [
+            {
+              "name": "control-title",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "Save Draft Function"
+            },
+            {
+              "name": "profile-level",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "2"
+            }
+          ],
+          "links": [
+            {
+              "href": "#103f5d72-122c-5399-8272-433c44aafb75",
+              "rel": "reference"
+            }
+          ],
+          "by-components": [
+            {
+              "component-uuid": "e7017a17-3b6e-5737-bfa1-72665fb3d13c",
+              "uuid": "5bdbf5c4-3f5c-528d-afed-caa10d3ebe5e",
+              "description": "Provide a save draft function for long transactions."
+            }
+          ],
+          "remarks": "Control Recommendations:\nEnsure the option to save drafts is clearly visible and accessible. Provide clear feedback when a draft has been saved and provide easy access to retrieve and resume the draft.\n\nRationale:\nSome transactions have long estimated completion time or many fields. An option to save and continue later provides end users with the flexibility of performing the transaction in chunks, and assurance that input can be retrieved if something goes wrong."
+        },
+        {
+          "uuid": "886a4084-db68-5249-a82f-39674174e8aa",
+          "control-id": "tx-6",
+          "props": [
+            {
+              "name": "control-title",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "Pre-fill Data"
+            },
+            {
+              "name": "profile-level",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "1"
+            }
+          ],
+          "links": [
+            {
+              "href": "#103f5d72-122c-5399-8272-433c44aafb75",
+              "rel": "reference"
+            }
+          ],
+          "by-components": [
+            {
+              "component-uuid": "e7017a17-3b6e-5737-bfa1-72665fb3d13c",
+              "uuid": "d50a30c5-3f64-5500-8b67-a38a16978b1a",
+              "description": "Pre-fill forms with known data where applicable;\nWhere SingPass/CorpPass is used, provide the option to pre-fill personal or business data with MyInfo and Enterprise Data Hub (EDH)."
+            }
+          ],
+          "remarks": "Control Recommendations:\nProperly assess accuracy and relevance of any pre-filled data before implementation.\n\nRationale:\nPre-filled data saves end users time and minimises the risk of errors from manual input."
+        },
+        {
+          "uuid": "b6615fac-fcc7-58b9-a644-f1d5a9ec044a",
+          "control-id": "tx-7",
+          "props": [
+            {
+              "name": "control-title",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "Payment and Refund"
+            },
+            {
+              "name": "profile-level",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "1"
+            }
+          ],
+          "links": [
+            {
+              "href": "#103f5d72-122c-5399-8272-433c44aafb75",
+              "rel": "reference"
+            }
+          ],
+          "by-components": [
+            {
+              "component-uuid": "e7017a17-3b6e-5737-bfa1-72665fb3d13c",
+              "uuid": "90a789ca-5dd4-51d7-aec6-162a12e76922",
+              "description": "Provide payment and refund information before payment is made."
+            }
+          ],
+          "remarks": "Control Recommendations:\nEnsure this information is easily accessible on the payment page and before the start of the transaction.\n\nRationale:\nBeing transparent and upfront about payment related details reassures end users and minimises the unpleasantness of rectifying an error."
+        },
+        {
+          "uuid": "54ca2593-bd6c-5f47-a9ad-75565fd749f7",
+          "control-id": "tx-8",
+          "props": [
+            {
+              "name": "control-title",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "Managing Stored Payment Details"
+            },
+            {
+              "name": "profile-level",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "1"
+            }
+          ],
+          "links": [
+            {
+              "href": "#103f5d72-122c-5399-8272-433c44aafb75",
+              "rel": "reference"
+            }
+          ],
+          "by-components": [
+            {
+              "component-uuid": "e7017a17-3b6e-5737-bfa1-72665fb3d13c",
+              "uuid": "789ed91a-c83e-516e-9333-2887146e4fb2",
+              "description": "Allow updating and removal of stored payment details in all digital services involving payments."
+            }
+          ],
+          "remarks": "Control Recommendations:\nProvide clear instructions and confirmation prompts to guide end users through the process to minimise errors.\n\nRationale:\nProvides end users with control over sensitive payment information."
+        },
+        {
+          "uuid": "76099405-3401-5b2b-b750-c4a965b5f20d",
+          "control-id": "tx-9",
+          "props": [
+            {
+              "name": "control-title",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "Success or failure message"
+            },
+            {
+              "name": "profile-level",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "1"
+            }
+          ],
+          "links": [
+            {
+              "href": "#103f5d72-122c-5399-8272-433c44aafb75",
+              "rel": "reference"
+            }
+          ],
+          "by-components": [
+            {
+              "component-uuid": "e7017a17-3b6e-5737-bfa1-72665fb3d13c",
+              "uuid": "e21b46e9-59c5-58a0-bf6f-2c2522445f9a",
+              "description": "Display a success or failure message at the end of the transaction."
+            }
+          ],
+          "remarks": "Control Recommendations:\nUse familiar and unambiguous visual cues, such as clear copy, iconography, and colour(e.g. green for success, red for failure) to enhance immediate recognition.\n\nRationale:\nClear feedback on the outcome of the transaction reassures end users."
+        },
+        {
+          "uuid": "ff88065e-c14a-5bdf-aea1-7cce15e604d1",
+          "control-id": "tx-10",
+          "props": [
+            {
+              "name": "control-title",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "Failed Transaction Details"
+            },
+            {
+              "name": "profile-level",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "1"
+            }
+          ],
+          "links": [
+            {
+              "href": "#103f5d72-122c-5399-8272-433c44aafb75",
+              "rel": "reference"
+            }
+          ],
+          "by-components": [
+            {
+              "component-uuid": "e7017a17-3b6e-5737-bfa1-72665fb3d13c",
+              "uuid": "eb4e7aaa-f757-5849-ab5d-713e92b55fea",
+              "description": "Provide the following details for failed transactions:\n* a) Clear reasons for failure or rejection (unless limited by policy considerations)\n* b) Alternative actions\n* c) Channels for appeals or further enquiries"
+            }
+          ],
+          "remarks": "Control Recommendations:\nEnsuring explanations are clear and as detailed as possible within policy constraints.\n\nRationale:\nProviding specific and actionable information to end users when a transaction fails allows them to quickly understand the reasons, and resolve issues if applicable."
+        },
+        {
+          "uuid": "ccfec96c-f4ad-52d3-a357-b86e52a65e55",
+          "control-id": "tx-11",
+          "props": [
+            {
+              "name": "control-title",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "Payment details"
+            },
+            {
+              "name": "profile-level",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "1"
+            }
+          ],
+          "links": [
+            {
+              "href": "#103f5d72-122c-5399-8272-433c44aafb75",
+              "rel": "reference"
+            }
+          ],
+          "by-components": [
+            {
+              "component-uuid": "e7017a17-3b6e-5737-bfa1-72665fb3d13c",
+              "uuid": "9bf3b7b4-8090-522b-b7bd-26dac7049ebe",
+              "description": "Display payment details once payment has been completed."
+            }
+          ],
+          "remarks": "Control Recommendations:\nImportant payment details include:\ni) Acknowledgement code or receipt number (where applicable);\nii) Transaction date;\niii) List of products and/or services transacted (where applicable);\niv) Chosen digital payment mechanism (where applicable);\nv) Amount paid\nPayment information can be displayed on the success screen and/or sent via other acknowledgement channels. Consider providing the option to download or print the receipt for record-keeping.\n\nRationale:\nTransactions involving payment are important to end users. Post transaction acknowledgement serves as a secondary check and can potentially reduce the consequences of errors."
+        },
+        {
+          "uuid": "5758cf2c-81be-555c-b44e-78d01bd2a778",
+          "control-id": "tx-12",
+          "props": [
+            {
+              "name": "control-title",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "Transaction Outcome"
+            },
+            {
+              "name": "profile-level",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "1"
+            }
+          ],
+          "links": [
+            {
+              "href": "#103f5d72-122c-5399-8272-433c44aafb75",
+              "rel": "reference"
+            }
+          ],
+          "by-components": [
+            {
+              "component-uuid": "e7017a17-3b6e-5737-bfa1-72665fb3d13c",
+              "uuid": "0110e897-2267-51e0-abac-ab9dc147015b",
+              "description": "Provide an estimated timeframe for the transaction outcome when it is not immediately available."
+            }
+          ],
+          "remarks": "Control Recommendations:\nThis information can be provided before the start of the transaction, on the submission success screen, and/or in acknowledgement or receipts.\n\nRationale:\nKeeping users informed about when to expect a decision reduces uncertainty and manages user expectations."
+        },
+        {
+          "uuid": "6923642c-e69b-56e0-894a-b9075a54041e",
+          "control-id": "tx-13",
+          "props": [
+            {
+              "name": "control-title",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "Post-transaction Acknowledgement"
+            },
+            {
+              "name": "profile-level",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "1"
+            }
+          ],
+          "links": [
+            {
+              "href": "#103f5d72-122c-5399-8272-433c44aafb75",
+              "rel": "reference"
+            }
+          ],
+          "by-components": [
+            {
+              "component-uuid": "e7017a17-3b6e-5737-bfa1-72665fb3d13c",
+              "uuid": "22b35113-c13f-5ab5-b8ae-e5b167ed1f37",
+              "description": "Send and/or allow download of an acknowledgement after a successful transaction."
+            }
+          ],
+          "remarks": "Control Recommendations:\nSend acknowledgement via channels like SMS, email, push notification, or in-app notifications. Ensure that the acknowledgment includes key details about the submission.\n\nRationale:\nAllowing the end user to retain a receipt or acknowledgement of the transaction that can be revisited provides reassurance that the submission or transaction has been received."
+        },
+        {
+          "uuid": "8fa5cb9c-ddac-5e7f-b0f6-9925657e751e",
+          "control-id": "tx-14",
+          "props": [
+            {
+              "name": "control-title",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "Transaction Status Updates"
+            },
+            {
+              "name": "profile-level",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "1"
+            }
+          ],
+          "links": [
+            {
+              "href": "#103f5d72-122c-5399-8272-433c44aafb75",
+              "rel": "reference"
+            }
+          ],
+          "by-components": [
+            {
+              "component-uuid": "e7017a17-3b6e-5737-bfa1-72665fb3d13c",
+              "uuid": "2ed3f088-5d4f-5bd6-82b8-8dc088216e75",
+              "description": "Provide notifications when there are updates to transaction status."
+            }
+          ],
+          "remarks": "Control Recommendations:\nNotifications can be sent via SMS, email, push notification, or in-app notifications.\n\nRationale:\nAn active approach of notifying end users when they are updates to their transaction status reduces the need to manually check, and allows for timely follow-ups."
+        },
+        {
+          "uuid": "52003408-f4fb-5754-b163-b7fe87acb0b2",
+          "control-id": "tx-15",
+          "props": [
+            {
+              "name": "control-title",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "Tracking Transaction Status"
+            },
+            {
+              "name": "profile-level",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "2"
+            }
+          ],
+          "links": [
+            {
+              "href": "#103f5d72-122c-5399-8272-433c44aafb75",
+              "rel": "reference"
+            }
+          ],
+          "by-components": [
+            {
+              "component-uuid": "e7017a17-3b6e-5737-bfa1-72665fb3d13c",
+              "uuid": "2f6becbf-d478-5776-a587-c6a4a096601b",
+              "description": "Enable online tracking of transaction status."
+            }
+          ],
+          "remarks": "Control Recommendations:\nProvide clear status labels and descriptions, estimated completion timelines, and any required end user actions.\n\nRationale:\nAllowing end users to track their transactions online increases transparency and builds trust. The ability to self-service provides a sense of control, reducing anxiety for users, and reducing reliance and load on customer support."
+        },
+        {
+          "uuid": "2c6ed827-d577-5d33-8a5f-4b9edf1e3cc9",
+          "control-id": "pr-1",
+          "props": [
+            {
+              "name": "control-title",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "Digital Service Review"
+            },
+            {
+              "name": "profile-level",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "1"
+            }
+          ],
+          "links": [
+            {
+              "href": "#4703d8c1-8f8e-513b-83a5-702ad0a6540b",
+              "rel": "reference"
+            }
+          ],
+          "by-components": [
+            {
+              "component-uuid": "e7017a17-3b6e-5737-bfa1-72665fb3d13c",
+              "uuid": "fd7e4269-c336-52b0-88fd-b2f45fe29b59",
+              "description": "Review digital services every {{ insert: param, pr-1_prm_1 }} day(s). Shut down services that are no longer needed or fail to meet their intended objectives."
+            }
+          ],
+          "remarks": "Control Recommendations:\nReview factors such as relevance, importance and usage rates of the service.Ensure that there is a process to review each digital service such as websites and mobile apps periodically.\nReview factors such as relevance, importance and usage rates of the service.\n\nRationale:\nServices that are not effective incur unnecessary costs for the organisation.\n\nParameters to set:\n* pr-1_prm_1"
+        },
+        {
+          "uuid": "2ab0a457-7985-5d87-8e72-fe55b090191c",
+          "control-id": "pr-2",
+          "props": [
+            {
+              "name": "control-title",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "Digital Service Registration"
+            },
+            {
+              "name": "profile-level",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "0"
+            }
+          ],
+          "links": [
+            {
+              "href": "#4703d8c1-8f8e-513b-83a5-702ad0a6540b",
+              "rel": "reference"
+            }
+          ],
+          "by-components": [
+            {
+              "component-uuid": "e7017a17-3b6e-5737-bfa1-72665fb3d13c",
+              "uuid": "60a40c04-739a-5c0b-91b3-0bf5655a3abe",
+              "description": "Register and implement WOGAA on all public facing digital services."
+            }
+          ],
+          "remarks": "Control Recommendations:\nRegistration and implementation includes:\n* Registration of all public facing digital services\n* Implementation of WOGAA tracking code\n* Enabling Sentiments\nRefer to Setup Guide for details.\nOnly registration is required for SaaS and COTS products that do not allow customisation and the implementation of the tracking code and sentiments.\n\nRationale:\nA centralised registry and tracking of digital services across Whole-of-Government facilitates central oversight and benchmarking of digital services. WOGAA implementation enables analytics data and feedback collection that is essential to identifying issues and opportunities for continuous improvement of the digital service."
+        },
+        {
+          "uuid": "eaf37831-c0db-55e1-9f64-46e2488107e1",
+          "control-id": "pr-3",
+          "props": [
+            {
+              "name": "control-title",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "Digital Service Availability"
+            },
+            {
+              "name": "profile-level",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "1"
+            }
+          ],
+          "links": [
+            {
+              "href": "#4703d8c1-8f8e-513b-83a5-702ad0a6540b",
+              "rel": "reference"
+            }
+          ],
+          "by-components": [
+            {
+              "component-uuid": "e7017a17-3b6e-5737-bfa1-72665fb3d13c",
+              "uuid": "0421df49-5428-531c-971c-083f51450a4a",
+              "description": "Make digital services available to users 24/7.\nClearly communicate the operational hours if a service cannot be available 24/7."
+            }
+          ],
+          "remarks": "Control Recommendations:\nDo not limit the availability of services to specific hours unless justified by operational or business requirements.\n\nRationale:\nEnd users expect to have access to digital channels anytime excluding planned and unplanned downtime."
+        },
+        {
+          "uuid": "2bb2c59d-4e47-5e90-a9eb-65f4c58bbf8d",
+          "control-id": "pr-4",
+          "props": [
+            {
+              "name": "control-title",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "Notify of Scheduled Downtime"
+            },
+            {
+              "name": "profile-level",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "1"
+            }
+          ],
+          "links": [
+            {
+              "href": "#4703d8c1-8f8e-513b-83a5-702ad0a6540b",
+              "rel": "reference"
+            }
+          ],
+          "by-components": [
+            {
+              "component-uuid": "e7017a17-3b6e-5737-bfa1-72665fb3d13c",
+              "uuid": "fece94be-2865-5114-ba70-fa3fd159a3f0",
+              "description": "Provide notice of scheduled downtime at least {{ insert: param, pr-4_prm_1 }} day(s) in advance."
+            }
+          ],
+          "remarks": "Control Recommendations:\nClearly communicate scheduled downtime using methods like maintenance banners and in-app notifications. Useful information include date, time, duration, and reason for the downtime (if applicable), feature(s) or section(s) of the digital service that will be unavailable (if applicable).\nBalance between providing enough lead time, and ensuring that end users can remember when the maintenance will happen.\n\nRationale:\nAwareness of scheduled downtime minimises disruption to users by allowing them to plan around it.\n\nParameters to set:\n* pr-4_prm_1"
+        },
+        {
+          "uuid": "6afb20c1-a42c-58ba-9861-046b1afb9d0c",
+          "control-id": "pr-5",
+          "props": [
+            {
+              "name": "control-title",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "Manage Broken Links"
+            },
+            {
+              "name": "profile-level",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "1"
+            }
+          ],
+          "links": [
+            {
+              "href": "#4703d8c1-8f8e-513b-83a5-702ad0a6540b",
+              "rel": "reference"
+            }
+          ],
+          "by-components": [
+            {
+              "component-uuid": "e7017a17-3b6e-5737-bfa1-72665fb3d13c",
+              "uuid": "e2606af7-f474-5d5d-a0f7-0f2e0af1f92f",
+              "description": "Establish processes to detect broken links, and address them within {{ insert: param, pr-5_prm_1 }} day(s) from detection."
+            }
+          ],
+          "remarks": "Control Recommendations:\nUse automated tools like WOGAA's broken link scanner to regularly scan for broken links. This applies to both internal and external links.\n\nRationale:\nBroken links affect content delivery and prevent end users from completing tasks. Digital services with many broken links are perceived as untrustworthy and unreliable.\n\nParameters to set:\n* pr-5_prm_1"
+        },
+        {
+          "uuid": "c8f7db93-0e7a-5f2e-acf8-b94ac21758f0",
+          "control-id": "pr-6",
+          "props": [
+            {
+              "name": "control-title",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "Browser Compatibility"
+            },
+            {
+              "name": "profile-level",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "1"
+            }
+          ],
+          "links": [
+            {
+              "href": "#4703d8c1-8f8e-513b-83a5-702ad0a6540b",
+              "rel": "reference"
+            }
+          ],
+          "by-components": [
+            {
+              "component-uuid": "e7017a17-3b6e-5737-bfa1-72665fb3d13c",
+              "uuid": "0d9a038e-0593-5a3f-a7f7-a5afaa0c4a2f",
+              "description": "Ensure web-based services are compatible with the latest major versions of at least {{ insert: param, pr-6_prm_1 }} widely used web browsers, based on usage statistics."
+            }
+          ],
+          "remarks": "Control Recommendations:\nRegularly test your service on the latest two major versions of popular browsers such as Chrome, Firefox, Safari, and Edge. Get browser usage data from analytics tools.\nConsider using browser compatibility tools like BrowserStack or LambdaTest to automate and expand testing across multiple environments.\n\nRationale:\nBrowser incompatibility can cause layout bugs and other functional issues.\n\nParameters to set:\n* pr-6_prm_1"
+        },
+        {
+          "uuid": "86ef0844-c308-5044-a011-489e49c5f507",
+          "control-id": "pr-7",
+          "props": [
+            {
+              "name": "control-title",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "Optimise Load Times"
+            },
+            {
+              "name": "profile-level",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "1"
+            }
+          ],
+          "links": [
+            {
+              "href": "#4703d8c1-8f8e-513b-83a5-702ad0a6540b",
+              "rel": "reference"
+            }
+          ],
+          "by-components": [
+            {
+              "component-uuid": "e7017a17-3b6e-5737-bfa1-72665fb3d13c",
+              "uuid": "4e8beeec-ea30-573c-8b45-f64fc874bb2c",
+              "description": "Ensure that page load time of web-based services is {{ insert: param, pr-7_prm_1 }} second(s) or less."
+            }
+          ],
+          "remarks": "Control Recommendations:\nTrack or regularly test and optimise performance using tools like WOGAA and Google PageSpeed Insights.\n\nRationale:\nLong page load times frustrate end users and lead to longer transaction times and increased abandonment rate.\n\nParameters to set:\n* pr-7_prm_1"
+        },
+        {
+          "uuid": "4b0aeabc-5621-5ef8-abec-06d4462caa3c",
+          "control-id": "tl-1",
+          "props": [
+            {
+              "name": "control-title",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "Official Government Domain"
+            },
+            {
+              "name": "profile-level",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "1"
+            }
+          ],
+          "links": [
+            {
+              "href": "#1a79b8ec-2a6a-56e8-803b-4e76531573be",
+              "rel": "reference"
+            }
+          ],
+          "by-components": [
+            {
+              "component-uuid": "e7017a17-3b6e-5737-bfa1-72665fb3d13c",
+              "uuid": "5a354db3-8e21-599c-91dc-9b20beae8014",
+              "description": "Use .gov.sg domain for web-based digital services. Education Institutions may use .edu.sg. domain."
+            }
+          ],
+          "remarks": "Control Recommendations:\nRegister .gov.sg and .edu.sg domain names on the Whole of Government Domain Name Server (DNS) portal on the IT Service Management (ITSM) portal.\n\nRationale:\nHelps end users easily recognise that they are interacting with an authentic government source, reducing the risk of fraud, phishing, or misinformation."
+        },
+        {
+          "uuid": "f273fe7a-56f2-54c0-a592-00e9c32f3ea2",
+          "control-id": "tl-2",
+          "props": [
+            {
+              "name": "control-title",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "Agency or Initiative Logo"
+            },
+            {
+              "name": "profile-level",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "1"
+            }
+          ],
+          "links": [
+            {
+              "href": "#1a79b8ec-2a6a-56e8-803b-4e76531573be",
+              "rel": "reference"
+            }
+          ],
+          "by-components": [
+            {
+              "component-uuid": "e7017a17-3b6e-5737-bfa1-72665fb3d13c",
+              "uuid": "473be0e7-6b33-5abe-af9c-c7a1bdf3ce08",
+              "description": "Display the agency/initiative logo on the top left of every page of web-based digital services; Hyperlink the logo to the homepage."
+            }
+          ],
+          "remarks": "Control Recommendations:\nThe logo should render clearly without distortion or pixellation to maintain trust and reinforce brand reputation.\n\nRationale:\nProvides reassurance about the legitimacy of the service."
+        },
+        {
+          "uuid": "084743e1-f25b-5d42-98f9-1d1bb7c02899",
+          "control-id": "tl-3",
+          "props": [
+            {
+              "name": "control-title",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "Official Government Banner"
+            },
+            {
+              "name": "profile-level",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "0"
+            }
+          ],
+          "links": [
+            {
+              "href": "#1a79b8ec-2a6a-56e8-803b-4e76531573be",
+              "rel": "reference"
+            }
+          ],
+          "by-components": [
+            {
+              "component-uuid": "e7017a17-3b6e-5737-bfa1-72665fb3d13c",
+              "uuid": "d036d809-39d6-5305-b601-8b6518415e95",
+              "description": "Display the Official Government Banner on every page of web-based .gov.sg digital services."
+            }
+          ],
+          "remarks": "Control Recommendations:\nThe Official Government banner must be the topmost component of the web service. Use the Singapore Government Design System (SGDS) ‘Official Government Banner’ component.\nNot required for SaaS and COTS products that do not allow customisation.\n\nRationale:\nHelps end users easily recognize that they are interacting with an authentic government service, reducing the risk of fraud, phishing, or misinformation."
+        },
+        {
+          "uuid": "1837d466-fa34-5f63-86bc-bb47275e4510",
+          "control-id": "tl-4",
+          "props": [
+            {
+              "name": "control-title",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "Official Government Footer"
+            },
+            {
+              "name": "profile-level",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "1"
+            }
+          ],
+          "links": [
+            {
+              "href": "#1a79b8ec-2a6a-56e8-803b-4e76531573be",
+              "rel": "reference"
+            }
+          ],
+          "by-components": [
+            {
+              "component-uuid": "e7017a17-3b6e-5737-bfa1-72665fb3d13c",
+              "uuid": "5a7c304f-8fc8-513e-9e14-849846c820cb",
+              "description": "Adopt the Official Global Footer on every page of .gov.sg web-based services."
+            }
+          ],
+          "remarks": "Control Recommendations:\nUse the basic footer provided by SGDS. The footer must contain\nA) The following footer links in this order\ni) Contact / Contact Us\nii) Feedback\niii) FAQ (if any)\niv) Sitemap (if any)\nv) Report Vulnerability\nvi) Privacy Statement\nvii) Terms of Use\nB) Copyright Statement in the format\n'© [current year in YYYY], Government of Singapore’\nDigital services owned by statutory boards may use the agency’s name instead of 'Government of Singapore'. Not required for pages that are part of transactional services.\n\nRationale:\nProvides consistency across government digital services and ensures that end users have access to consistently placed important utility links."
+        },
+        {
+          "uuid": "54f3190e-9482-5792-9c95-fa56526f5521",
+          "control-id": "tl-5",
+          "props": [
+            {
+              "name": "control-title",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "Mobile App Ownership and Distribution"
+            },
+            {
+              "name": "profile-level",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "0"
+            }
+          ],
+          "links": [
+            {
+              "href": "#1a79b8ec-2a6a-56e8-803b-4e76531573be",
+              "rel": "reference"
+            }
+          ],
+          "by-components": [
+            {
+              "component-uuid": "e7017a17-3b6e-5737-bfa1-72665fb3d13c",
+              "uuid": "acf2097c-b5ff-57c0-ad06-52a8f96236e9",
+              "description": "Distribute government mobile applications through official app stores and retain IP rights."
+            }
+          ],
+          "remarks": "Control Recommendations:\nRetain full ownership of all intellectual property rights, including copyright. Avoid releasing mobile applications under licenses that permit free distribution. Ensure compliance with platform guidelines for official government endorsement.\nDistribute apps only through the following platforms:\n* Apple App Store\n* Google Play Store\n* Huawei AppGallery\n\nRationale:\nMinimise the risk of end users downloading unauthorised versions of Government apps. Owning the IP rights provides agencies with a legal basis to request third-party app stores or websites to remove unauthorised versions of Government mobile applications."
+        },
+        {
+          "uuid": "72e8de57-c26a-5fa3-b526-91e3307b94a4",
+          "control-id": "tl-6",
+          "props": [
+            {
+              "name": "control-title",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "Application Store Listings"
+            },
+            {
+              "name": "profile-level",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "1"
+            }
+          ],
+          "links": [
+            {
+              "href": "#1a79b8ec-2a6a-56e8-803b-4e76531573be",
+              "rel": "reference"
+            }
+          ],
+          "by-components": [
+            {
+              "component-uuid": "e7017a17-3b6e-5737-bfa1-72665fb3d13c",
+              "uuid": "a23c3a73-1b67-500b-b426-265c1a0f7246",
+              "description": "Ensure that the agency name is used as the application store developer account name when publishing mobile applications."
+            }
+          ],
+          "remarks": "Control Recommendations:\nUse the full agency name\n\nRationale:\nHaving clear and properly named developer accounts reassures end users of the legitimacy of the mobile app."
+        },
+        {
+          "uuid": "3530ed41-de5d-5ec5-8427-cc33b166ccd8",
+          "control-id": "wp-1",
+          "props": [
+            {
+              "name": "control-title",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "Text Alternatives for Non-Text content"
+            },
+            {
+              "name": "profile-level",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "1"
+            }
+          ],
+          "links": [
+            {
+              "href": "#bc7430b8-0457-5592-84d9-64cc7462810e",
+              "rel": "reference"
+            }
+          ],
+          "by-components": [
+            {
+              "component-uuid": "e7017a17-3b6e-5737-bfa1-72665fb3d13c",
+              "uuid": "f1b5c10a-91e7-5586-8431-ab447a9c269c",
+              "description": "Provide text alternatives for essential non-text content."
+            }
+          ],
+          "remarks": "Control Recommendations:\nProvide accurate, concise alt text or a relevant textual description for non-text content (images, charts, media).\nImplement purely decorative non-text content in a way that can be ignored by assistive technology.\n\nRationale:\nEnsures that equivalent information is conveyed to all end users by allowing assistive technologies to read and communicate essential non-text content."
+        },
+        {
+          "uuid": "7ee08a2b-3c65-59b2-b685-a64acb1c605b",
+          "control-id": "wp-2",
+          "props": [
+            {
+              "name": "control-title",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "Captions for Prerecorded Media"
+            },
+            {
+              "name": "profile-level",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "1"
+            }
+          ],
+          "links": [
+            {
+              "href": "#bc7430b8-0457-5592-84d9-64cc7462810e",
+              "rel": "reference"
+            }
+          ],
+          "by-components": [
+            {
+              "component-uuid": "e7017a17-3b6e-5737-bfa1-72665fb3d13c",
+              "uuid": "ba1a10ad-6f0d-59b0-b22a-036128936102",
+              "description": "Provide captions for prerecorded video or audio content."
+            }
+          ],
+          "remarks": "Control Recommendations:\nUse transcribing or captioning tools to generate captions. Ensure captions are aligned with audio and are readable.\nNot required when the content is a media alternative for text and is clearly labeled as such.\n\nRationale:\nEnsures that individuals with hearing impairments can access and understand the material. Captions also help people engage better with content and allow people to access the content without audio."
+        },
+        {
+          "uuid": "d2794090-0080-583f-8015-2348f9f952b6",
+          "control-id": "wp-3",
+          "props": [
+            {
+              "name": "control-title",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "Text or Audio Alternatives for Prerecorded Media"
+            },
+            {
+              "name": "profile-level",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "1"
+            }
+          ],
+          "links": [
+            {
+              "href": "#bc7430b8-0457-5592-84d9-64cc7462810e",
+              "rel": "reference"
+            }
+          ],
+          "by-components": [
+            {
+              "component-uuid": "e7017a17-3b6e-5737-bfa1-72665fb3d13c",
+              "uuid": "cad5adef-41de-50a3-9716-71d31a6bc99f",
+              "description": "Provide alternatives for all prerecorded audio and video media."
+            }
+          ],
+          "remarks": "Control Recommendations:\nProvide text transcripts for audio-only content. Provide text alternatives or audio descriptions for video-only content and synchronised media (audio and video).\nNot required when the content is a media alternative for text and is clearly labeled as such.\n\nRationale:\nEnsures information conveyed by prerecorded audio and video content is available to all end users."
+        },
+        {
+          "uuid": "ee756ba7-d58a-547e-9976-91e0be1f8fdc",
+          "control-id": "wp-4",
+          "props": [
+            {
+              "name": "control-title",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "Live Captions"
+            },
+            {
+              "name": "profile-level",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "1"
+            }
+          ],
+          "links": [
+            {
+              "href": "#bc7430b8-0457-5592-84d9-64cc7462810e",
+              "rel": "reference"
+            }
+          ],
+          "by-components": [
+            {
+              "component-uuid": "e7017a17-3b6e-5737-bfa1-72665fb3d13c",
+              "uuid": "fc553575-839a-55ce-899e-3342369b7f17",
+              "description": "Provide captions for live audio and video content."
+            }
+          ],
+          "remarks": "Control Recommendations:\nUse automated or live captioning services for content like livestream and webinars. Ensure that the service or tool is sufficiently accurate.\n\nRationale:\nLive captions make live audio and video content accessible to end users who are deaf or hard of hearing."
+        },
+        {
+          "uuid": "35ffd7c5-4d37-58ae-9c05-8f3db65862bc",
+          "control-id": "wp-5",
+          "props": [
+            {
+              "name": "control-title",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "Audio Description for Prerecorded Video Content"
+            },
+            {
+              "name": "profile-level",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "1"
+            }
+          ],
+          "links": [
+            {
+              "href": "#bc7430b8-0457-5592-84d9-64cc7462810e",
+              "rel": "reference"
+            }
+          ],
+          "by-components": [
+            {
+              "component-uuid": "e7017a17-3b6e-5737-bfa1-72665fb3d13c",
+              "uuid": "eb1b32b5-fe32-5618-a8d1-c39aa3a07224",
+              "description": "Provided an audio description for all prerecorded video content."
+            }
+          ],
+          "remarks": "Control Recommendations:\nProvide user-selectable audio tracks focusing on critical visual elements necessary for understanding.\nThis is an extension of wp-3 which recommends but does not prescribe audio descriptions.\n\nRationale:\nEnsures that individuals who have visual impairments can better experience video content. This involves both information conveyed through the audio track and also descriptions of visual information such as actions, signs and facial expressions."
+        },
+        {
+          "uuid": "e6eca48c-7c5c-57c3-b2f9-7d97f0ab9beb",
+          "control-id": "wp-6",
+          "props": [
+            {
+              "name": "control-title",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "Presentation of Info and Relationships"
+            },
+            {
+              "name": "profile-level",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "1"
+            }
+          ],
+          "links": [
+            {
+              "href": "#bc7430b8-0457-5592-84d9-64cc7462810e",
+              "rel": "reference"
+            }
+          ],
+          "by-components": [
+            {
+              "component-uuid": "e7017a17-3b6e-5737-bfa1-72665fb3d13c",
+              "uuid": "8848d51d-d573-5bed-806f-bcfbb19754ff",
+              "description": "Present the structure, order and relationships of information on a page in a way that can be programmatically determined by assistive technology."
+            }
+          ],
+          "remarks": "Control Recommendations:\nApply techniques such as correct use of semantic HTML elements (e.g., headings, lists, tables), text descriptions and where necessary, ARIA markups. Do not overuse ARIA as it creates clutter and overwhelm end users.\n\nRationale:\nEnsures that the structure and organisation of content are clear to all end users, including those who use assistive technologies."
+        },
+        {
+          "uuid": "b4b3ac80-3aa5-5492-915a-3d6f98b59bfb",
+          "control-id": "wp-7",
+          "props": [
+            {
+              "name": "control-title",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "Meaningful Content Order"
+            },
+            {
+              "name": "profile-level",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "1"
+            }
+          ],
+          "links": [
+            {
+              "href": "#bc7430b8-0457-5592-84d9-64cc7462810e",
+              "rel": "reference"
+            }
+          ],
+          "by-components": [
+            {
+              "component-uuid": "e7017a17-3b6e-5737-bfa1-72665fb3d13c",
+              "uuid": "da4efef3-bfa8-56a4-ab1a-13b1e3e7f230",
+              "description": "Ensure that the logical reading order of content can be programmatically determined by software."
+            }
+          ],
+          "remarks": "Control Recommendations:\nEnsure code is structured to preserve the logical reading order of content. Validate with screen reader testing to confirm that end users can navigate content in a logical sequence.\n\nRationale:\nAllows assistive technology to present content in the intended reading order needed to understand the meaning."
+        },
+        {
+          "uuid": "25b3c24f-6b0e-505d-85c3-8ed028452218",
+          "control-id": "wp-8",
+          "props": [
+            {
+              "name": "control-title",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "Describing Displayed Controls"
+            },
+            {
+              "name": "profile-level",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "1"
+            }
+          ],
+          "links": [
+            {
+              "href": "#bc7430b8-0457-5592-84d9-64cc7462810e",
+              "rel": "reference"
+            }
+          ],
+          "by-components": [
+            {
+              "component-uuid": "e7017a17-3b6e-5737-bfa1-72665fb3d13c",
+              "uuid": "7c9ad5de-7af6-5cd8-8129-255677c01164",
+              "description": "Do not rely only on sensory characteristics such shape, colour, size, visual location, orientation, or sound when describing controls."
+            }
+          ],
+          "remarks": "Control Recommendations:\nDescribe controls by name.\nAvoid using expressions like \"click the blue button\" \"or\" \"Select an option after the beep\" when describing or referring to controls. Instead use clear, obvious and meaningful instructions like \"Click the 'next' button to continue with the survey\", \"When you have finished filling in your application form, click 'Submit' to complete your submission\"\n\nRationale:\nReliance of specific sensory characteristics may make descriptions or instructions inaccessible to some users with specific disabilities. E.g. Colour and shape may not perceivable by blind users."
+        },
+        {
+          "uuid": "84091d93-8f86-54f2-8002-d5cf7da0b308",
+          "control-id": "wp-9",
+          "props": [
+            {
+              "name": "control-title",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "Display Orientation"
+            },
+            {
+              "name": "profile-level",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "1"
+            }
+          ],
+          "links": [
+            {
+              "href": "#bc7430b8-0457-5592-84d9-64cc7462810e",
+              "rel": "reference"
+            }
+          ],
+          "by-components": [
+            {
+              "component-uuid": "e7017a17-3b6e-5737-bfa1-72665fb3d13c",
+              "uuid": "86152e78-9391-541d-99cc-154e8075fe46",
+              "description": "Do not restrict content to a single display orientation."
+            }
+          ],
+          "remarks": "Control Recommendations:\nAvoid locking orientation to a particular view. Ensure content can adapt to various orientations such as landscape and portrait without layout or functionality issues.\nNot required if a specific display orientation is necessary to provide the content in an accurate and functional manner.\n\nRationale:\nTo ensure that content displays in the orientation (portrait or landscape) preferred by the end user. Users with dexterity impairments such as those in wheelchairs may have devices mounted in a particular orientation."
+        },
+        {
+          "uuid": "3a23f7a4-73d0-5972-a2ca-8221a6ba4fc8",
+          "control-id": "wp-10",
+          "props": [
+            {
+              "name": "control-title",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "Identify Input Purpose"
+            },
+            {
+              "name": "profile-level",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "1"
+            }
+          ],
+          "links": [
+            {
+              "href": "#bc7430b8-0457-5592-84d9-64cc7462810e",
+              "rel": "reference"
+            }
+          ],
+          "by-components": [
+            {
+              "component-uuid": "e7017a17-3b6e-5737-bfa1-72665fb3d13c",
+              "uuid": "d91fe767-3495-5e59-bb4a-4d1526c93702",
+              "description": "Use labels and code to clearly specify the purpose and format of common inputs."
+            }
+          ],
+          "remarks": "Control Recommendations:\nClearly distinguish similar fields such as billing address and shipping address. Specify the exact format of input fields that may have multiple valid interpretations such as dates.\n\nRationale:\nEnsures that both regular end users and users of assistive technology can clearly discern the purpose of an input function."
+        },
+        {
+          "uuid": "9e485f83-b0ae-5a5b-90fd-7f82ed1d0cf4",
+          "control-id": "wp-11",
+          "props": [
+            {
+              "name": "control-title",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "Use of Color"
+            },
+            {
+              "name": "profile-level",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "1"
+            }
+          ],
+          "links": [
+            {
+              "href": "#bc7430b8-0457-5592-84d9-64cc7462810e",
+              "rel": "reference"
+            }
+          ],
+          "by-components": [
+            {
+              "component-uuid": "e7017a17-3b6e-5737-bfa1-72665fb3d13c",
+              "uuid": "c59817b1-8827-5964-9190-745df88d7c01",
+              "description": "Avoid using colour as the only visual means of conveying information, indicating an action, prompting a response, or distinguishing a visual element."
+            }
+          ],
+          "remarks": "Control Recommendations:\nUse a mix of shape (icons, symbols), colour and text for essential content such as error messages.\n\nRationale:\nUsing multiple modes in addition to colour, ensures that crucial information and state changes are well communicated to end users, especially those with colour vision deficiencies."
+        },
+        {
+          "uuid": "9b956895-6066-534e-9c77-1cbd770da2c5",
+          "control-id": "wp-12",
+          "props": [
+            {
+              "name": "control-title",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "Audio Control"
+            },
+            {
+              "name": "profile-level",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "1"
+            }
+          ],
+          "links": [
+            {
+              "href": "#bc7430b8-0457-5592-84d9-64cc7462810e",
+              "rel": "reference"
+            }
+          ],
+          "by-components": [
+            {
+              "component-uuid": "e7017a17-3b6e-5737-bfa1-72665fb3d13c",
+              "uuid": "d77286e5-ab1e-53ce-9a93-f64ea2e4e136",
+              "description": "Providing options to pause, stop or adjust the volume of audio that automatically plays for more than 3 seconds."
+            }
+          ],
+          "remarks": "Control Recommendations:\nOnly play sounds on user request or provide the user with functions to pause, stop or adjust the volume near the beginning of the digital service so it is easily and quickly discovered.\n\nRationale:\nTo prevent unexpected or disruptive audio from affecting users' experience, particularly those with cognitive or hearing impairments. Background audio also interferes with narration by screen reading software."
+        },
+        {
+          "uuid": "d9705cf2-2f6b-59d7-8566-aecfd1919e04",
+          "control-id": "wp-13",
+          "props": [
+            {
+              "name": "control-title",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "Minimum Contrast"
+            },
+            {
+              "name": "profile-level",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "1"
+            }
+          ],
+          "links": [
+            {
+              "href": "#bc7430b8-0457-5592-84d9-64cc7462810e",
+              "rel": "reference"
+            }
+          ],
+          "by-components": [
+            {
+              "component-uuid": "e7017a17-3b6e-5737-bfa1-72665fb3d13c",
+              "uuid": "70d3446f-9264-538f-8990-aff5067fa669",
+              "description": "Ensure a minimum contrast ratio of 4.5:1 between text and its background.\nLarge text (at least 18 point or 14 point bold) can have a reduced contrast ratio of at least 3:1."
+            }
+          ],
+          "remarks": "Control Recommendations:\nUse tools like WebAIM's Contrast Checker or Oobee to verify that text and images of text meet the minimum contrast ratio.\nNot required for\na) Text that is decorative, conveys no meaningful information\nb) Part of a component in an inactive state\n\nRationale:\nAdequate contrast between text and background is essential for good readability and usability, especially for end users with low vision or colour vision deficiencies."
+        },
+        {
+          "uuid": "e354cf45-0b5f-51f8-a2cc-39edc75f28c1",
+          "control-id": "wp-14",
+          "props": [
+            {
+              "name": "control-title",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "Text Scaling"
+            },
+            {
+              "name": "profile-level",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "1"
+            }
+          ],
+          "links": [
+            {
+              "href": "#bc7430b8-0457-5592-84d9-64cc7462810e",
+              "rel": "reference"
+            }
+          ],
+          "by-components": [
+            {
+              "component-uuid": "e7017a17-3b6e-5737-bfa1-72665fb3d13c",
+              "uuid": "f7c1b28a-11d5-502d-af81-16c1a33e8356",
+              "description": "Ensure text can be scaled up to 200% without loss of content or functionality."
+            }
+          ],
+          "remarks": "Control Recommendations:\nUse relative units like REM. Ensure at least one one browser or platform text scaling mechanism can be used. This includes zoom (of the entire page's content), magnification, and text-only resizing. Test to confirm that no content is clipped, truncated, or obscured after resizing.\nThis excludes captions and images of text.\n\nRationale:\nResizable text makes digital content accessible to a wide range of end users with different visual capabilities, particularly those without access to screen magnification tools."
+        },
+        {
+          "uuid": "7bba70ef-901d-5fba-8b2d-0eb1b4cac8c5",
+          "control-id": "wp-15",
+          "props": [
+            {
+              "name": "control-title",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "Images of Text"
+            },
+            {
+              "name": "profile-level",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "1"
+            }
+          ],
+          "links": [
+            {
+              "href": "#bc7430b8-0457-5592-84d9-64cc7462810e",
+              "rel": "reference"
+            }
+          ],
+          "by-components": [
+            {
+              "component-uuid": "e7017a17-3b6e-5737-bfa1-72665fb3d13c",
+              "uuid": "6a3143dd-cd61-529d-b574-547c6b6515a6",
+              "description": "Use text instead of images of text."
+            }
+          ],
+          "remarks": "Control Recommendations:\nAvoid using images of text except when essential, such as for logos. Where text in images are necessary, ensure that alternative text or captions provide the same information.\n\nRationale:\nText in images are not accessible, especially for end users with visual impairments or reading disabilities. Users cannot adjust the size or font for better readability and the text is not readable by common screen reader technology."
+        },
+        {
+          "uuid": "75893775-1a4e-5891-93d7-a0eca50ee3f7",
+          "control-id": "wp-16",
+          "props": [
+            {
+              "name": "control-title",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "Content Reflow"
+            },
+            {
+              "name": "profile-level",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "1"
+            }
+          ],
+          "links": [
+            {
+              "href": "#bc7430b8-0457-5592-84d9-64cc7462810e",
+              "rel": "reference"
+            }
+          ],
+          "by-components": [
+            {
+              "component-uuid": "e7017a17-3b6e-5737-bfa1-72665fb3d13c",
+              "uuid": "2bb857ee-5f9d-577f-aa80-bf4a67316bf7",
+              "description": "Enable lines of text and content to reflow across different viewports."
+            }
+          ],
+          "remarks": "Control Recommendations:\nUse responsive design frameworks like CSS Flexbox or Grid and test on a variety of devices to confirm that content remains legible and usable without excessive scrolling even when text is resized.\nNot required for content that requires two-dimensional layout for understanding or functionality, such as maps, complex data tables or data visualisations.\n\nRationale:\nEnabling reflowing of content allows users who rely on large fonts, including those using devices with smaller screens to be able to view and navigate digital content without scrolling horizontally even when text size is increased."
+        },
+        {
+          "uuid": "5d102d29-29a0-5ce2-83f2-7e1ebf02d192",
+          "control-id": "wp-17",
+          "props": [
+            {
+              "name": "control-title",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "Non-text Contrast"
+            },
+            {
+              "name": "profile-level",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "1"
+            }
+          ],
+          "links": [
+            {
+              "href": "#bc7430b8-0457-5592-84d9-64cc7462810e",
+              "rel": "reference"
+            }
+          ],
+          "by-components": [
+            {
+              "component-uuid": "e7017a17-3b6e-5737-bfa1-72665fb3d13c",
+              "uuid": "a0f53289-927e-5938-8024-1e7f9fddafe7",
+              "description": "Ensure a minimum contrast ratio of 3:1 between colours of user interface components and graphical objects that convey important information, and their respective backgrounds."
+            }
+          ],
+          "remarks": "Control Recommendations:\nUse tools like WebAIM's Contrast Checker to test contrast. Focus on elements critical for interaction, such as buttons and form inputs.\n\nRationale:\nSufficient contrast helps end users better perceive and identify non-text user interface components and key graphical objects, improving usability."
+        },
+        {
+          "uuid": "9dc5a74b-8563-5eb0-9cb1-2a5fdc39029a",
+          "control-id": "wp-18",
+          "props": [
+            {
+              "name": "control-title",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "Text Spacing"
+            },
+            {
+              "name": "profile-level",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "1"
+            }
+          ],
+          "links": [
+            {
+              "href": "#bc7430b8-0457-5592-84d9-64cc7462810e",
+              "rel": "reference"
+            }
+          ],
+          "by-components": [
+            {
+              "component-uuid": "e7017a17-3b6e-5737-bfa1-72665fb3d13c",
+              "uuid": "504d3f92-d3f6-5cf0-ab04-168d058b024f",
+              "description": "Ensure that text implemented using markup languages can be adjusted to the following text style properties with no loss of content or functionality:\n* a) Line height to 1.5 times the font size\n* b) Paragraph spacing to 2 times the font size\n* c) Letter spacing to 0.12 times the font size\n* d) Word spacing to 0.16 times the font size"
+            }
+          ],
+          "remarks": "Control Recommendations:\nAllow for text spacing override by assistive technology and test with tools that simulate the spacing configurations specified.\nText content does not need to use these text spacing values as defaults, and there is no need to implement controls for users to adjust text properties within the digital service.\n\nRationale:\nEnsures that end users, in particular those with low vision or dyslexia are: a) Not restricted from overriding default text spacing through the use of assistive technology, stylesheets or extensions. b) Content or functionality is not lost and the content remains legible and functional."
+        },
+        {
+          "uuid": "3edeb5f1-c21f-5fcf-9067-65378d1976a0",
+          "control-id": "wp-19",
+          "props": [
+            {
+              "name": "control-title",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "Content on Hover or Focus"
+            },
+            {
+              "name": "profile-level",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "1"
+            }
+          ],
+          "links": [
+            {
+              "href": "#bc7430b8-0457-5592-84d9-64cc7462810e",
+              "rel": "reference"
+            }
+          ],
+          "by-components": [
+            {
+              "component-uuid": "e7017a17-3b6e-5737-bfa1-72665fb3d13c",
+              "uuid": "df45f650-79e1-5723-8f0c-f8edca08afa4",
+              "description": "Ensure content appearing on hover or focus\n* a) Appears long enough to be read and interacted with\n* b) Does not disappear unexpectedly\n* c) Can be easily dismissed using a pointer device or keyboard"
+            }
+          ],
+          "remarks": "Control Recommendations:\nDesign custom tooltips, sub-menus and other non-modal popups which display on hover and focus to be perceivable and dismissible without disrupting the overall user experience.\n\nRationale:\nElements that appear on hover or focus can be difficult to manage. End users with limited motor control may have trouble keeping their pointer steady, and keyboard-only users need a reliable way to dismiss such content."
+        },
+        {
+          "uuid": "191c356c-85d3-5948-82ad-509a513d21f8",
+          "control-id": "wo-1",
+          "props": [
+            {
+              "name": "control-title",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "Keyboard equivalent"
+            },
+            {
+              "name": "profile-level",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "1"
+            }
+          ],
+          "links": [
+            {
+              "href": "#91505045-10e5-5a59-a129-cd33f7393b98",
+              "rel": "reference"
+            }
+          ],
+          "by-components": [
+            {
+              "component-uuid": "e7017a17-3b6e-5737-bfa1-72665fb3d13c",
+              "uuid": "302071b8-c3d2-5ac2-8a37-b3bae6cfaf36",
+              "description": "Ensure any action done using a pointer device can also be done using a keyboard."
+            }
+          ],
+          "remarks": "Control Recommendations:\nProvide keyboard operation for all the functionality of the page unless the function requires path-dependent input such as handwriting.\nAvoid requiring specific timings for individual keystrokes such as requirements to repeat or execute multiple keystrokes within a short period of time.\n\nRationale:\nEnsures that there is no loss of functionality for users who rely on keyboards such as those with motor impairments."
+        },
+        {
+          "uuid": "4b28f83b-62e4-5c61-9057-b2e4117d2360",
+          "control-id": "wo-2",
+          "props": [
+            {
+              "name": "control-title",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "No Keyboard Trap"
+            },
+            {
+              "name": "profile-level",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "1"
+            }
+          ],
+          "links": [
+            {
+              "href": "#91505045-10e5-5a59-a129-cd33f7393b98",
+              "rel": "reference"
+            }
+          ],
+          "by-components": [
+            {
+              "component-uuid": "e7017a17-3b6e-5737-bfa1-72665fb3d13c",
+              "uuid": "9465d373-e8aa-58c0-8c80-4a30577db4c5",
+              "description": "Ensure that keyboard users can move keyboard focus away or out from a component or section of the digital service."
+            }
+          ],
+          "remarks": "Control Recommendations:\nTest forms, widgets, and custom elements with keyboard-only navigation to confirm end users can exit all components using standard keys (like Tab and Shift+Tab).\nIf the key functionality of the component restricts the focus to a subsection of the content, communicate clearly to users how to leave that state and \"untrap\" the focus.\n\nRationale:\nA keyboard trap happens when keyboard focus is moved to a component or subsection of the digital service without a way of the end user navigating back out using a keyboard interface. End users who who rely on exclusive keyboard interface usage such as people with vision and physical disabilities get stuck and are unable to proceed to other parts of the service or complete a critical transaction."
+        },
+        {
+          "uuid": "46038e50-ee6c-5472-94a6-1aec3fcae586",
+          "control-id": "wo-3",
+          "props": [
+            {
+              "name": "control-title",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "Character Key Shortcuts"
+            },
+            {
+              "name": "profile-level",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "1"
+            }
+          ],
+          "links": [
+            {
+              "href": "#91505045-10e5-5a59-a129-cd33f7393b98",
+              "rel": "reference"
+            }
+          ],
+          "by-components": [
+            {
+              "component-uuid": "e7017a17-3b6e-5737-bfa1-72665fb3d13c",
+              "uuid": "137b1469-04c1-5e3e-80e7-29465966c96c",
+              "description": "Provide a mechanism to disable or remap shortcuts that are activated using only one character key press."
+            }
+          ],
+          "remarks": "Control Recommendations:\nIf character key shortcuts are used, provide end users with the ability to disable or remap them. Implement keyboard settings within the interface for customisation, ensuring shortcuts do not interfere with common keyboard interactions.\n\nRationale:\nReduces the risk of accidental activation of keyboard shortcuts for keyboard users and speech input users, whose dictation is interpreted as strings of letters."
+        },
+        {
+          "uuid": "4ac7d30f-0d97-592a-b6bc-48f970e9d206",
+          "control-id": "wo-4",
+          "props": [
+            {
+              "name": "control-title",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "Adjustable Timings"
+            },
+            {
+              "name": "profile-level",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "1"
+            }
+          ],
+          "links": [
+            {
+              "href": "#91505045-10e5-5a59-a129-cd33f7393b98",
+              "rel": "reference"
+            }
+          ],
+          "by-components": [
+            {
+              "component-uuid": "e7017a17-3b6e-5737-bfa1-72665fb3d13c",
+              "uuid": "60c6ccb1-3b38-5787-b445-1e9b4af4ce5e",
+              "description": "Allow time limits to be turned off, adjusted, or extended."
+            }
+          ],
+          "remarks": "Control Recommendations:\nAvoid time-dependent functions unless absolutely necessary. Ensure timers are non-disruptive and adjustable or extendable.\nNot required when the time limit is:\na) Mandatory from a legal point of view\nb) Required as part of a real-time event where extensions would invalidate the activity\nc) Longer than 20 hours\n\nRationale:\nPersons with disabilities may need more time to complete complex tasks such as filling out lengthy grant forms. Designing functions that are not time-dependent or allow for adjustable timings will help everyone, especially people with disabilities, succeed at completing these tasks."
+        },
+        {
+          "uuid": "a4295c8b-bd10-50ed-b5fd-e6ad427085d4",
+          "control-id": "wo-5",
+          "props": [
+            {
+              "name": "control-title",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "Pause, Stop, Hide"
+            },
+            {
+              "name": "profile-level",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "1"
+            }
+          ],
+          "links": [
+            {
+              "href": "#91505045-10e5-5a59-a129-cd33f7393b98",
+              "rel": "reference"
+            }
+          ],
+          "by-components": [
+            {
+              "component-uuid": "e7017a17-3b6e-5737-bfa1-72665fb3d13c",
+              "uuid": "0b599e54-a675-5a62-bcb8-3842c4ef1865",
+              "description": "Provide a function to pause, stop, hide or control the frequency of moving, blinking, scrolling or auto-updating content that occur in parallel with other content."
+            }
+          ],
+          "remarks": "Control Recommendations:\nContent changes refer to, but are not exclusive to, auto-updating information, animations containing essential information or similar components.\nAllow users to pause, stop, or hide content that automatically moves, blinks, scrolls or auto-updates for more than 5 seconds.\n\nRationale:\nContent that moves or auto-updates can be a barrier to anyone who has trouble reading stationary text quickly, tracking moving objects or noticing page changes easily. It can also cause problems for screen readers."
+        },
+        {
+          "uuid": "2077de9d-4bb2-58ea-8f90-d315c3a9cb3a",
+          "control-id": "wo-6",
+          "props": [
+            {
+              "name": "control-title",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "Reduce Flash Triggers"
+            },
+            {
+              "name": "profile-level",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "1"
+            }
+          ],
+          "links": [
+            {
+              "href": "#91505045-10e5-5a59-a129-cd33f7393b98",
+              "rel": "reference"
+            }
+          ],
+          "by-components": [
+            {
+              "component-uuid": "e7017a17-3b6e-5737-bfa1-72665fb3d13c",
+              "uuid": "441dc06b-5dec-5ce0-9c05-60cc37326c6d",
+              "description": "Avoid content that flashes more than three times per second or provide a warning and the option to skip such content."
+            }
+          ],
+          "remarks": "Control Recommendations:\nProvide a clearly displayed warning message such as \"This video may potentially trigger seizures for people with photosensitive epilepsy. Viewer discretion is advised.\"\nExcludes flashes contained in a small area, are low contrast or include a small amount of the colour red.\n\nRationale:\nFlashing content can trigger seizures in end users with photosensitive epilepsy leading to serious health risks for these users."
+        },
+        {
+          "uuid": "946a08a5-6f75-5380-8330-366d0b0c8172",
+          "control-id": "wo-7",
+          "props": [
+            {
+              "name": "control-title",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "Bypass Repeating Content"
+            },
+            {
+              "name": "profile-level",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "1"
+            }
+          ],
+          "links": [
+            {
+              "href": "#91505045-10e5-5a59-a129-cd33f7393b98",
+              "rel": "reference"
+            }
+          ],
+          "by-components": [
+            {
+              "component-uuid": "e7017a17-3b6e-5737-bfa1-72665fb3d13c",
+              "uuid": "c811aa8a-4451-5433-a025-ad41ef1782ec",
+              "description": "Provide a means of skipping repetitive blocks of content that appear across multiple pages."
+            }
+          ],
+          "remarks": "Control Recommendations:\nImplement visible and keyboard accessible link(s) for end users to skip repeated content blocks and/or group blocks of repeated material in a way that can be skipped through the use of ARIA landmarks or heading markup.\n\nRationale:\nEnd users who navigate sequentially with keyboards or screen readers often encounter repeated content such as headers and navigation links across multiple pages. Providing a mechanism to bypass these repetitive sections enables users to access the main content more efficiently."
+        },
+        {
+          "uuid": "3f609671-8a9f-53f6-a872-5ac956d89a2d",
+          "control-id": "wo-8",
+          "props": [
+            {
+              "name": "control-title",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "Page Title And Purpose"
+            },
+            {
+              "name": "profile-level",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "1"
+            }
+          ],
+          "links": [
+            {
+              "href": "#91505045-10e5-5a59-a129-cd33f7393b98",
+              "rel": "reference"
+            }
+          ],
+          "by-components": [
+            {
+              "component-uuid": "e7017a17-3b6e-5737-bfa1-72665fb3d13c",
+              "uuid": "cc3fe37b-36bf-543f-9bad-af5517347df0",
+              "description": "Provide a page title describing the purpose of every web page or distinct Single-Page Application view served from the same Uniform Resource Identifier (URI)."
+            }
+          ],
+          "remarks": "Control Recommendations:\nProvide a clear and succinct page title that describes the purpose of the page. For example, \"Budget 2024 Support Schemes Calculator\" is a clear title stating the page contains a calculator for Support Schemes from Budget 2024.\n\nRationale:\nClear, descriptive titles provide quick context, enabling all end users (including users of assistive technologies) to quickly understand where they are without having to scan page content. They also facilitate efficient navigation in site maps and search results, allowing rapid identification of relevant information."
+        },
+        {
+          "uuid": "87ec27fc-a6f4-5f26-98d0-661809fe488f",
+          "control-id": "wo-9",
+          "props": [
+            {
+              "name": "control-title",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "Sequential Focus Order"
+            },
+            {
+              "name": "profile-level",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "1"
+            }
+          ],
+          "links": [
+            {
+              "href": "#91505045-10e5-5a59-a129-cd33f7393b98",
+              "rel": "reference"
+            }
+          ],
+          "by-components": [
+            {
+              "component-uuid": "e7017a17-3b6e-5737-bfa1-72665fb3d13c",
+              "uuid": "e5c4818e-2f42-514c-913b-0056687d10b9",
+              "description": "Ensure focusable components receive focus in an order that preserves meaning and operability when the navigation sequences affect meaning or operation."
+            }
+          ],
+          "remarks": "Control Recommendations:\nWhen a user triggers a focusable element like a modal dialog via an element (button or link), the keyboard focus should be set to within the modal and limited to the elements of modal until dismissed.\nWhen the modal is dismissed, the keyboard focus should logically return to the original trigger element to minimise confusion for the user.\n\nRationale:\nAllows keyboard users to navigate in a sequence that reflects the content's logical structure, preventing disorientation from unexpected tabbing focus. This approach accommodates various valid navigation patterns while preserving content coherence. Implementing this improves accessibility, often results in cleaner markup, and can enhance SEO, benefiting all users."
+        },
+        {
+          "uuid": "268f7dba-6812-5132-9b45-d73968134d83",
+          "control-id": "wo-10",
+          "props": [
+            {
+              "name": "control-title",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "Link Text And Purpose"
+            },
+            {
+              "name": "profile-level",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "1"
+            }
+          ],
+          "links": [
+            {
+              "href": "#91505045-10e5-5a59-a129-cd33f7393b98",
+              "rel": "reference"
+            }
+          ],
+          "by-components": [
+            {
+              "component-uuid": "e7017a17-3b6e-5737-bfa1-72665fb3d13c",
+              "uuid": "5d41a5fb-d20d-584f-a43b-644a136ef56a",
+              "description": "Ensure that link text identifies the purpose of the link and can be interpreted easily on its own."
+            }
+          ],
+          "remarks": "Control Recommendations:\nAvoid using vague link text such as \"click here\" or \"read more\".\n\nRationale:\nDescriptive and meaningful link text helps users understand the content and purpose of each link without needing to read the surrounding text. This is especially important for screen reader users who often navigate web pages by jumping from one link to another. It also improves the SEO value of a page and helps all users find the information they need more efficiently."
+        },
+        {
+          "uuid": "2fe71b01-41ee-5f26-82da-6a0cb4abd152",
+          "control-id": "wo-11",
+          "props": [
+            {
+              "name": "control-title",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "Multiple Ways"
+            },
+            {
+              "name": "profile-level",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "1"
+            }
+          ],
+          "links": [
+            {
+              "href": "#91505045-10e5-5a59-a129-cd33f7393b98",
+              "rel": "reference"
+            }
+          ],
+          "by-components": [
+            {
+              "component-uuid": "e7017a17-3b6e-5737-bfa1-72665fb3d13c",
+              "uuid": "7c63452f-4b81-5e2d-8765-d66b84ca8c32",
+              "description": "Provide at least two ways to reach the same content."
+            }
+          ],
+          "remarks": "Control Recommendations:\nFocus on information architecture and implement multiple ways to reach content such as clear and logical navigation structures, search function and shortcuts.\n\nRationale:\nProviding multiple ways to access content allows end users to locate content in ways that best meet their needs. Users may find one navigation path easier or more comprehensible than another, improving both the user experience of the service and the discoverability of content."
+        },
+        {
+          "uuid": "435c4604-2beb-537a-a402-a5003fb41993",
+          "control-id": "wo-12",
+          "props": [
+            {
+              "name": "control-title",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "Headings and Labels"
+            },
+            {
+              "name": "profile-level",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "1"
+            }
+          ],
+          "links": [
+            {
+              "href": "#91505045-10e5-5a59-a129-cd33f7393b98",
+              "rel": "reference"
+            }
+          ],
+          "by-components": [
+            {
+              "component-uuid": "e7017a17-3b6e-5737-bfa1-72665fb3d13c",
+              "uuid": "9e3729d3-18ee-55e7-b630-6cf54944b260",
+              "description": "Provide descriptive headers and labels that identify the context of surrounding text and the component's purpose."
+            }
+          ],
+          "remarks": "Control Recommendations:\nDo not disable platform or user-agent default visual focus indicators. If default focus indicators are not available or do not meet other accessible guidelines like colour contrast, modify the background colour or border of the element with focus.\nEnsure that 'floating' components like widgets and sticky headers do not cover elements receiving focus.\n\nRationale:\nAllows end users to quickly identify which element or control has keyboard focus. This is especially important for users relying exclusively on keyboards to navigate."
+        },
+        {
+          "uuid": "b088aa16-d556-5688-9ac5-147e770d967c",
+          "control-id": "wo-13",
+          "props": [
+            {
+              "name": "control-title",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "Focus Visible and Not Obscured"
+            },
+            {
+              "name": "profile-level",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "1"
+            }
+          ],
+          "links": [
+            {
+              "href": "#91505045-10e5-5a59-a129-cd33f7393b98",
+              "rel": "reference"
+            }
+          ],
+          "by-components": [
+            {
+              "component-uuid": "e7017a17-3b6e-5737-bfa1-72665fb3d13c",
+              "uuid": "cc30f66a-2e66-541a-9d27-c409fc1a5aed",
+              "description": "Ensure components receiving focus have distinguishable indicators and are not obscured by other elements."
+            }
+          ],
+          "remarks": "Control Recommendations:\nDo not disable platform or user-agent default visual focus indicators. If default focus indicators are not available or do not meet other accessible guidelines like colour contrast, modify the background colour or border of the element with focus.\nEnsure that 'floating' components like widgets and sticky headers do not cover elements receiving focus.\n\nRationale:\nAllows end users to quickly identify which element or control has keyboard focus. This is especially important for users relying exclusively on keyboards to navigate."
+        },
+        {
+          "uuid": "a2ae2890-15ff-5435-ae8f-ba066f07c239",
+          "control-id": "wo-14",
+          "props": [
+            {
+              "name": "control-title",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "Simple Pointer Alternatives"
+            },
+            {
+              "name": "profile-level",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "1"
+            }
+          ],
+          "links": [
+            {
+              "href": "#91505045-10e5-5a59-a129-cd33f7393b98",
+              "rel": "reference"
+            }
+          ],
+          "by-components": [
+            {
+              "component-uuid": "e7017a17-3b6e-5737-bfa1-72665fb3d13c",
+              "uuid": "c6092edf-2ff2-569a-b9d6-8e496ef96dd5",
+              "description": "Provide single-point alternatives to multipoint or path-based interactions or gestures."
+            }
+          ],
+          "remarks": "Control Recommendations:\nIf multipoint or path-based gestures such as sliders and drag-and-drop functions are used, provide alternative options to perform the same interaction through simple single-point alternatives.\n\nRationale:\nInteractions that involve complicated gestures or precise movements such as dragging or pinching can be challenging or impossible for end users with mobility disabilities, elderly users, or those using adaptive input devices."
+        },
+        {
+          "uuid": "a9076bed-ed9e-516b-8afd-15da83365063",
+          "control-id": "wo-15",
+          "props": [
+            {
+              "name": "control-title",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "Pointer Cancellation"
+            },
+            {
+              "name": "profile-level",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "1"
+            }
+          ],
+          "links": [
+            {
+              "href": "#91505045-10e5-5a59-a129-cd33f7393b98",
+              "rel": "reference"
+            }
+          ],
+          "by-components": [
+            {
+              "component-uuid": "e7017a17-3b6e-5737-bfa1-72665fb3d13c",
+              "uuid": "f4a722e9-2a87-52f5-9f3e-6602c056b381",
+              "description": "Provide a predictable and consistent way to cancel or undo pointer interactions."
+            }
+          ],
+          "remarks": "Control Recommendations:\nImplement clear and accessible methods to cancel critical actions such as an \"undo\" function. Confirmation dialogs can be used as a secondary confirmation for critical actions.\nUnless absolutely necessary, only execute a function when the click or touch is released (up-event) instead of when the click or touch is made (down-event). This gives end users the opportunity to cancel the activation after by moving their pointer or finger away from the target before releasing.\n\nRationale:\nPeople with various disabilities can accidentally initiate touch or mouse events. Allowing such end users to easily recover from such unintended pointer actions minimises unintended consequences such as accidental submissions."
+        },
+        {
+          "uuid": "a7093563-160f-5eb2-8059-3cb1a90a14d2",
+          "control-id": "wo-16",
+          "props": [
+            {
+              "name": "control-title",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "Label In Name"
+            },
+            {
+              "name": "profile-level",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "1"
+            }
+          ],
+          "links": [
+            {
+              "href": "#91505045-10e5-5a59-a129-cd33f7393b98",
+              "rel": "reference"
+            }
+          ],
+          "by-components": [
+            {
+              "component-uuid": "e7017a17-3b6e-5737-bfa1-72665fb3d13c",
+              "uuid": "d4faf860-2db9-5c17-b816-4f8bb1c51bb1",
+              "description": "Ensure that visible text labels of user interface components match or are contained within their programmatic or accessible names."
+            }
+          ],
+          "remarks": "Control Recommendations:\nEnsure that accessibility labels meaningfully describe the equivalent visual UI element by containing both the visible text label and other contextual descriptors that help assistive technology users fully understand the purpose and interaction.\n\nRationale:\nMatching visible text labels with the programmatic component supports the use of assistive technologies such as allowing speech-input users to navigate by speaking the visible text labels of components."
+        },
+        {
+          "uuid": "bce6282f-a4a0-5a00-9efb-ab2c3030ec84",
+          "control-id": "wo-17",
+          "props": [
+            {
+              "name": "control-title",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "Motion Actuation"
+            },
+            {
+              "name": "profile-level",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "1"
+            }
+          ],
+          "links": [
+            {
+              "href": "#91505045-10e5-5a59-a129-cd33f7393b98",
+              "rel": "reference"
+            }
+          ],
+          "by-components": [
+            {
+              "component-uuid": "e7017a17-3b6e-5737-bfa1-72665fb3d13c",
+              "uuid": "5b7cfe2b-d5ac-514d-b197-8401826b8822",
+              "description": "Provide an option to disable motion control for motion-operated features, and provide alternative means to operate such features."
+            }
+          ],
+          "remarks": "Control Recommendations:\nWhen implementing motion-operated features, provide a way to disable motion actuation and offer alternative means to operate these features through user interface components.\nNot required when motion is essential to the function, such as in pedometers that require device motion to count steps.\n\nRationale:\nEnd users with motor impairments may have difficulty holding or moving a device steadily, which can prevent them from using motion-operated features and may cause accidental triggering of functions."
+        },
+        {
+          "uuid": "088b1e35-0e37-58b1-9528-07eff1edf587",
+          "control-id": "wo-18",
+          "props": [
+            {
+              "name": "control-title",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "Minimum Pointer Target Size"
+            },
+            {
+              "name": "profile-level",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "1"
+            }
+          ],
+          "links": [
+            {
+              "href": "#91505045-10e5-5a59-a129-cd33f7393b98",
+              "rel": "reference"
+            }
+          ],
+          "by-components": [
+            {
+              "component-uuid": "e7017a17-3b6e-5737-bfa1-72665fb3d13c",
+              "uuid": "fb326c9a-9389-5d0d-a4f9-7c1993ee1e01",
+              "description": "Ensure that interactive areas for pointer input are at least 24 by 24 CSS pixels."
+            }
+          ],
+          "remarks": "Control Recommendations:\nUse min-height and min-width to ensure sufficient target spacing.\nIf targets have to be smaller than 24-pixels, they must be spaced so that a 24-pixel area around each target does not overlap adjacent targets.\nFollow platform guidelines and consider larger target sizes for mobile applications and mobile web browsing where touch is the input mechanism.\nNot required if the size of the interactive area is constrained by the line-height of non-interactive text such as text links within a body of text.\n\nRationale:\nEnd users with physical and fine motor disabilities require more effort to accurately activate small targets or targets that are close to each other. Ensuring pointer inputs are large enough with sufficient spacing between targets reduces the likelihood of errors from accidentally activating the wrong control."
+        },
+        {
+          "uuid": "a860504c-4001-5652-9ff4-e6eccccf82be",
+          "control-id": "wu-1",
+          "props": [
+            {
+              "name": "control-title",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "Language of Page"
+            },
+            {
+              "name": "profile-level",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "1"
+            }
+          ],
+          "links": [
+            {
+              "href": "#a50f703d-8b73-5de9-96c1-759f3dc546b8",
+              "rel": "reference"
+            }
+          ],
+          "by-components": [
+            {
+              "component-uuid": "e7017a17-3b6e-5737-bfa1-72665fb3d13c",
+              "uuid": "506758ba-3322-5363-aa53-f3029bf6a0da",
+              "description": "Ensure that the primary language on a page is programmatically determined."
+            }
+          ],
+          "remarks": "Control Recommendations:\nFor websites, specify the primary language of each webpage using the lang attribute in the HTML tag.\nFor mobile apps, set the language of the app content using the platform's appropriate language or accessibility attribute such the accessibilityLanguage attribute for iOS.\nFor PDFs, use the /Lang entry to specify the language of the document or section.\n\nRationale:\nSpecifying the language ensures that assistive technology can present content to end users using the correct language settings. This includes pronunciation rules and rendering of display characters and scripts."
+        },
+        {
+          "uuid": "ed3e0e11-7c6f-5f87-8b37-f4a7a9b6de1a",
+          "control-id": "wu-2",
+          "props": [
+            {
+              "name": "control-title",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "Language of Parts"
+            },
+            {
+              "name": "profile-level",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "1"
+            }
+          ],
+          "links": [
+            {
+              "href": "#a50f703d-8b73-5de9-96c1-759f3dc546b8",
+              "rel": "reference"
+            }
+          ],
+          "by-components": [
+            {
+              "component-uuid": "e7017a17-3b6e-5737-bfa1-72665fb3d13c",
+              "uuid": "ee9ad2a8-0d4f-51b7-a525-6b31f95f529b",
+              "description": "Ensure the language of words or sections that differ from the page's primary language is programmatically determined."
+            }
+          ],
+          "remarks": "Control Recommendations:\nSpecify the language of text that differs from the primary language of the page using the lang attribute in HTML elements or the platform’s equivalent language tagging feature.\n\nRationale:\nAllows assistive technology to identify language changes and properly present content in the correct intonation and proper pronunciation to end users."
+        },
+        {
+          "uuid": "fa110133-b99c-5d89-b7d7-23084413baa4",
+          "control-id": "wu-3",
+          "props": [
+            {
+              "name": "control-title",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "Unusual Words"
+            },
+            {
+              "name": "profile-level",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "1"
+            }
+          ],
+          "links": [
+            {
+              "href": "#a50f703d-8b73-5de9-96c1-759f3dc546b8",
+              "rel": "reference"
+            }
+          ],
+          "by-components": [
+            {
+              "component-uuid": "e7017a17-3b6e-5737-bfa1-72665fb3d13c",
+              "uuid": "fd872203-6c50-5932-8d77-26ddcbc11055",
+              "description": "Provide definitions for technical jargon and unusual terms."
+            }
+          ],
+          "remarks": "Control Recommendations:\nAvoid jargon and unusual terms where possible. If absolutely necessary, provide contextual help such as inline explanations, tooltips, or glossaries.\n\nRationale:\nSlang, jargon, metaphors, and figures of speech may not be understood by some groups of end users. Identifying and providing relevance guidance make such content more accessible to everyone."
+        },
+        {
+          "uuid": "689ac142-2c22-5ba1-93b7-284094e54007",
+          "control-id": "wu-4",
+          "props": [
+            {
+              "name": "control-title",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "Abbreviations"
+            },
+            {
+              "name": "profile-level",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "1"
+            }
+          ],
+          "links": [
+            {
+              "href": "#a50f703d-8b73-5de9-96c1-759f3dc546b8",
+              "rel": "reference"
+            }
+          ],
+          "by-components": [
+            {
+              "component-uuid": "e7017a17-3b6e-5737-bfa1-72665fb3d13c",
+              "uuid": "24c97eee-bb2a-5ce5-b5b4-bd020e4bb317",
+              "description": "Provide the expanded form of abbreviations."
+            }
+          ],
+          "remarks": "Control Recommendations:\nProvide expanded forms of abbreviations the first time they appear on a page or flow, or provide contextual help such as inline explanations, tooltips, or glossaries.\nNot required for common abbreviations such as PDF and SMS where presenting the expanded form is unnecessary for understanding of meaning, and may negatively affect the reading experience.\n\nRationale:\nAbbreviations or acronyms may not be understood by some end users, especially when used for the first time in a page or section."
+        },
+        {
+          "uuid": "d83f0ec4-c5d8-5d22-8921-ef4af6a58016",
+          "control-id": "wu-5",
+          "props": [
+            {
+              "name": "control-title",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "Changes On Focus"
+            },
+            {
+              "name": "profile-level",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "1"
+            }
+          ],
+          "links": [
+            {
+              "href": "#a50f703d-8b73-5de9-96c1-759f3dc546b8",
+              "rel": "reference"
+            }
+          ],
+          "by-components": [
+            {
+              "component-uuid": "e7017a17-3b6e-5737-bfa1-72665fb3d13c",
+              "uuid": "e4366f71-eb20-55ca-905d-efb67822a3f1",
+              "description": "Avoid changing the context when a user interface component receives focus"
+            }
+          ],
+          "remarks": "Control Recommendations:\nIf a component triggers an event when it receives focus, the context should not be changed.\nAvoid actions such as form submissions, opening a new window and changing focus to another component when a component receives focus.\n\nRationale:\nUnexpected changes of context triggered by focus change can be disorienting to users of assistive technology. Ensuring that context changes are predictable helps end users feel secure and in control while navigating a site."
+        },
+        {
+          "uuid": "1b50b0a6-2450-5d4a-8392-e339307936da",
+          "control-id": "wu-6",
+          "props": [
+            {
+              "name": "control-title",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "Changes On Input"
+            },
+            {
+              "name": "profile-level",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "1"
+            }
+          ],
+          "links": [
+            {
+              "href": "#a50f703d-8b73-5de9-96c1-759f3dc546b8",
+              "rel": "reference"
+            }
+          ],
+          "by-components": [
+            {
+              "component-uuid": "e7017a17-3b6e-5737-bfa1-72665fb3d13c",
+              "uuid": "02dacf24-ccef-5b84-9b9c-118e2b27f128",
+              "description": "Provide advance warning when input causes a change of context."
+            }
+          ],
+          "remarks": "Control Recommendations:\nClicking on links or buttons are not considered inputs or changing the setting of that control in the context of this control.\nExplicitly inform end users if provision of input like checking a checkbox or entering text into a text field results in a change in context. Changes in context include responses like navigation to a new page or section, submission, or opening a new window.\nAlternatively, provide controls such as buttons that allow end users to intentionally trigger actions like confirming a selection or submission.\n\nRationale:\nUnexpected changes of context triggered by input can be disorienting to users of assistive technology. Ensuring that context changes are predictable helps users feel secure and in control while navigating a site."
+        },
+        {
+          "uuid": "65d75c70-67ed-50a3-9378-cd76664d9ca4",
+          "control-id": "wu-7",
+          "props": [
+            {
+              "name": "control-title",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "Consistent Navigation"
+            },
+            {
+              "name": "profile-level",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "1"
+            }
+          ],
+          "links": [
+            {
+              "href": "#a50f703d-8b73-5de9-96c1-759f3dc546b8",
+              "rel": "reference"
+            }
+          ],
+          "by-components": [
+            {
+              "component-uuid": "e7017a17-3b6e-5737-bfa1-72665fb3d13c",
+              "uuid": "d073f2ce-fb31-581c-8901-308020dd672d",
+              "description": "Implement a primary or main navigation panel that\n* Is placed at or near the top of the website\n* Is not hidden or collapsed within an icon on desktop for websites\n* Presents navigation links in the same relative order on each page"
+            }
+          ],
+          "remarks": "Control Recommendations:\nTest the top navigation component with users to ensure it is usable and accessible.\n\nRationale:\nUnexpected changes of context triggered by focus change can be disorienting to end users with sensory or cognitive impairment, or users of assistive technology."
+        },
+        {
+          "uuid": "6660979f-d66e-522a-a0af-3fe3a26d6d93",
+          "control-id": "wu-8",
+          "props": [
+            {
+              "name": "control-title",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "Consistent Identification"
+            },
+            {
+              "name": "profile-level",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "1"
+            }
+          ],
+          "links": [
+            {
+              "href": "#a50f703d-8b73-5de9-96c1-759f3dc546b8",
+              "rel": "reference"
+            }
+          ],
+          "by-components": [
+            {
+              "component-uuid": "e7017a17-3b6e-5737-bfa1-72665fb3d13c",
+              "uuid": "b2e4ea64-4cc0-5b92-8e5f-d8fa2dd8eecf",
+              "description": "Identify and label repeated or related components consistently within the digital service."
+            }
+          ],
+          "remarks": "Control Recommendations:\nEnsure that text used to identify a component such as label, name, or text alternatives are identical for each user interface component with the same function within the digital service.\n\nRationale:\nAllows end users to quickly learn and understand navigation, design and interaction patterns within the digital service. This reduces cognitive load and increase efficiency of task completion."
+        },
+        {
+          "uuid": "dfca1ce9-e6eb-5b79-a67d-d0dae102d8f6",
+          "control-id": "wu-9",
+          "props": [
+            {
+              "name": "control-title",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "Consistent Help"
+            },
+            {
+              "name": "profile-level",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "1"
+            }
+          ],
+          "links": [
+            {
+              "href": "#a50f703d-8b73-5de9-96c1-759f3dc546b8",
+              "rel": "reference"
+            }
+          ],
+          "by-components": [
+            {
+              "component-uuid": "e7017a17-3b6e-5737-bfa1-72665fb3d13c",
+              "uuid": "1d48b7e2-5ea4-58c7-bcf3-4776bc123d45",
+              "description": "Place help and support mechanisms consistently across multiple pages."
+            }
+          ],
+          "remarks": "Control Recommendations:\nImplementing the tl-4: Official Government Footer ensures consistent placement of contact and FAQ across multiple pages.\nEnsure that other help and support mechanisms such as messaging systems or chatbots are also consistently placed across multiple pages.\n\nRationale:\nHelp and assistance are key aspects of a digital service. Consistent placement makes it easy for end users, especially those who may struggle with complex or unfamiliar interfaces to find help and support mechanisms."
+        },
+        {
+          "uuid": "c26864a2-dde5-5aa8-b789-245569ff4022",
+          "control-id": "wu-10",
+          "props": [
+            {
+              "name": "control-title",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "Error Identification"
+            },
+            {
+              "name": "profile-level",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "1"
+            }
+          ],
+          "links": [
+            {
+              "href": "#a50f703d-8b73-5de9-96c1-759f3dc546b8",
+              "rel": "reference"
+            }
+          ],
+          "by-components": [
+            {
+              "component-uuid": "e7017a17-3b6e-5737-bfa1-72665fb3d13c",
+              "uuid": "4045b467-6ccd-5f24-bfc2-f77c58525858",
+              "description": "Indicate input errors by:\n* a) Visually and audibly identifying the component or section that generated the error\n* b) Providing a text description of the error"
+            }
+          ],
+          "remarks": "Control Recommendations:\nClearly associate error messages with the source component or section. Ensure the error is easily identifiable and noticeable visually and for users of screen readers by using techniques such as ARIA attributes and requirements in wp-11.\n\nRationale:\nHelping end users easily and quickly identify, locate and understand errors minimises the frustration of encountering and resolving errors."
+        },
+        {
+          "uuid": "a5577f45-f6c6-5188-9ce1-ba77a44e7de6",
+          "control-id": "wu-11",
+          "props": [
+            {
+              "name": "control-title",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "Error Suggestion"
+            },
+            {
+              "name": "profile-level",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "1"
+            }
+          ],
+          "links": [
+            {
+              "href": "#a50f703d-8b73-5de9-96c1-759f3dc546b8",
+              "rel": "reference"
+            }
+          ],
+          "by-components": [
+            {
+              "component-uuid": "e7017a17-3b6e-5737-bfa1-72665fb3d13c",
+              "uuid": "a173f723-31d8-5bb3-9a66-8f7916ea6ea7",
+              "description": "Ensure that error messages:\n* a) Explain what went wrong in non-technical language.\n* b) Explain how to correct the issue or provide alternative actions (If suggestions for correction are known)"
+            }
+          ],
+          "remarks": "Control Recommendations:\nWrite error messages in plain language that is understood by end users of different backgrounds, and helps the user understand or resolve the issue. This applies to all error messages including inline form errors and system error pages such as 404, 500 errors.\n\nRationale:\nError messages that are not clear or do not provide useful and actionable information prevent end users from completing their tasks and lead to frustration."
+        },
+        {
+          "uuid": "66f7b926-958d-5d6b-a300-d87a39b41c75",
+          "control-id": "wu-12",
+          "props": [
+            {
+              "name": "control-title",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "Error Prevention"
+            },
+            {
+              "name": "profile-level",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "1"
+            }
+          ],
+          "links": [
+            {
+              "href": "#a50f703d-8b73-5de9-96c1-759f3dc546b8",
+              "rel": "reference"
+            }
+          ],
+          "by-components": [
+            {
+              "component-uuid": "e7017a17-3b6e-5737-bfa1-72665fb3d13c",
+              "uuid": "6061de1c-3874-5feb-96e1-a6462145d8f8",
+              "description": "Prevent errors by:\n* a) Checking user-entered data for errors and/or providing a mechanism to review, confirm, and correct information before final submission\n* b) Allow submissions to be reversed (if feasible)"
+            }
+          ],
+          "remarks": "Control Recommendations:\nImplement proper error validation.\nProvide a summary page or section for users to review and correct their inputs/information before submission. This is essential for multi-page forms which are difficult to review, and transactions with significant consequences such as those involving payments or having legal implications.\n\nRationale:\nProviding ways for end users to confirm, correct, or reverse important submissions reduces the chance of errors."
+        },
+        {
+          "uuid": "e60f1171-704b-5a61-b69d-01a2bc9a5b95",
+          "control-id": "wu-13",
+          "props": [
+            {
+              "name": "control-title",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "Redundant Entry"
+            },
+            {
+              "name": "profile-level",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "1"
+            }
+          ],
+          "links": [
+            {
+              "href": "#a50f703d-8b73-5de9-96c1-759f3dc546b8",
+              "rel": "reference"
+            }
+          ],
+          "by-components": [
+            {
+              "component-uuid": "e7017a17-3b6e-5737-bfa1-72665fb3d13c",
+              "uuid": "c85f653a-02f3-5e4f-b25e-1740e6ac3092",
+              "description": "Avoid requiring re-entry of information already provided within the same process."
+            }
+          ],
+          "remarks": "Control Recommendations:\nEither auto-populate or allow the end user to select information that was already provided.\nThis is not required if the information is required to ensure the security of the content (E.g. Confirm password) or if the previously entered information is no longer valid.\n\nRationale:\nRepetitive data entry requires unnecessary effort especially for end users with cognitive or motor impairments who may struggle with entering information."
+        },
+        {
+          "uuid": "d8cffd61-fc52-5ec1-8848-9ca79a63a97d",
+          "control-id": "wu-14",
+          "props": [
+            {
+              "name": "control-title",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "Accessible Authentication (Minimum)"
+            },
+            {
+              "name": "profile-level",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "1"
+            }
+          ],
+          "links": [
+            {
+              "href": "#a50f703d-8b73-5de9-96c1-759f3dc546b8",
+              "rel": "reference"
+            }
+          ],
+          "by-components": [
+            {
+              "component-uuid": "e7017a17-3b6e-5737-bfa1-72665fb3d13c",
+              "uuid": "f497e297-894c-5557-a174-f8d6a77f37f5",
+              "description": "Provide accessible authentication alternatives that do not require recalling, solving, or transcribing information."
+            }
+          ],
+          "remarks": "Control Recommendations:\nProvide at least 1 non-password authentication such as Singpass QR login or text/email based one-time codes.\n\nRationale:\nEnd users with cognitive impairments have difficulties recalling or performing cognitively demanding actions."
+        },
+        {
+          "uuid": "ef773a8c-97b4-5c07-b791-eabaf3edf625",
+          "control-id": "wr-1",
+          "props": [
+            {
+              "name": "control-title",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "Name, Role, Value"
+            },
+            {
+              "name": "profile-level",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "1"
+            }
+          ],
+          "links": [
+            {
+              "href": "#e9de958b-ba62-5a21-88fb-e6bc5e62751a",
+              "rel": "reference"
+            }
+          ],
+          "by-components": [
+            {
+              "component-uuid": "e7017a17-3b6e-5737-bfa1-72665fb3d13c",
+              "uuid": "6d644545-8467-5746-8eb3-2e6ba5679263",
+              "description": "Ensure that essential information of custom components and controls can be identified and read by assistive technologies."
+            }
+          ],
+          "remarks": "Control Recommendations:\nEssential information including name, roles, properties, values, states, and state changes are provided using techniques like ARIA labels.\nStandard HTML controls should already meet this criterion when used according to specification. (example: text input field)\n\nRationale:\nEnables end users of assistive technology to properly understand and interact with custom components."
+        },
+        {
+          "uuid": "eb4fb9d2-ac5e-548d-bd98-efd5007a6b91",
+          "control-id": "wr-2",
+          "props": [
+            {
+              "name": "control-title",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "Status Messages"
+            },
+            {
+              "name": "profile-level",
+              "ns": "https://info.standards.tech.gov.sg/ns/oscal",
+              "value": "1"
+            }
+          ],
+          "links": [
+            {
+              "href": "#e9de958b-ba62-5a21-88fb-e6bc5e62751a",
+              "rel": "reference"
+            }
+          ],
+          "by-components": [
+            {
+              "component-uuid": "e7017a17-3b6e-5737-bfa1-72665fb3d13c",
+              "uuid": "42eaa750-cf9f-50be-94d3-de1c1d875a9c",
+              "description": "Ensure that assistive technology can identify and announce system status changes that don't receive focus."
+            }
+          ],
+          "remarks": "Control Recommendations:\nUse ARIA roles and properties to inform users of status changes, such as when an incorrect text in an input is entered and a status message appears above.\n\nRationale:\nAllows screen readers to identify and announce changes to content that may otherwise be missed by users of assistive technologies. This benefits users with visual impairments who unlike sighted users may not notice changes outside of their area of focus."
+        }
+      ]
+    },
+    "back-matter": {
+      "resources": [
+        {
+          "uuid": "e231cdb4-53ae-5e76-9bb4-540f491eadc5",
+          "title": "Digital Services (High Impact) System Security Plan template",
+          "description": "Official Digital Services (High Impact) SSP template page.",
+          "rlinks": [
+            {
+              "href": "https://info.standards.tech.gov.sg/ssp/dss-high/",
+              "media-type": "text/html"
+            }
+          ]
+        },
+        {
+          "uuid": "01608fdf-0b3e-5b82-977a-3364420cc24f",
+          "title": "Understand Users Control Catalog",
+          "rlinks": [
+            {
+              "href": "../control-catalog/dss/uu.json",
+              "media-type": "application/json"
+            },
+            {
+              "href": "https://info.standards.tech.gov.sg/control-catalog/dss/uu/",
+              "media-type": "text/html"
+            }
+          ]
+        },
+        {
+          "uuid": "1d867980-af0e-5aa9-a10c-97376d125fa6",
+          "title": "Baseline Design Practices Control Catalog",
+          "rlinks": [
+            {
+              "href": "../control-catalog/dss/bd.json",
+              "media-type": "application/json"
+            },
+            {
+              "href": "https://info.standards.tech.gov.sg/control-catalog/dss/bd/",
+              "media-type": "text/html"
+            }
+          ]
+        },
+        {
+          "uuid": "103f5d72-122c-5399-8272-433c44aafb75",
+          "title": "Transactions and Payments Control Catalog",
+          "rlinks": [
+            {
+              "href": "../control-catalog/dss/tx.json",
+              "media-type": "application/json"
+            },
+            {
+              "href": "https://info.standards.tech.gov.sg/control-catalog/dss/tx/",
+              "media-type": "text/html"
+            }
+          ]
+        },
+        {
+          "uuid": "4703d8c1-8f8e-513b-83a5-702ad0a6540b",
+          "title": "Performance and Reliability Control Catalog",
+          "rlinks": [
+            {
+              "href": "../control-catalog/dss/pr.json",
+              "media-type": "application/json"
+            },
+            {
+              "href": "https://info.standards.tech.gov.sg/control-catalog/dss/pr/",
+              "media-type": "text/html"
+            }
+          ]
+        },
+        {
+          "uuid": "1a79b8ec-2a6a-56e8-803b-4e76531573be",
+          "title": "Trust and Legitimacy Control Catalog",
+          "rlinks": [
+            {
+              "href": "../control-catalog/dss/tl.json",
+              "media-type": "application/json"
+            },
+            {
+              "href": "https://info.standards.tech.gov.sg/control-catalog/dss/tl/",
+              "media-type": "text/html"
+            }
+          ]
+        },
+        {
+          "uuid": "bc7430b8-0457-5592-84d9-64cc7462810e",
+          "title": "WCAG - Perceivable Control Catalog",
+          "rlinks": [
+            {
+              "href": "../control-catalog/dss/wp.json",
+              "media-type": "application/json"
+            },
+            {
+              "href": "https://info.standards.tech.gov.sg/control-catalog/dss/wp/",
+              "media-type": "text/html"
+            }
+          ]
+        },
+        {
+          "uuid": "91505045-10e5-5a59-a129-cd33f7393b98",
+          "title": "WCAG - Operable Control Catalog",
+          "rlinks": [
+            {
+              "href": "../control-catalog/dss/wo.json",
+              "media-type": "application/json"
+            },
+            {
+              "href": "https://info.standards.tech.gov.sg/control-catalog/dss/wo/",
+              "media-type": "text/html"
+            }
+          ]
+        },
+        {
+          "uuid": "a50f703d-8b73-5de9-96c1-759f3dc546b8",
+          "title": "WCAG - Understandable Control Catalog",
+          "rlinks": [
+            {
+              "href": "../control-catalog/dss/wu.json",
+              "media-type": "application/json"
+            },
+            {
+              "href": "https://info.standards.tech.gov.sg/control-catalog/dss/wu/",
+              "media-type": "text/html"
+            }
+          ]
+        },
+        {
+          "uuid": "e9de958b-ba62-5a21-88fb-e6bc5e62751a",
+          "title": "WCAG - Robust Control Catalog",
+          "rlinks": [
+            {
+              "href": "../control-catalog/dss/wr.json",
+              "media-type": "application/json"
+            },
+            {
+              "href": "https://info.standards.tech.gov.sg/control-catalog/dss/wr/",
+              "media-type": "text/html"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

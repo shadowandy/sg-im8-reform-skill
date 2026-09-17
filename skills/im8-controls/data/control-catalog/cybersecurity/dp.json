@@ -1,0 +1,355 @@
+{
+  "catalog": {
+    "uuid": "ce2f58b0-0e7d-51bc-99d0-32ea48481f97",
+    "metadata": {
+      "title": "Cybersecurity Control Catalog - Data Protection",
+      "last-modified": "2026-03-24T00:00:00+08:00",
+      "version": "2026.03.24",
+      "oscal-version": "1.1.2",
+      "props": [
+        {
+          "name": "keywords",
+          "value": "IM8, GovTech, Singapore, cybersecurity, Data Protection"
+        },
+        {
+          "name": "abbreviation",
+          "value": "DP"
+        },
+        {
+          "name": "source",
+          "value": "https://info.standards.tech.gov.sg/control-catalog/cybersecurity/dp/"
+        }
+      ]
+    },
+    "groups": [
+      {
+        "id": "dp",
+        "title": "Data Protection",
+        "controls": [
+          {
+            "id": "dp-1",
+            "title": "Data Residency",
+            "props": [
+              {
+                "name": "risk-statement",
+                "value": "Failure to enforce data residency in the appropriate country may lead to legal and regulatory compliance issues, privacy concerns, and potential unauthorised access or storage of sensitive data outside the jurisdiction, increasing the risk of legal consequences and data breaches."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-24T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#dd80664f-38cc-5903-a439-187dc810c242",
+                "rel": "source",
+                "text": "Data Protection Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "dp-1_smt",
+                "name": "statement",
+                "prose": "Enforce data residency of {{ insert: param, dp-1_prm_2 }} data in {{ insert: param, dp-1_prm_1 }}."
+              },
+              {
+                "id": "dp-1_gdn",
+                "name": "guidance",
+                "prose": "Data residency in Singapore must be enforced for {{ insert: param, dp-1_prm_2 }} data."
+              }
+            ],
+            "params": [
+              {
+                "id": "dp-1_prm_1",
+                "class": "str",
+                "label": "country",
+                "guidelines": [
+                  {
+                    "prose": "The country the data resides in."
+                  }
+                ]
+              },
+              {
+                "id": "dp-1_prm_2",
+                "class": "str",
+                "label": "type",
+                "guidelines": [
+                  {
+                    "prose": "The type of data that should have enforced data residency."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "dp-2",
+            "title": "Data at Rest Encryption",
+            "props": [
+              {
+                "name": "risk-statement",
+                "value": "Without encrypting data at rest, there's an increased risk of unauthorised access and data exposure in the event of physical theft, unauthorised access to storage media, or compromised security controls, compromising the confidentiality of stored information."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-24T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#dd80664f-38cc-5903-a439-187dc810c242",
+                "rel": "source",
+                "text": "Data Protection Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "dp-2_smt",
+                "name": "statement",
+                "prose": "Encrypt data at rest."
+              },
+              {
+                "id": "dp-2_gdn",
+                "name": "guidance",
+                "prose": "Many CSP services encrypt data at rest by default but this should be confirmed and validated depending on service usage."
+              }
+            ]
+          },
+          {
+            "id": "dp-3",
+            "title": "Data in Transit Encryption",
+            "props": [
+              {
+                "name": "risk-statement",
+                "value": "Failure to encrypt data in transit increases the risk of unauthorised interception and eavesdropping, potentially leading to data breaches, unauthorised access, and compromise of sensitive information during transmission."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-24T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#dd80664f-38cc-5903-a439-187dc810c242",
+                "rel": "source",
+                "text": "Data Protection Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "dp-3_smt",
+                "name": "statement",
+                "prose": "Encrypt data in transit."
+              },
+              {
+                "id": "dp-3_gdn",
+                "name": "guidance",
+                "prose": "While some CSP services transparently encrypt data in transit at the network layer, data at the application layer should be encrypted using protocols such as Transport Layer Security (TLS) and Secure Socket Layer (SSL)."
+              }
+            ]
+          },
+          {
+            "id": "dp-4",
+            "title": "Central Cloud Tenant Management",
+            "props": [
+              {
+                "name": "risk-statement",
+                "value": "Lack of centralised cloud tenant management can lead to inconsistent security policies, reduced visibility, and increased difficulty in managing and securing cloud resources across the organisation."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-24T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#dd80664f-38cc-5903-a439-187dc810c242",
+                "rel": "source",
+                "text": "Data Protection Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "dp-4_smt",
+                "name": "statement",
+                "prose": "Implement a centralised cloud tenant management structure for {{ insert: param, dp-4_prm_1 }} using {{ insert: param, dp-4_prm_2 }}."
+              },
+              {
+                "id": "dp-4_gdn",
+                "name": "guidance",
+                "prose": "Consider services like AWS Organizations, GCP Organizations, or Azure Management Groups for centralised management. Implement appropriate landing zone frameworks. Establish consistent policies and guardrails across all accounts or projects. Centralise logging and monitoring for comprehensive visibility. Use tagging strategies for resource organisation."
+              }
+            ],
+            "params": [
+              {
+                "id": "dp-4_prm_1",
+                "class": "str",
+                "label": "systems",
+                "guidelines": [
+                  {
+                    "prose": "The systems to be hosted on a central tenant."
+                  }
+                ]
+              },
+              {
+                "id": "dp-4_prm_2",
+                "class": "str",
+                "label": "system",
+                "guidelines": [
+                  {
+                    "prose": "The central tenant management structure."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "dp-5",
+            "title": "Sanitisation",
+            "props": [
+              {
+                "name": "risk-statement",
+                "value": "Violating this control can expose government data to unauthorised users."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-24T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#dd80664f-38cc-5903-a439-187dc810c242",
+                "rel": "source",
+                "text": "Data Protection Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "dp-5_smt",
+                "name": "statement",
+                "prose": "Sanitise all hardware that stores data at rest. Shred or incinerate data storage meant for retirement."
+              },
+              {
+                "id": "dp-5_gdn",
+                "name": "guidance",
+                "prose": "Use industry standards such as a) Peter Gutmann Secure Deletion; b) Bruce Schneier Algorithm c) US Department of Defence's Standards (DoD 5220.22-M)."
+              }
+            ]
+          },
+          {
+            "id": "dp-6",
+            "title": "Witness Sanitisation and Destruction of Storage Devices",
+            "props": [
+              {
+                "name": "risk-statement",
+                "value": "Ensuring storage devices are sanitised or destroyed will eliminate the possibility of unauthorised or unintended data retention."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-24T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#dd80664f-38cc-5903-a439-187dc810c242",
+                "rel": "source",
+                "text": "Data Protection Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "dp-6_smt",
+                "name": "statement",
+                "prose": "Witness the sanitisation and destruction process to ensure data is removed from storage."
+              },
+              {
+                "id": "dp-6_gdn",
+                "name": "guidance",
+                "prose": "Establish a SOP to ensure sanitisation and destruction are witnessed by an agency staff."
+              }
+            ]
+          },
+          {
+            "id": "dp-7",
+            "title": "Data Loss Prevention",
+            "props": [
+              {
+                "name": "risk-statement",
+                "value": "Failure to implement data loss prevention measures increases the risk of unauthorised data exfiltration, accidental data leaks, and data breaches, compromising sensitive information and organisational integrity."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-24T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#dd80664f-38cc-5903-a439-187dc810c242",
+                "rel": "source",
+                "text": "Data Protection Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "dp-7_smt",
+                "name": "statement",
+                "prose": "Implement data loss prevention mechanisms that monitor data flows, detect sensitive data transfers, and block unauthorised sharing of sensitive data."
+              },
+              {
+                "id": "dp-7_gdn",
+                "name": "guidance",
+                "prose": "Where possible, use built-in solutions such as Microsoft Purview or Google Workspace data loss prevention rules. Regularly review and update data loss prevention policies to adapt to evolving threats and organisational needs."
+              }
+            ]
+          },
+          {
+            "id": "dp-8",
+            "title": "Data Classification Disclosure",
+            "props": [
+              {
+                "name": "risk-statement",
+                "value": "Users who are not informed of the maximum allowed data classification may submit sensitive information the system is not permitted to process, risking data breaches, legal violations, and reputational harm."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-24T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#dd80664f-38cc-5903-a439-187dc810c242",
+                "rel": "source",
+                "text": "Data Protection Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "dp-8_smt",
+                "name": "statement",
+                "prose": "For internal applications serving public officers, specify the highest permitted security and sensitivity classification for input data, such as text, audio, or multimedia/file uploads, in the system's user interface and guides."
+              },
+              {
+                "id": "dp-8_gdn",
+                "name": "guidance",
+                "prose": "Indicate with a clear message, either at or near the input field, the relevant data classification that may be used with the system."
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "back-matter": {
+      "resources": [
+        {
+          "uuid": "dd80664f-38cc-5903-a439-187dc810c242",
+          "title": "Data Protection — Singapore Government ICT&SS Policy Reform",
+          "description": "Official Data Protection control catalog page.",
+          "rlinks": [
+            {
+              "href": "https://info.standards.tech.gov.sg/control-catalog/cybersecurity/dp/"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

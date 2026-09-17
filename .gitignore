@@ -1,0 +1,33 @@
+# Local agent config (skill symlink, settings, permissions)
+.claude/
+
+# Python
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+
+# Build output (regenerate with ./package-skill.sh)
+*.zip
+
+# Interrupted fetch runs (tool/fetch-control-catalog.sh)
+.staging.*/
+
+# Secrets and credentials
+.env
+.env.*
+!.env.example
+.netrc
+*.pem
+*.key
+*.p12
+*.pfx
+credentials*.json
+secrets*.json
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp

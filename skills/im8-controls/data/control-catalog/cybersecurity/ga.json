@@ -1,0 +1,333 @@
+{
+  "catalog": {
+    "uuid": "0c0b18e2-ca43-52e2-82a9-41b838f7d754",
+    "metadata": {
+      "title": "Cybersecurity Control Catalog - Generative AI",
+      "last-modified": "2026-03-24T00:00:00+08:00",
+      "version": "2026.03.24",
+      "oscal-version": "1.1.2",
+      "props": [
+        {
+          "name": "keywords",
+          "value": "IM8, GovTech, Singapore, cybersecurity, Generative AI"
+        },
+        {
+          "name": "abbreviation",
+          "value": "GA"
+        },
+        {
+          "name": "source",
+          "value": "https://info.standards.tech.gov.sg/control-catalog/cybersecurity/ga/"
+        }
+      ]
+    },
+    "groups": [
+      {
+        "id": "ga",
+        "title": "Generative AI",
+        "controls": [
+          {
+            "id": "ga-1",
+            "title": "Overseas-hosted GenAI API services",
+            "props": [
+              {
+                "name": "risk-statement",
+                "value": "Primary data is at greater legal, privacy, and exfiltration risk when in transit and processed by GenAI API services hosted in other countries."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-24T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#9da41e73-9dd0-56e9-a7df-5ea2f042ffb7",
+                "rel": "source",
+                "text": "Generative AI Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "ga-1_smt",
+                "name": "statement",
+                "prose": "Use only up to RESTRICTED and SENSITIVE NORMAL data with GenAI API services served by models hosted overseas."
+              },
+              {
+                "id": "ga-1_gdn",
+                "name": "guidance",
+                "prose": "Verify data classification with data owner before using the data with overseas GenAI API services. Ensure that these API services are accessed only via environments authorised for up to RESTRICTED and SENSITIVE NORMAL data."
+              }
+            ]
+          },
+          {
+            "id": "ga-2",
+            "title": "Singapore-hosted GenAI API services",
+            "props": [
+              {
+                "name": "risk-statement",
+                "value": "Primary data carries legal, privacy, and exfiltration risk when in transit and processed by GenAI API services hosted in Singapore."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-24T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#9da41e73-9dd0-56e9-a7df-5ea2f042ffb7",
+                "rel": "source",
+                "text": "Generative AI Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "ga-2_smt",
+                "name": "statement",
+                "prose": "Use only up to CONFIDENTIAL and SENSITIVE HIGH data with GenAI API services served by models hosted in Singapore."
+              },
+              {
+                "id": "ga-2_gdn",
+                "name": "guidance",
+                "prose": "Verify data classification with data owner before using the data with Singapore-hosted GenAI API services. Ensure that these API services are accessed only via environments authorised for up to CONFIDENTIAL and SENSITIVE HIGH data. Check documentation for whether cross-region inferencing or overseas processing occurs under certain conditions."
+              }
+            ]
+          },
+          {
+            "id": "ga-3",
+            "title": "Non-logging and non-training Agreement",
+            "props": [
+              {
+                "name": "risk-statement",
+                "value": "Without a legally binding agreement, the GenAI service provider can access primary data or logs through automated or manual checks that can expose classified data, or they may use the data for further training of their GenAI models."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-24T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#9da41e73-9dd0-56e9-a7df-5ea2f042ffb7",
+                "rel": "source",
+                "text": "Generative AI Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "ga-3_smt",
+                "name": "statement",
+                "prose": "Obtain a legally-binding commitment from the GenAI API service provider that states that they do not log, store, nor retain input and output data, and that no input and output data are used for training GenAI models. Prompt caching (i.e. temporarily storing responses to frequently used prompts) is exempt from the above restriction on logging, storing, or retaining data, provided the cache time-to-live (TTL) is ≤ 24 hours."
+              },
+              {
+                "id": "ga-3_gdn",
+                "name": "guidance",
+                "prose": "Ensure that the agreement covers all endpoints, parameters, outputs and models in use. Using GenAI API services provided by GCC 2.0 satisfies this control."
+              }
+            ]
+          },
+          {
+            "id": "ga-4",
+            "title": "Data classification for self-hosted GenAI models",
+            "props": [
+              {
+                "name": "risk-statement",
+                "value": "Using GenAI models with data that is more classified than what its environment is permitted to hold may open up cybersecurity vulnerabilities for attackers to exfiltrate classified data."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-24T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#9da41e73-9dd0-56e9-a7df-5ea2f042ffb7",
+                "rel": "source",
+                "text": "Generative AI Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "ga-4_smt",
+                "name": "statement",
+                "prose": "Ensure that GenAI models are hosted in an environment that can host the highest data classification of government data contained in the system that the model is deployed in."
+              },
+              {
+                "id": "ga-4_gdn",
+                "name": "guidance",
+                "prose": "Refer to relevant IM8 SSPs for controls that need to be met before hosting government data of a given data classification in that environment (e.g. in a Singapore-hosted GCC environment.)"
+              }
+            ]
+          },
+          {
+            "id": "ga-5",
+            "title": "GenAI model formats and loaders",
+            "props": [
+              {
+                "name": "risk-statement",
+                "value": "Insecure model formats or loaders have been shown to be potential threat vectors that may allow for arbitrary code execution. Failure to use more secure formats or loaders may result in potential unauthorised access to the system."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-24T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#9da41e73-9dd0-56e9-a7df-5ea2f042ffb7",
+                "rel": "source",
+                "text": "Generative AI Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "ga-5_smt",
+                "name": "statement",
+                "prose": "Use approved formats (such as {{ insert: param, ga-5_prm_1 }}) when using any open-weights GenAI models. Use approved loaders (such as {{ insert: param, ga-5_prm_2 }}) to load open-weights GenAI models."
+              },
+              {
+                "id": "ga-5_gdn",
+                "name": "guidance",
+                "prose": "Update GenAI model loaders frequently to hinder attacks."
+              }
+            ],
+            "params": [
+              {
+                "id": "ga-5_prm_1",
+                "class": "str",
+                "label": "list of model formats",
+                "guidelines": [
+                  {
+                    "prose": "An example list of approved model formats."
+                  }
+                ]
+              },
+              {
+                "id": "ga-5_prm_2",
+                "class": "str",
+                "label": "list of model loaders",
+                "guidelines": [
+                  {
+                    "prose": "An example list of approved model loaders."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "ga-6",
+            "title": "File upload safeguards",
+            "props": [
+              {
+                "name": "risk-statement",
+                "value": "Enabling file uploads in a generative AI application creates two key risks: (a) the possibility of sensitive data leaks if models are prompted to reveal information from uploaded files, and (b) the risk of exceeding permitted data classification levels — either by uploading multiple files without reassessing their collective classification, or by inadvertently uploading documents with a higher classification level due to human error."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-24T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#9da41e73-9dd0-56e9-a7df-5ea2f042ffb7",
+                "rel": "source",
+                "text": "Generative AI Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "ga-6_smt",
+                "name": "statement",
+                "prose": "Implement file upload safeguards if file uploads are enabled in the system."
+              },
+              {
+                "id": "ga-6_gdn",
+                "name": "guidance",
+                "prose": "Examples of safeguards include but are not limited to: (1) Implementing Data Loss Protection (“DLP”) tools to monitor document uploads, (2) Disabling bulk or batch file uploads, such as by preventing users from selecting multiple files with a single action, or by requiring users to confirm the data security/sensitivity classification of each file individually before uploading, (3) Prompting users who upload excessively large files to review file contents and their collective data security/sensitivity classification."
+              }
+            ]
+          },
+          {
+            "id": "ga-7",
+            "title": "Evaluation of GenAI accuracy, safety, and output quality",
+            "props": [
+              {
+                "name": "risk-statement",
+                "value": "Failure to evaluate models, prompts, and their dependencies (such as tool integrations and retrieval-augmented generation (RAG) systems) can result in low-quality outputs after updates or configuration changes."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-24T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#9da41e73-9dd0-56e9-a7df-5ea2f042ffb7",
+                "rel": "source",
+                "text": "Generative AI Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "ga-7_smt",
+                "name": "statement",
+                "prose": "Test the accuracy, safety, and quality of the GenAI application's outputs, with clearly defined metrics, test scenarios, and criteria."
+              },
+              {
+                "id": "ga-7_gdn",
+                "name": "guidance",
+                "prose": "Determine the adequate level of accuracy, safety, and output quality for your application. Develop tests to assess outputs on these dimensions. The complexity and structure of these tests should be tailored to the risk profile of your application. Document this approach and measure & monitor results after relevant model, prompt, and dependency updates."
+              }
+            ]
+          },
+          {
+            "id": "ga-8",
+            "title": "Inform users about GenAI risks and limitations",
+            "props": [
+              {
+                "name": "risk-statement",
+                "value": "Uninformed users may trust inaccurate model-generated outputs."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-24T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#9da41e73-9dd0-56e9-a7df-5ea2f042ffb7",
+                "rel": "source",
+                "text": "Generative AI Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "ga-8_smt",
+                "name": "statement",
+                "prose": "Require users to explicitly acknowledge the risk of inaccurate or fabricated outputs (hallucinations), such as selecting a checkbox or clicking on an 'I Agree' button before the application can be accessed."
+              },
+              {
+                "id": "ga-8_gdn",
+                "name": "guidance",
+                "prose": "Include clauses about the risk of inaccurate / fabricated outputs in your Terms of Use. Indicate prominently in your application about the possibility of inaccurate or fabricated outputs. Ensure that educational materials, such as documentation, guides, playbooks, or workshops, highlight responsible use and best practices for users of the GenAI system."
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "back-matter": {
+      "resources": [
+        {
+          "uuid": "9da41e73-9dd0-56e9-a7df-5ea2f042ffb7",
+          "title": "Generative AI — Singapore Government ICT&SS Policy Reform",
+          "description": "Official Generative AI control catalog page.",
+          "rlinks": [
+            {
+              "href": "https://info.standards.tech.gov.sg/control-catalog/cybersecurity/ga/"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

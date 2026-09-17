@@ -1,0 +1,344 @@
+{
+  "catalog": {
+    "uuid": "e6f01e6b-f7f1-5e5a-a756-380a77bd15f8",
+    "metadata": {
+      "title": "Digital Service Standards Control Catalog - Baseline Design Practices",
+      "last-modified": "2026-03-05T00:00:00+08:00",
+      "version": "2026.03.05",
+      "oscal-version": "1.1.2",
+      "props": [
+        {
+          "name": "keywords",
+          "value": "IM8, GovTech, Singapore, digital service standards, Baseline Design Practices"
+        },
+        {
+          "name": "abbreviation",
+          "value": "BD"
+        },
+        {
+          "name": "source",
+          "value": "https://info.standards.tech.gov.sg/control-catalog/dss/bd/"
+        }
+      ]
+    },
+    "groups": [
+      {
+        "id": "bd",
+        "title": "Baseline Design Practices",
+        "controls": [
+          {
+            "id": "bd-1",
+            "title": "Responsive Web Design",
+            "props": [
+              {
+                "name": "rationale",
+                "value": "A significant amount of web traffic comes from mobile devices. Responsive Web Design allows for optimised browsing experience on devices with different screen sizes."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-05T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#ffcc8da2-4a45-5f71-8ddb-f7a43f75a173",
+                "rel": "source",
+                "text": "Baseline Design Practices Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "bd-1_smt",
+                "name": "statement",
+                "prose": "Adopt Responsive Web Design for web-based digital services.\nIf specific content is deemed unsuitable for mobile devices, disable mobile device access, and clearly explain why the content or service is disabled and how it can be accessed."
+              },
+              {
+                "id": "bd-1_gdn",
+                "name": "guidance",
+                "prose": "Implement Responsive Web Design techniques to ensure web-based digital services are optimised for various devices and screen sizes. Test and resolve any layout or functionality issues."
+              }
+            ]
+          },
+          {
+            "id": "bd-2",
+            "title": "Site Search",
+            "props": [
+              {
+                "name": "rationale",
+                "value": "Search is a known and effective alternative to navigation for users who know what they are looking for."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-05T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#ffcc8da2-4a45-5f71-8ddb-f7a43f75a173",
+                "rel": "source",
+                "text": "Baseline Design Practices Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "bd-2_smt",
+                "name": "statement",
+                "prose": "Provide a site search function for multi-page websites."
+              },
+              {
+                "id": "bd-2_gdn",
+                "name": "guidance",
+                "prose": "Implement a site search function like SearchSG. Make it easily accessible and discoverable. Regularly review search analytics to optimise the search functionality based on user behaviour and needs.\nNot required for\na) Mobile applications\nb) Transactional services\nc) Websites where search is the service offered (e.g. CDCGoWhere)."
+              }
+            ]
+          },
+          {
+            "id": "bd-3",
+            "title": "Support multiple languages",
+            "props": [
+              {
+                "name": "rationale",
+                "value": "Allowing end users to select their preferred language enhances usability and inclusivity, allowing broader access and understanding."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-05T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#ffcc8da2-4a45-5f71-8ddb-f7a43f75a173",
+                "rel": "source",
+                "text": "Baseline Design Practices Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "bd-3_smt",
+                "name": "statement",
+                "prose": "Provide content in multiple languages to accommodate language preferences."
+              },
+              {
+                "id": "bd-3_gdn",
+                "name": "guidance",
+                "prose": "Implement language selection mechanisms at key entry points, such as login or homepage, or select language based on device setting. Ensure that end users can easily switch between languages at any time."
+              }
+            ]
+          },
+          {
+            "id": "bd-4",
+            "title": "Clear and Concise Content",
+            "props": [
+              {
+                "name": "rationale",
+                "value": "Writing in a simple and concise manner allows more users with different backgrounds and language proficiency to understand your content."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-05T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#ffcc8da2-4a45-5f71-8ddb-f7a43f75a173",
+                "rel": "source",
+                "text": "Baseline Design Practices Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "bd-4_smt",
+                "name": "statement",
+                "prose": "Write in a clear and concise manner that is easy to read and understand; Choose simple words that most people can understand."
+              },
+              {
+                "id": "bd-4_gdn",
+                "name": "guidance",
+                "prose": "Conduct user testing to validate that content is clear and accessible to your target audience.\nReadability formulas such as Flesch Reading Ease or Flesch-Kincaid grade level provide an indication of the difficulty of text and identify areas for simplification."
+              }
+            ]
+          },
+          {
+            "id": "bd-5",
+            "title": "Search Engine Optimisation",
+            "props": [
+              {
+                "name": "rationale",
+                "value": "SEO increases the findability and reach of web content by helping search platforms effectively crawl your content and optimising the content displayed in search listings. Good SEO practices are essential for end users who access your pages via search."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-05T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#ffcc8da2-4a45-5f71-8ddb-f7a43f75a173",
+                "rel": "source",
+                "text": "Baseline Design Practices Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "bd-5_smt",
+                "name": "statement",
+                "prose": "Implement Search Engine Optimisation (SEO) best practices to improve website search engine rankings and results."
+              },
+              {
+                "id": "bd-5_gdn",
+                "name": "guidance",
+                "prose": "Fill out all metadata fields and optimise your website's meta tags. Check that information presented on the search engine results page such as page titles and abstracts are informative and relevant.\nNot required for digital services that are restricted to a specific audience and accessed directly, and experimental or beta services."
+              }
+            ]
+          },
+          {
+            "id": "bd-6",
+            "title": "Consistent UI Design",
+            "props": [
+              {
+                "name": "rationale",
+                "value": "Consistent design and placement of interface components improves usability by allowing end users to quickly learn interface patterns. Design systems or style guides help with consistency and scalability by consolidating reusable designs and components."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-05T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#ffcc8da2-4a45-5f71-8ddb-f7a43f75a173",
+                "rel": "source",
+                "text": "Baseline Design Practices Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "bd-6_smt",
+                "name": "statement",
+                "prose": "Use a design system or style guide to maintain a consistent user interface design throughout the entire service."
+              },
+              {
+                "id": "bd-6_gdn",
+                "name": "guidance",
+                "prose": "Use a design system such as the Singapore Government Design System (SGDS)."
+              }
+            ]
+          },
+          {
+            "id": "bd-7",
+            "title": "Mandatory and Optional Fields",
+            "props": [
+              {
+                "name": "rationale",
+                "value": "Reduces completion time by allowing end users to skip unnecessary fields and increases completion rates by helping end users understand the effort required."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-05T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#ffcc8da2-4a45-5f71-8ddb-f7a43f75a173",
+                "rel": "source",
+                "text": "Baseline Design Practices Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "bd-7_smt",
+                "name": "statement",
+                "prose": "Indicate if input fields are mandatory or optional."
+              },
+              {
+                "id": "bd-7_gdn",
+                "name": "guidance",
+                "prose": "Use consistent visual indicators, such as asterisks (*) for mandatory fields. Providing an 'optional' label for optional fields is a good alternative if majority of the fields are mandatory. Ensure these indicators are accessible to screen readers.\nNot required for login pages asking for unique identifier (username) and password."
+              }
+            ]
+          },
+          {
+            "id": "bd-8",
+            "title": "Log-in Indication",
+            "props": [
+              {
+                "name": "rationale",
+                "value": "Provides a clear indication that the end user is logged into the right account. This is especially important for shared devices."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-05T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#ffcc8da2-4a45-5f71-8ddb-f7a43f75a173",
+                "rel": "source",
+                "text": "Baseline Design Practices Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "bd-8_smt",
+                "name": "statement",
+                "prose": "Prominently display the name or identifier of the individual associated with the account after login."
+              },
+              {
+                "id": "bd-8_gdn",
+                "name": "guidance",
+                "prose": "Display the end user's name or identifier in a clear, accessible location, such as the header or near the top of the page."
+              }
+            ]
+          },
+          {
+            "id": "bd-9",
+            "title": "Contact Channels",
+            "props": [
+              {
+                "name": "rationale",
+                "value": "Allow end users to contact the relevant parties if they require help or assistance. Reassures users by providing a clear method to acquire information or resolve issues."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-05T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#ffcc8da2-4a45-5f71-8ddb-f7a43f75a173",
+                "rel": "source",
+                "text": "Baseline Design Practices Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "bd-9_smt",
+                "name": "statement",
+                "prose": "Provide at least one contact channel for help or assistance."
+              },
+              {
+                "id": "bd-9_gdn",
+                "name": "guidance",
+                "prose": "Implement contact channels such as phone numbers, email, contact forms, live chat.\nTL-4: Official Government Footer requires a link to contact channels within the footer and WU-9: Consistent Help requires consistent placement of help and support mechanisms across pages."
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "back-matter": {
+      "resources": [
+        {
+          "uuid": "ffcc8da2-4a45-5f71-8ddb-f7a43f75a173",
+          "title": "Baseline Design Practices — Singapore Government ICT&SS Policy Reform",
+          "description": "Official Baseline Design Practices control catalog page.",
+          "rlinks": [
+            {
+              "href": "https://info.standards.tech.gov.sg/control-catalog/dss/bd/"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

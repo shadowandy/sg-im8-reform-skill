@@ -1,0 +1,191 @@
+{
+  "catalog": {
+    "uuid": "a2a2eac3-6dfc-5982-aa27-55dbf885ddef",
+    "metadata": {
+      "title": "Cybersecurity Control Catalog - Cryptography, Encryption and Key Management",
+      "last-modified": "2026-03-24T00:00:00+08:00",
+      "version": "2026.03.24",
+      "oscal-version": "1.1.2",
+      "props": [
+        {
+          "name": "keywords",
+          "value": "IM8, GovTech, Singapore, cybersecurity, Cryptography, Encryption and Key Management"
+        },
+        {
+          "name": "abbreviation",
+          "value": "CK"
+        },
+        {
+          "name": "source",
+          "value": "https://info.standards.tech.gov.sg/control-catalog/cybersecurity/ck/"
+        }
+      ]
+    },
+    "groups": [
+      {
+        "id": "ck",
+        "title": "Cryptography, Encryption and Key Management",
+        "controls": [
+          {
+            "id": "ck-1",
+            "title": "Cryptographic Key Establishment",
+            "props": [
+              {
+                "name": "risk-statement",
+                "value": "Insecure cryptographic key establishment can lead to weak or broken encryption."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-24T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#3ba81cb0-e9e9-5e7d-9f9c-d55730501af9",
+                "rel": "source",
+                "text": "Cryptography, Encryption and Key Management Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "ck-1_smt",
+                "name": "statement",
+                "prose": "Use industry-standard cryptographic key establishment schemes and key derivation methods."
+              },
+              {
+                "id": "ck-1_gdn",
+                "name": "guidance",
+                "prose": "Refer to SP 800-56A, SP 800-56B, and SP 800-56C for updated industry-standard cryptographic key establishment schemes and key derivation methods. Cloud services such as AWS Key Management Service and Azure Key Vault can be used for generating and managing cryptographic keys."
+              }
+            ]
+          },
+          {
+            "id": "ck-2",
+            "title": "Cryptographic Key Rotation",
+            "props": [
+              {
+                "name": "risk-statement",
+                "value": "Failing to rotate cryptographic keys increases the risk of broken encryption."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-24T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#3ba81cb0-e9e9-5e7d-9f9c-d55730501af9",
+                "rel": "source",
+                "text": "Cryptography, Encryption and Key Management Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "ck-2_smt",
+                "name": "statement",
+                "prose": "Rotate cryptographic keys every {{ insert: param, ck-2_prm_1 }} days."
+              },
+              {
+                "id": "ck-2_gdn",
+                "name": "guidance",
+                "prose": "Cloud services such as AWS Key Management Service and Azure Key Vault enable automatic rotation of cryptographic keys."
+              }
+            ],
+            "params": [
+              {
+                "id": "ck-2_prm_1",
+                "class": "int",
+                "label": "time period (days)",
+                "guidelines": [
+                  {
+                    "prose": "The time period in days of cryptographic key rotation frequency."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "ck-3",
+            "title": "Cryptographic Key Management",
+            "props": [
+              {
+                "name": "risk-statement",
+                "value": "Inadequate key management increase the risk of unauthorised access, data breaches, and compromised cryptographic operations due to poorly managed or safeguarded cryptographic keys."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-24T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#3ba81cb0-e9e9-5e7d-9f9c-d55730501af9",
+                "rel": "source",
+                "text": "Cryptography, Encryption and Key Management Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "ck-3_smt",
+                "name": "statement",
+                "prose": "Implement cryptographic key management processes to ensure cryptographic keys are well-managed and safeguarded throughout their lifecycle."
+              },
+              {
+                "id": "ck-3_gdn",
+                "name": "guidance",
+                "prose": "Follow key management practices such as those described in NIST SP 800-57 or ISO/IEC 27017 to cover aspects including generation, registration, storage, distribution, installation, use, rotation, backup, recovery, revocation, suspension, and destruction of keys."
+              }
+            ]
+          },
+          {
+            "id": "ck-4",
+            "title": "Cryptographic Key Storage",
+            "props": [
+              {
+                "name": "risk-statement",
+                "value": "Inadequate key storage and access controls can lead to unauthorised key access and potential data breaches."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-24T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#3ba81cb0-e9e9-5e7d-9f9c-d55730501af9",
+                "rel": "source",
+                "text": "Cryptography, Encryption and Key Management Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "ck-4_smt",
+                "name": "statement",
+                "prose": "Securely store cryptographic keys and implement strict access controls based on the principle of least privilege."
+              },
+              {
+                "id": "ck-4_gdn",
+                "name": "guidance",
+                "prose": "Use cloud services such as AWS Key Management Service and Azure Key Vault to securely store cryptographic keys with access controls."
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "back-matter": {
+      "resources": [
+        {
+          "uuid": "3ba81cb0-e9e9-5e7d-9f9c-d55730501af9",
+          "title": "Cryptography, Encryption and Key Management — Singapore Government ICT&SS Policy Reform",
+          "description": "Official Cryptography, Encryption and Key Management control catalog page.",
+          "rlinks": [
+            {
+              "href": "https://info.standards.tech.gov.sg/control-catalog/cybersecurity/ck/"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

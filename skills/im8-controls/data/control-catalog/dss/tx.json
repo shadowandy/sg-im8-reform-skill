@@ -1,0 +1,542 @@
+{
+  "catalog": {
+    "uuid": "9977face-ada7-57e4-913e-55f024cdb52e",
+    "metadata": {
+      "title": "Digital Service Standards Control Catalog - Transactions and Payments",
+      "last-modified": "2026-03-05T00:00:00+08:00",
+      "version": "2026.03.05",
+      "oscal-version": "1.1.2",
+      "props": [
+        {
+          "name": "keywords",
+          "value": "IM8, GovTech, Singapore, digital service standards, Transactions and Payments"
+        },
+        {
+          "name": "abbreviation",
+          "value": "TX"
+        },
+        {
+          "name": "source",
+          "value": "https://info.standards.tech.gov.sg/control-catalog/dss/tx/"
+        }
+      ]
+    },
+    "groups": [
+      {
+        "id": "tx",
+        "title": "Transactions and Payments",
+        "controls": [
+          {
+            "id": "tx-1",
+            "title": "Digital-First Approach",
+            "props": [
+              {
+                "name": "rationale",
+                "value": "A transaction that is not fully digital diminishes the convenience of being able to transact anywhere and anytime."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-05T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#8fc84b3a-cdba-5612-af5c-0d69e49695f2",
+                "rel": "source",
+                "text": "Transactions and Payments Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "tx-1_smt",
+                "name": "statement",
+                "prose": "Design digital transactions to be fully digital from start to finish, unless otherwise stated in legal regulations."
+              },
+              {
+                "id": "tx-1_gdn",
+                "name": "guidance",
+                "prose": "Avoid requiring non-digital interactions such as physical signatures, paper-based approvals, or in-person submissions as part of a digital service.\nImplement digital signature solutions such as Singpass, and enable common digital payment methods like credit card and Paynow."
+              }
+            ]
+          },
+          {
+            "id": "tx-2",
+            "title": "Transaction Prerequisites",
+            "props": [
+              {
+                "name": "rationale",
+                "value": "Knowing the information and documents required allows end users to assess their readiness and ability to complete the transaction before committing to it."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-05T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#8fc84b3a-cdba-5612-af5c-0d69e49695f2",
+                "rel": "source",
+                "text": "Transactions and Payments Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "tx-2_smt",
+                "name": "statement",
+                "prose": "Provide all information required to complete the transaction before the start of the transaction."
+              },
+              {
+                "id": "tx-2_gdn",
+                "name": "guidance",
+                "prose": "Information to include where applicable:\na) Prerequisites or eligibility criteria\nb) Estimated completion time/time range\nc) Required documents and accepted file formats\nd) Cost and payment modes available"
+              }
+            ]
+          },
+          {
+            "id": "tx-3",
+            "title": "Break Down Long Transactions",
+            "props": [
+              {
+                "name": "rationale",
+                "value": "Makes long or multi-step tasks feel more manageable."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-05T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#8fc84b3a-cdba-5612-af5c-0d69e49695f2",
+                "rel": "source",
+                "text": "Transactions and Payments Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "tx-3_smt",
+                "name": "statement",
+                "prose": "Break long transactions down into logical steps or sections."
+              },
+              {
+                "id": "tx-3_gdn",
+                "name": "guidance",
+                "prose": "Group related input fields together to reduce cognitive load and streamline data entry."
+              }
+            ]
+          },
+          {
+            "id": "tx-4",
+            "title": "Progress Indicators",
+            "props": [
+              {
+                "name": "rationale",
+                "value": "Progress indicators can help end users estimate time required for a task, and know their progress within a transaction or flow."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-05T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#8fc84b3a-cdba-5612-af5c-0d69e49695f2",
+                "rel": "source",
+                "text": "Transactions and Payments Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "tx-4_smt",
+                "name": "statement",
+                "prose": "Provide progress indicators for multi-step transactions."
+              },
+              {
+                "id": "tx-4_gdn",
+                "name": "guidance",
+                "prose": "Use a clear and intuitive design to visually convey the process and progress."
+              }
+            ]
+          },
+          {
+            "id": "tx-5",
+            "title": "Save Draft Function",
+            "props": [
+              {
+                "name": "rationale",
+                "value": "Some transactions have long estimated completion time or many fields. An option to save and continue later provides end users with the flexibility of performing the transaction in chunks, and assurance that input can be retrieved if something goes wrong."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-05T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#8fc84b3a-cdba-5612-af5c-0d69e49695f2",
+                "rel": "source",
+                "text": "Transactions and Payments Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "tx-5_smt",
+                "name": "statement",
+                "prose": "Provide a save draft function for long transactions."
+              },
+              {
+                "id": "tx-5_gdn",
+                "name": "guidance",
+                "prose": "Ensure the option to save drafts is clearly visible and accessible. Provide clear feedback when a draft has been saved and provide easy access to retrieve and resume the draft."
+              }
+            ]
+          },
+          {
+            "id": "tx-6",
+            "title": "Pre-fill Data",
+            "props": [
+              {
+                "name": "rationale",
+                "value": "Pre-filled data saves end users time and minimises the risk of errors from manual input."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-05T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#8fc84b3a-cdba-5612-af5c-0d69e49695f2",
+                "rel": "source",
+                "text": "Transactions and Payments Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "tx-6_smt",
+                "name": "statement",
+                "prose": "Pre-fill forms with known data where applicable;\nWhere SingPass/CorpPass is used, provide the option to pre-fill personal or business data with MyInfo and Enterprise Data Hub (EDH)."
+              },
+              {
+                "id": "tx-6_gdn",
+                "name": "guidance",
+                "prose": "Properly assess accuracy and relevance of any pre-filled data before implementation."
+              }
+            ]
+          },
+          {
+            "id": "tx-7",
+            "title": "Payment and Refund",
+            "props": [
+              {
+                "name": "rationale",
+                "value": "Being transparent and upfront about payment related details reassures end users and minimises the unpleasantness of rectifying an error."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-05T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#8fc84b3a-cdba-5612-af5c-0d69e49695f2",
+                "rel": "source",
+                "text": "Transactions and Payments Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "tx-7_smt",
+                "name": "statement",
+                "prose": "Provide payment and refund information before payment is made."
+              },
+              {
+                "id": "tx-7_gdn",
+                "name": "guidance",
+                "prose": "Ensure this information is easily accessible on the payment page and before the start of the transaction."
+              }
+            ]
+          },
+          {
+            "id": "tx-8",
+            "title": "Managing Stored Payment Details",
+            "props": [
+              {
+                "name": "rationale",
+                "value": "Provides end users with control over sensitive payment information."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-05T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#8fc84b3a-cdba-5612-af5c-0d69e49695f2",
+                "rel": "source",
+                "text": "Transactions and Payments Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "tx-8_smt",
+                "name": "statement",
+                "prose": "Allow updating and removal of stored payment details in all digital services involving payments."
+              },
+              {
+                "id": "tx-8_gdn",
+                "name": "guidance",
+                "prose": "Provide clear instructions and confirmation prompts to guide end users through the process to minimise errors."
+              }
+            ]
+          },
+          {
+            "id": "tx-9",
+            "title": "Success or failure message",
+            "props": [
+              {
+                "name": "rationale",
+                "value": "Clear feedback on the outcome of the transaction reassures end users."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-05T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#8fc84b3a-cdba-5612-af5c-0d69e49695f2",
+                "rel": "source",
+                "text": "Transactions and Payments Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "tx-9_smt",
+                "name": "statement",
+                "prose": "Display a success or failure message at the end of the transaction."
+              },
+              {
+                "id": "tx-9_gdn",
+                "name": "guidance",
+                "prose": "Use familiar and unambiguous visual cues, such as clear copy, iconography, and colour(e.g. green for success, red for failure) to enhance immediate recognition."
+              }
+            ]
+          },
+          {
+            "id": "tx-10",
+            "title": "Failed Transaction Details",
+            "props": [
+              {
+                "name": "rationale",
+                "value": "Providing specific and actionable information to end users when a transaction fails allows them to quickly understand the reasons, and resolve issues if applicable."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-05T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#8fc84b3a-cdba-5612-af5c-0d69e49695f2",
+                "rel": "source",
+                "text": "Transactions and Payments Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "tx-10_smt",
+                "name": "statement",
+                "prose": "Provide the following details for failed transactions:\n* a) Clear reasons for failure or rejection (unless limited by policy considerations)\n* b) Alternative actions\n* c) Channels for appeals or further enquiries"
+              },
+              {
+                "id": "tx-10_gdn",
+                "name": "guidance",
+                "prose": "Ensuring explanations are clear and as detailed as possible within policy constraints."
+              }
+            ]
+          },
+          {
+            "id": "tx-11",
+            "title": "Payment details",
+            "props": [
+              {
+                "name": "rationale",
+                "value": "Transactions involving payment are important to end users. Post transaction acknowledgement serves as a secondary check and can potentially reduce the consequences of errors."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-05T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#8fc84b3a-cdba-5612-af5c-0d69e49695f2",
+                "rel": "source",
+                "text": "Transactions and Payments Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "tx-11_smt",
+                "name": "statement",
+                "prose": "Display payment details once payment has been completed."
+              },
+              {
+                "id": "tx-11_gdn",
+                "name": "guidance",
+                "prose": "Important payment details include:\ni) Acknowledgement code or receipt number (where applicable);\nii) Transaction date;\niii) List of products and/or services transacted (where applicable);\niv) Chosen digital payment mechanism (where applicable);\nv) Amount paid\nPayment information can be displayed on the success screen and/or sent via other acknowledgement channels. Consider providing the option to download or print the receipt for record-keeping."
+              }
+            ]
+          },
+          {
+            "id": "tx-12",
+            "title": "Transaction Outcome",
+            "props": [
+              {
+                "name": "rationale",
+                "value": "Keeping users informed about when to expect a decision reduces uncertainty and manages user expectations."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-05T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#8fc84b3a-cdba-5612-af5c-0d69e49695f2",
+                "rel": "source",
+                "text": "Transactions and Payments Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "tx-12_smt",
+                "name": "statement",
+                "prose": "Provide an estimated timeframe for the transaction outcome when it is not immediately available."
+              },
+              {
+                "id": "tx-12_gdn",
+                "name": "guidance",
+                "prose": "This information can be provided before the start of the transaction, on the submission success screen, and/or in acknowledgement or receipts."
+              }
+            ]
+          },
+          {
+            "id": "tx-13",
+            "title": "Post-transaction Acknowledgement",
+            "props": [
+              {
+                "name": "rationale",
+                "value": "Allowing the end user to retain a receipt or acknowledgement of the transaction that can be revisited provides reassurance that the submission or transaction has been received."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-05T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#8fc84b3a-cdba-5612-af5c-0d69e49695f2",
+                "rel": "source",
+                "text": "Transactions and Payments Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "tx-13_smt",
+                "name": "statement",
+                "prose": "Send and/or allow download of an acknowledgement after a successful transaction."
+              },
+              {
+                "id": "tx-13_gdn",
+                "name": "guidance",
+                "prose": "Send acknowledgement via channels like SMS, email, push notification, or in-app notifications. Ensure that the acknowledgment includes key details about the submission."
+              }
+            ]
+          },
+          {
+            "id": "tx-14",
+            "title": "Transaction Status Updates",
+            "props": [
+              {
+                "name": "rationale",
+                "value": "An active approach of notifying end users when they are updates to their transaction status reduces the need to manually check, and allows for timely follow-ups."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-05T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#8fc84b3a-cdba-5612-af5c-0d69e49695f2",
+                "rel": "source",
+                "text": "Transactions and Payments Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "tx-14_smt",
+                "name": "statement",
+                "prose": "Provide notifications when there are updates to transaction status."
+              },
+              {
+                "id": "tx-14_gdn",
+                "name": "guidance",
+                "prose": "Notifications can be sent via SMS, email, push notification, or in-app notifications."
+              }
+            ]
+          },
+          {
+            "id": "tx-15",
+            "title": "Tracking Transaction Status",
+            "props": [
+              {
+                "name": "rationale",
+                "value": "Allowing end users to track their transactions online increases transparency and builds trust. The ability to self-service provides a sense of control, reducing anxiety for users, and reducing reliance and load on customer support."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-05T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#8fc84b3a-cdba-5612-af5c-0d69e49695f2",
+                "rel": "source",
+                "text": "Transactions and Payments Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "tx-15_smt",
+                "name": "statement",
+                "prose": "Enable online tracking of transaction status."
+              },
+              {
+                "id": "tx-15_gdn",
+                "name": "guidance",
+                "prose": "Provide clear status labels and descriptions, estimated completion timelines, and any required end user actions."
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "back-matter": {
+      "resources": [
+        {
+          "uuid": "8fc84b3a-cdba-5612-af5c-0d69e49695f2",
+          "title": "Transactions and Payments — Singapore Government ICT&SS Policy Reform",
+          "description": "Official Transactions and Payments control catalog page.",
+          "rlinks": [
+            {
+              "href": "https://info.standards.tech.gov.sg/control-catalog/dss/tx/"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

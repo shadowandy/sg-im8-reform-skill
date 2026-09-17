@@ -1,0 +1,776 @@
+{
+  "catalog": {
+    "uuid": "f7befc6e-34c7-591c-b816-6e89695ceed1",
+    "metadata": {
+      "title": "Cybersecurity Control Catalog - Logging and Monitoring",
+      "last-modified": "2026-03-24T00:00:00+08:00",
+      "version": "2026.03.24",
+      "oscal-version": "1.1.2",
+      "props": [
+        {
+          "name": "keywords",
+          "value": "IM8, GovTech, Singapore, cybersecurity, Logging and Monitoring"
+        },
+        {
+          "name": "abbreviation",
+          "value": "LM"
+        },
+        {
+          "name": "source",
+          "value": "https://info.standards.tech.gov.sg/control-catalog/cybersecurity/lm/"
+        }
+      ]
+    },
+    "groups": [
+      {
+        "id": "lm",
+        "title": "Logging and Monitoring",
+        "controls": [
+          {
+            "id": "lm-1",
+            "title": "Separate Log Storage",
+            "props": [
+              {
+                "name": "risk-statement",
+                "value": "Storing logs in a repository separate from the system component reduces the risk of tampering, unauthorised access, and manipulation of logs if the system component is compromised."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-24T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#c1b686a2-ea61-50c6-9ff2-ce40dfea97f5",
+                "rel": "source",
+                "text": "Logging and Monitoring Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "lm-1_smt",
+                "name": "statement",
+                "prose": "Store logs in a different system or system component than the system component that generated the logs."
+              },
+              {
+                "id": "lm-1_gdn",
+                "name": "guidance",
+                "prose": "Do not store logs only in the same system component that generated it. For example, an application server on EC2 or ECS should send logs to a separate storage such as an S3 bucket as soon as possible after the logged event instead of only storing it on the server. For cloud audit logs, store them in a separate system or account."
+              }
+            ]
+          },
+          {
+            "id": "lm-2",
+            "title": "Tamper-Resistant Log Storage",
+            "props": [
+              {
+                "name": "risk-statement",
+                "value": "Without protection measures, logs are susceptible to unauthorised access, modification, or deletion, leading to the risk of tampering, loss of crucial audit information, and compromised forensic analysis capabilities during security incidents."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-24T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#c1b686a2-ea61-50c6-9ff2-ce40dfea97f5",
+                "rel": "source",
+                "text": "Logging and Monitoring Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "lm-2_smt",
+                "name": "statement",
+                "prose": "Protect logs from unauthorised access, modification, and deletion."
+              },
+              {
+                "id": "lm-2_gdn",
+                "name": "guidance",
+                "prose": "Apply access control policies to logs based on the principle of least privilege. As far as possible, only read access should be granted. Logs sent to GCC Central Logs are tamper-resistant."
+              }
+            ]
+          },
+          {
+            "id": "lm-3",
+            "title": "Network Flow Logging",
+            "props": [
+              {
+                "name": "risk-statement",
+                "value": "Failing to log network traffic going to and from network interfaces increases the risk of overlooking suspicious activities, potential security breaches, and the inability to trace and investigate network-related incidents effectively."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-24T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#c1b686a2-ea61-50c6-9ff2-ce40dfea97f5",
+                "rel": "source",
+                "text": "Logging and Monitoring Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "lm-3_smt",
+                "name": "statement",
+                "prose": "Log network traffic going to and from network interfaces."
+              },
+              {
+                "id": "lm-3_gdn",
+                "name": "guidance",
+                "prose": "Enable VPC Flow Logs for AWS or its equivalents."
+              }
+            ]
+          },
+          {
+            "id": "lm-4",
+            "title": "Audit Logging",
+            "props": [
+              {
+                "name": "risk-statement",
+                "value": "Neglecting to log and manage audit events increases the risk of undetected security incidents, compromises visibility into system activities, and hinders effective forensic analysis and compliance monitoring."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-24T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#c1b686a2-ea61-50c6-9ff2-ce40dfea97f5",
+                "rel": "source",
+                "text": "Logging and Monitoring Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "lm-4_smt",
+                "name": "statement",
+                "prose": "Log management and audit events."
+              },
+              {
+                "id": "lm-4_gdn",
+                "name": "guidance",
+                "prose": "For cloud, configure CloudTrail for AWS or its equivalents to log management and audit events such as changes to accounts, access, IAM policies and resources. For SaaS and COTS, enable audit logging features."
+              }
+            ]
+          },
+          {
+            "id": "lm-5",
+            "title": "Database Logging",
+            "props": [
+              {
+                "name": "risk-statement",
+                "value": "Neglecting to log database audit events raises the risk of overlooking unauthorised activities, compromises in data security, and hinders the ability to track and investigate security incidents or compliance violations within the database environment."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-24T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#c1b686a2-ea61-50c6-9ff2-ce40dfea97f5",
+                "rel": "source",
+                "text": "Logging and Monitoring Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "lm-5_smt",
+                "name": "statement",
+                "prose": "Log database audit events."
+              },
+              {
+                "id": "lm-5_gdn",
+                "name": "guidance",
+                "prose": "Enable RDS logging for AWS or its equivalents."
+              }
+            ]
+          },
+          {
+            "id": "lm-6",
+            "title": "Access Logging",
+            "props": [
+              {
+                "name": "risk-statement",
+                "value": "Failure to log access requests sent to web application firewalls, load balancers, proxies, or web servers increases the risk of overlooking potential security threats, unauthorised access attempts, and compromises visibility into the traffic that could lead to security incidents."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-24T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#c1b686a2-ea61-50c6-9ff2-ce40dfea97f5",
+                "rel": "source",
+                "text": "Logging and Monitoring Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "lm-6_smt",
+                "name": "statement",
+                "prose": "Log access requests sent to web application firewalls, load balancers, proxies or web servers."
+              },
+              {
+                "id": "lm-6_gdn",
+                "name": "guidance",
+                "prose": "Enable AWS WAF logging, Application Load Balancer logging, API Gateways, or their equivalents."
+              }
+            ]
+          },
+          {
+            "id": "lm-7",
+            "title": "Host Security Event Logging",
+            "props": [
+              {
+                "name": "risk-statement",
+                "value": "Neglecting to log security events on hosts increases the risk of undetected security incidents, compromises incident response capabilities, and hinders forensic analysis, limiting the ability to identify and mitigate potential threats."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-24T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#c1b686a2-ea61-50c6-9ff2-ce40dfea97f5",
+                "rel": "source",
+                "text": "Logging and Monitoring Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "lm-7_smt",
+                "name": "statement",
+                "prose": "Log security events on hosts."
+              },
+              {
+                "id": "lm-7_gdn",
+                "name": "guidance",
+                "prose": "Host security events include operating system security events, authentication, and endpoint detection and response alerts, configuration changes, and account and access rights changes."
+              }
+            ]
+          },
+          {
+            "id": "lm-8",
+            "title": "Security Log Retention",
+            "props": [
+              {
+                "name": "risk-statement",
+                "value": "Failure to retain security logs increases the risk of losing crucial historical data, hindering investigations, compliance audits, and the ability to identify and respond to security incidents that occurred beyond a limited timeframe."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-24T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#c1b686a2-ea61-50c6-9ff2-ce40dfea97f5",
+                "rel": "source",
+                "text": "Logging and Monitoring Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "lm-8_smt",
+                "name": "statement",
+                "prose": "Retain security logs for at least {{ insert: param, lm-8_prm_1 }} day(s)."
+              },
+              {
+                "id": "lm-8_gdn",
+                "name": "guidance",
+                "prose": "Security logs include network flow logs, cloud management logs, access logs, database logs and host logs. Retain non-security logs (e.g. application, operations and performance logs) as long as needed for incident resolution and debugging. Consider log lifecycle management automation, such as Amazon S3 Lifecycle configurations."
+              }
+            ],
+            "params": [
+              {
+                "id": "lm-8_prm_1",
+                "class": "int",
+                "label": "time period (days)",
+                "guidelines": [
+                  {
+                    "prose": "The time period in days of log retention."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "lm-9",
+            "title": "Security Monitoring and Alerting",
+            "props": [
+              {
+                "name": "risk-statement",
+                "value": "Without configuring security monitoring to identify potential security violations or breaches and send automated alerts, there's an increased risk of delayed or unnoticed security incidents, hindering timely response and mitigation efforts to protect the system from further compromise."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-24T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#c1b686a2-ea61-50c6-9ff2-ce40dfea97f5",
+                "rel": "source",
+                "text": "Logging and Monitoring Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "lm-9_smt",
+                "name": "statement",
+                "prose": "Configure security monitoring to identify potential security violations or breaches and send automated alerts, and respond to them accordingly."
+              },
+              {
+                "id": "lm-9_gdn",
+                "name": "guidance",
+                "prose": "Enable Amazon GuardDuty, Microsoft Azure Security Center, or their equivalents."
+              }
+            ]
+          },
+          {
+            "id": "lm-10",
+            "title": "Resource Usage Monitoring and Alerting",
+            "props": [
+              {
+                "name": "risk-statement",
+                "value": "Lack of resource usage monitoring with automated alerts increases the risk of overlooking abnormal usage patterns, potential resource abuse, and compromises in system performance, hindering the ability to proactively address issues and prevent service disruptions."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-24T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#c1b686a2-ea61-50c6-9ff2-ce40dfea97f5",
+                "rel": "source",
+                "text": "Logging and Monitoring Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "lm-10_smt",
+                "name": "statement",
+                "prose": "Configure resource usage monitoring to identify abnormal usage and send automated alerts."
+              },
+              {
+                "id": "lm-10_gdn",
+                "name": "guidance",
+                "prose": "Configure Amazon CloudWatch alarms, Azure Monitor alerts, or their equivalents to identify abnormal usage such as spike in usage, access to resources during unexpected hours, and excessive charges."
+              }
+            ]
+          },
+          {
+            "id": "lm-11",
+            "title": "Service Level Monitoring and Alerting",
+            "props": [
+              {
+                "name": "risk-statement",
+                "value": "Without effective service level monitoring to identify potential application or service degradation and send automated alerts, there is a risk of failing to meet service availability standards, which could result in user dissatisfaction and reduced reliability."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-24T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#c1b686a2-ea61-50c6-9ff2-ce40dfea97f5",
+                "rel": "source",
+                "text": "Logging and Monitoring Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "lm-11_smt",
+                "name": "statement",
+                "prose": "Monitor, maintain and alert on service level objectives (SLOs) and indicators (SLIs) to ensure consistent service performance, availability and reliability."
+              },
+              {
+                "id": "lm-11_gdn",
+                "name": "guidance",
+                "prose": "Implement a comprehensive monitoring system that tracks key SLIs and evaluates them against defined SLOs. This will help in identifying potential service level breaches early and take proactive measures to maintain service quality. Examples include CloudWatch metrics and alerts, Amazon Route 53 health checks, Azure Monitor Application Insights, or their equivalents."
+              }
+            ]
+          },
+          {
+            "id": "lm-12",
+            "title": "Central Security Log Management and Monitoring",
+            "props": [
+              {
+                "name": "risk-statement",
+                "value": "Lack of central security log management and monitoring increases the risk of delayed or unnoticed security incidents, hindering effective response, and compromising the overall cybersecurity posture."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-24T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#c1b686a2-ea61-50c6-9ff2-ce40dfea97f5",
+                "rel": "source",
+                "text": "Logging and Monitoring Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "lm-12_smt",
+                "name": "statement",
+                "prose": "Centralise security log management and monitoring with {{ insert: param, lm-12_prm_1 }}."
+              },
+              {
+                "id": "lm-12_gdn",
+                "name": "guidance",
+                "prose": "Tenants on Government Commercial Cloud (GCC) already have Cloud Service Provider (CSP) tenant security logs stored centrally and available for forwarding to Government Cyber Security Operations Centre (GCSOC). Contact GCSOC for subscription and additional services."
+              }
+            ],
+            "params": [
+              {
+                "id": "lm-12_prm_1",
+                "class": "str",
+                "label": "service",
+                "guidelines": [
+                  {
+                    "prose": "The central security log management and monitoring service."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "lm-13",
+            "title": "Anomalous Database Activity Monitoring",
+            "props": [
+              {
+                "name": "risk-statement",
+                "value": "Neglecting to monitor database activities for anomalous behaviour increases the risk of undetected security threats, unauthorised access, and compromises in data integrity, hindering the ability to identify and respond to potential database-related incidents."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-24T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#c1b686a2-ea61-50c6-9ff2-ce40dfea97f5",
+                "rel": "source",
+                "text": "Logging and Monitoring Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "lm-13_smt",
+                "name": "statement",
+                "prose": "Monitor database activities for anomalous activity."
+              },
+              {
+                "id": "lm-13_gdn",
+                "name": "guidance",
+                "prose": "Configure database activity monitoring tools, such as RDS Activity Streams or similar mechanisms, to detect and alert on unusual authentication attempts, abnormal read or write operations, or other anomalous database activity."
+              }
+            ]
+          },
+          {
+            "id": "lm-14",
+            "title": "Web Defacement Monitoring",
+            "props": [
+              {
+                "name": "risk-statement",
+                "value": "Failure to detect and respond to web defacement promptly will lead to prolonged disruption to services."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-24T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#c1b686a2-ea61-50c6-9ff2-ce40dfea97f5",
+                "rel": "source",
+                "text": "Logging and Monitoring Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "lm-14_smt",
+                "name": "statement",
+                "prose": "Plan for and implement measures to detect and recover from web defacements."
+              },
+              {
+                "id": "lm-14_gdn",
+                "name": "guidance",
+                "prose": "Visual monitoring tools enable detection of web defacements of internet-facing systems."
+              }
+            ]
+          },
+          {
+            "id": "lm-15",
+            "title": "Structured Log Formatting",
+            "props": [
+              {
+                "name": "risk-statement",
+                "value": "Inconsistent or unstructured log formatting can lead to difficulties in log analysis and monitoring, potentially resulting in missed critical events or delayed response to system anomalies."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-24T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#c1b686a2-ea61-50c6-9ff2-ce40dfea97f5",
+                "rel": "source",
+                "text": "Logging and Monitoring Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "lm-15_smt",
+                "name": "statement",
+                "prose": "Publish logs in a consistent, structured format that aligns with industry standards for easy parsing and analysis."
+              },
+              {
+                "id": "lm-15_gdn",
+                "name": "guidance",
+                "prose": "For security logs, implement or transform to OCSF (Open Cybersecurity Schema Framework), ECS (Elastic Common Schema) or similar schemas to standardise log formats for better threat detection and analysis. For operational logs, adopt OpenTelemetry or structured JSON formats to facilitate clear, structured, and efficient log analysis for system performance and diagnostics. Consistent log formatting aids in automated parsing and helps in integrating logs from various sources."
+              }
+            ]
+          },
+          {
+            "id": "lm-16",
+            "title": "Key Signals Monitoring",
+            "props": [
+              {
+                "name": "risk-statement",
+                "value": "Inadequate monitoring of key user-facing signals such as latency, traffic, errors, and saturation can lead to suboptimal service performance, adversely impacting user experience, system efficiency, and increasing the likelihood of system failures. This oversight can significantly detract from service reliability and user satisfaction."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-24T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#c1b686a2-ea61-50c6-9ff2-ce40dfea97f5",
+                "rel": "source",
+                "text": "Logging and Monitoring Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "lm-16_smt",
+                "name": "statement",
+                "prose": "Monitor key user-facing signals to maintain robust service health and performance."
+              },
+              {
+                "id": "lm-16_gdn",
+                "name": "guidance",
+                "prose": "Implement monitoring of key signals such as latency, traffic, errors, and saturation (the 4 Golden Signals). Regularly track and analyse these indicators for proactive issue detection and resolution. Use this data to identify trends and areas for system improvement, ensuring continuous enhancement in service quality and reliability."
+              }
+            ]
+          },
+          {
+            "id": "lm-17",
+            "title": "Software delivery performance monitoring",
+            "props": [
+              {
+                "name": "risk-statement",
+                "value": "Failing to measure and improve the software delivery performance can lead to inefficient development processes, reduced software quality and longer recovery times."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-24T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#c1b686a2-ea61-50c6-9ff2-ce40dfea97f5",
+                "rel": "source",
+                "text": "Logging and Monitoring Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "lm-17_smt",
+                "name": "statement",
+                "prose": "Measure and analyse software delivery performance to optimise development velocity and operational efficiency."
+              },
+              {
+                "id": "lm-17_gdn",
+                "name": "guidance",
+                "prose": "Implement tools and processes to track Deployment Frequency, Lead Time for Changes, Change Failure Rate, and Time to Restore Service (the DORA 4 Key metrics). Use these metrics as benchmarks to drive continuous improvement in the software development and deployment process, enhancing agility, reliability, and responsiveness to changes."
+              }
+            ]
+          },
+          {
+            "id": "lm-18",
+            "title": "Whole of Government Application Analytics (WOGAA)",
+            "props": [
+              {
+                "name": "risk-statement",
+                "value": "Lack of performance tracking can lead to gaps in service delivery."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-24T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#c1b686a2-ea61-50c6-9ff2-ce40dfea97f5",
+                "rel": "source",
+                "text": "Logging and Monitoring Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "lm-18_smt",
+                "name": "statement",
+                "prose": "Implement Whole of Government Application Analytics (WOGAA) in public facing digital services."
+              },
+              {
+                "id": "lm-18_gdn",
+                "name": "guidance",
+                "prose": "Register at the WOGAA portal at https://wogaa.sg/ and follow the implementation documentation at https://docs.wogaa.sg/."
+              }
+            ]
+          },
+          {
+            "id": "lm-19",
+            "title": "Log Sanitisation",
+            "props": [
+              {
+                "name": "risk-statement",
+                "value": "Failing to sanitise logs increases the risk of unauthorised exposure or misuse of sensitive information and other confidential data. This exposure could lead to privacy breaches, financial losses, compliance violations and damage to national reputation."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-24T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#c1b686a2-ea61-50c6-9ff2-ce40dfea97f5",
+                "rel": "source",
+                "text": "Logging and Monitoring Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "lm-19_smt",
+                "name": "statement",
+                "prose": "Sanitise logs to protect classified and sensitive data before it is recorded in any logging system or shared to any third party."
+              },
+              {
+                "id": "lm-19_gdn",
+                "name": "guidance",
+                "prose": "Identify types of classified and sensitive data that may appear in logs. When logging, consider using sanitisation techniques like masking or tokenisation. This ensures that sensitive information — such as PII, credentials, API keys, and payment details — are not stored in plaintext during log collection."
+              }
+            ]
+          },
+          {
+            "id": "lm-20",
+            "title": "User and Entity Behaviour Analytics",
+            "props": [
+              {
+                "name": "risk-statement",
+                "value": "Lack of monitoring for potentially malicious user and entity behaviour increases the risk of insider threats and undetected malicious activities, potentially leading to data breaches and system compromise."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-24T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#c1b686a2-ea61-50c6-9ff2-ce40dfea97f5",
+                "rel": "source",
+                "text": "Logging and Monitoring Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "lm-20_smt",
+                "name": "statement",
+                "prose": "Implement User and Entity Behaviour Analytics (UEBA) to monitor and analyse user activities for suspicious behaviour and potential threats."
+              },
+              {
+                "id": "lm-20_gdn",
+                "name": "guidance",
+                "prose": "Select a UEBA tool that integrates with existing security information and event management (SIEM) solutions and provides real-time alerts for anomalous activities. Ensure regular updates and tuning of the tool to enhance detection capabilities."
+              }
+            ]
+          },
+          {
+            "id": "lm-21",
+            "title": "Detection Updates",
+            "props": [
+              {
+                "name": "risk-statement",
+                "value": "Outdated detection rules increase the risk of undetected compromises."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-24T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#c1b686a2-ea61-50c6-9ff2-ce40dfea97f5",
+                "rel": "source",
+                "text": "Logging and Monitoring Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "lm-21_smt",
+                "name": "statement",
+                "prose": "Update detections for malware and indicators of compromise at least every {{ insert: param, lm-21_prm_1 }} day(s)."
+              },
+              {
+                "id": "lm-21_gdn",
+                "name": "guidance",
+                "prose": "Implement automation to monitor the rollout of detection updates and ensure conformance."
+              }
+            ],
+            "params": [
+              {
+                "id": "lm-21_prm_1",
+                "class": "int",
+                "label": "time period (days)",
+                "guidelines": [
+                  {
+                    "prose": "The time period in days for detection update frequency."
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "back-matter": {
+      "resources": [
+        {
+          "uuid": "c1b686a2-ea61-50c6-9ff2-ce40dfea97f5",
+          "title": "Logging and Monitoring — Singapore Government ICT&SS Policy Reform",
+          "description": "Official Logging and Monitoring control catalog page.",
+          "rlinks": [
+            {
+              "href": "https://info.standards.tech.gov.sg/control-catalog/cybersecurity/lm/"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

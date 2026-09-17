@@ -1,0 +1,521 @@
+{
+  "catalog": {
+    "uuid": "b6af729d-12d2-5bde-9897-e27fd99efef6",
+    "metadata": {
+      "title": "Cybersecurity Control Catalog - Infrastructure Security",
+      "last-modified": "2026-03-24T00:00:00+08:00",
+      "version": "2026.03.24",
+      "oscal-version": "1.1.2",
+      "props": [
+        {
+          "name": "keywords",
+          "value": "IM8, GovTech, Singapore, cybersecurity, Infrastructure Security"
+        },
+        {
+          "name": "abbreviation",
+          "value": "IS"
+        },
+        {
+          "name": "source",
+          "value": "https://info.standards.tech.gov.sg/control-catalog/cybersecurity/is/"
+        }
+      ]
+    },
+    "groups": [
+      {
+        "id": "is",
+        "title": "Infrastructure Security",
+        "controls": [
+          {
+            "id": "is-1",
+            "title": "Management Agents",
+            "props": [
+              {
+                "name": "risk-statement",
+                "value": "Without installing management agents on hosts, there is an increased risk of manual misconfigurations, difficulty in maintaining consistent configurations, and potential security vulnerabilities due to reduced visibility and ability to manage hosts effectively."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-24T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#a21e09a0-87c6-5990-bd7d-0aa94f54e2ef",
+                "rel": "source",
+                "text": "Infrastructure Security Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "is-1_smt",
+                "name": "statement",
+                "prose": "Install CSP management agents on hosts to remotely and securely manage their configurations."
+              },
+              {
+                "id": "is-1_gdn",
+                "name": "guidance",
+                "prose": "Most CSP compute instances preinstall management agents (e.g., AWS Systems Manager Agent, Azure Windows VM Agent) by default. If the image does not come with the preinstalled agent, install manually."
+              }
+            ]
+          },
+          {
+            "id": "is-2",
+            "title": "Automated Patch Management Tools",
+            "props": [
+              {
+                "name": "risk-statement",
+                "value": "Failure to automate security patching of operating systems and included software increases the risk of delayed or missed security updates, leaving systems vulnerable to known exploits and potential security breaches, compromising the overall security of the environment."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-24T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#a21e09a0-87c6-5990-bd7d-0aa94f54e2ef",
+                "rel": "source",
+                "text": "Infrastructure Security Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "is-2_smt",
+                "name": "statement",
+                "prose": "Use automated patch management tools to facilitate security patching of operating systems and software included in the operating systems."
+              },
+              {
+                "id": "is-2_gdn",
+                "name": "guidance",
+                "prose": "Patch management can be automated as part of the build and deploy phase, such as with golden images for containers and virtual machines. It can also be automated in running instances on the cloud via CSP node management services (such as Azure Update Manager or AWS Systems Manager Patch Manager) and on-premises via patch management services (such as Windows Server Update Services or Configuration Management tools). To minimise risk of disruption due to patching, consider staged rollouts with canary deployments or in non-production environments."
+              }
+            ]
+          },
+          {
+            "id": "is-3",
+            "title": "Restricted Administrator Privileges",
+            "props": [
+              {
+                "name": "risk-statement",
+                "value": "Without restricting administrator privileges, there is an increased risk of unauthorised access, privilege escalation, and potential security breaches, compromising the integrity and security of the system."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-24T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#a21e09a0-87c6-5990-bd7d-0aa94f54e2ef",
+                "rel": "source",
+                "text": "Infrastructure Security Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "is-3_smt",
+                "name": "statement",
+                "prose": "Restrict administrator privileges by disabling remote login for the root/administrator user and restricting sudo/administrators group access."
+              },
+              {
+                "id": "is-3_gdn",
+                "name": "guidance",
+                "prose": "Further reduce the attack surface by running common services such as the web server or database without root/administrator/system privileges."
+              }
+            ]
+          },
+          {
+            "id": "is-4",
+            "title": "Least Functionality",
+            "props": [
+              {
+                "name": "risk-statement",
+                "value": "Failure to disable or remove unnecessary functions, system ports, protocols, software, and services on the host increases the attack surface, potential vulnerabilities, and the risk of exploitation, compromising the overall security and performance of the system."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-24T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#a21e09a0-87c6-5990-bd7d-0aa94f54e2ef",
+                "rel": "source",
+                "text": "Infrastructure Security Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "is-4_smt",
+                "name": "statement",
+                "prose": "Disable or remove unnecessary functions, system ports, protocols, software, and services on the host."
+              },
+              {
+                "id": "is-4_gdn",
+                "name": "guidance",
+                "prose": "Follow the principle of least functionality to configure the host to carry out only its intended purpose. CSP node management services can provide an inventory of software and services (e.g., AWS Systems Manager Inventory). Vulnerability assessment scanners (e.g., AWS Inspector) can also identify software vulnerabilities and network exposure."
+              }
+            ]
+          },
+          {
+            "id": "is-5",
+            "title": "Host System Hardening",
+            "props": [
+              {
+                "name": "risk-statement",
+                "value": "Without hardening the operating system configuration according to industry standards, there's an increased risk of security vulnerabilities, unauthorised access, and potential exploitation, compromising the overall security posture and resilience of the operating system."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-24T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#a21e09a0-87c6-5990-bd7d-0aa94f54e2ef",
+                "rel": "source",
+                "text": "Infrastructure Security Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "is-5_smt",
+                "name": "statement",
+                "prose": "Harden the host configuration with reference to industry standards."
+              },
+              {
+                "id": "is-5_gdn",
+                "name": "guidance",
+                "prose": "Select the appropriate benchmark for the host such as from the NIST National Checklist Program or CIS Benchmarks. Automate the configuration process or use hardened images instead of manually configuring."
+              }
+            ]
+          },
+          {
+            "id": "is-6",
+            "title": "Remote Administration",
+            "props": [
+              {
+                "name": "risk-statement",
+                "value": "Using remote administration tools enhances security by providing controlled and audited access, reducing the risk of unauthorised activities, and improving overall management of privileged identities."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-24T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#a21e09a0-87c6-5990-bd7d-0aa94f54e2ef",
+                "rel": "source",
+                "text": "Infrastructure Security Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "is-6_smt",
+                "name": "statement",
+                "prose": "Use remote administration tools to control and monitor remote access."
+              },
+              {
+                "id": "is-6_gdn",
+                "name": "guidance",
+                "prose": "Prioritise remote administration tools (e.g., AWS Systems Manager Session Manager, AWS Systems Manager Fleet Manager) over direct SSH or RDP. If SSH is still required and remote administration tools are not available, use it only within a private non-production environment such as an encrypted tunnel and authenticate with short-lived certificates. Document and remediate gaps in monitoring and automation to minimise the need for remote access."
+              }
+            ]
+          },
+          {
+            "id": "is-7",
+            "title": "Malware Protection",
+            "props": [
+              {
+                "name": "risk-statement",
+                "value": "Without malware protection, there's an increased risk of undetected malicious activities, potential data breaches, and compromise of host systems, highlighting the importance of proactive measures to ensure the security and integrity of the environment."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-24T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#a21e09a0-87c6-5990-bd7d-0aa94f54e2ef",
+                "rel": "source",
+                "text": "Infrastructure Security Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "is-7_smt",
+                "name": "statement",
+                "prose": "Detect and quarantine malware on hosts with anti-malware tools."
+              },
+              {
+                "id": "is-7_gdn",
+                "name": "guidance",
+                "prose": "Configure anti-malware tools for all compute hosts, preferably leveraging cloud-native services where available. These tools should be kept up-to-date with the latest malware signatures. Regular scans should be scheduled to detect and quarantine potential threats."
+              }
+            ]
+          },
+          {
+            "id": "is-8",
+            "title": "Endpoint Detection and Response (EDR)",
+            "props": [
+              {
+                "name": "risk-statement",
+                "value": "Failure to monitor security threats on hosts with an Endpoint Detection and Response (EDR) tool increases the risk of undetected advanced threats, compromises in host security, and delayed response to potential security incidents, highlighting the need for continuous monitoring and proactive threat detection."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-24T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#a21e09a0-87c6-5990-bd7d-0aa94f54e2ef",
+                "rel": "source",
+                "text": "Infrastructure Security Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "is-8_smt",
+                "name": "statement",
+                "prose": "Monitor security threats on hosts with an EDR tool."
+              },
+              {
+                "id": "is-8_gdn",
+                "name": "guidance",
+                "prose": "Implement EDR tools for all compute hosts. Security incident response should be planned and documented for the tool. EDR tools with built-in malware protection should be favoured to reduce additional agents."
+              }
+            ]
+          },
+          {
+            "id": "is-9",
+            "title": "End-of-Support (EOS) Assets",
+            "props": [
+              {
+                "name": "risk-statement",
+                "value": "EOS assets can introduce security vulnerabilities as the assets are no longer provided with security fixes."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-24T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#a21e09a0-87c6-5990-bd7d-0aa94f54e2ef",
+                "rel": "source",
+                "text": "Infrastructure Security Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "is-9_smt",
+                "name": "statement",
+                "prose": "Ensure deployed {{ insert: param, is-9_prm_1 }} assets have not reached end-of-support (EOS). Use of EOS assets will require risk acceptance by approved authority."
+              },
+              {
+                "id": "is-9_gdn",
+                "name": "guidance",
+                "prose": "Identify, track and replace EOS assets in a timely manner. Regularly review assets to identify upcoming EOS timeframe and replace them ahead of EOS date."
+              }
+            ],
+            "params": [
+              {
+                "id": "is-9_prm_1",
+                "class": "str",
+                "label": "type",
+                "guidelines": [
+                  {
+                    "prose": "The type of asset."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "is-10",
+            "title": "Synchronise time clocks",
+            "props": [
+              {
+                "name": "risk-statement",
+                "value": "The lack of synchronised clocks introduces significant risks, including increased security vulnerabilities, data integrity issues, and challenges in troubleshooting."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-24T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#a21e09a0-87c6-5990-bd7d-0aa94f54e2ef",
+                "rel": "source",
+                "text": "Infrastructure Security Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "is-10_smt",
+                "name": "statement",
+                "prose": "Synchronise internal clocks to a common reference time source."
+              },
+              {
+                "id": "is-10_gdn",
+                "name": "guidance",
+                "prose": "Use common time source such as Network Time Protocol (NTP). In the cloud, it is recommended to use the default time sources provided by the CSPs."
+              }
+            ]
+          },
+          {
+            "id": "is-11",
+            "title": "Central Domain Name Registration",
+            "props": [
+              {
+                "name": "risk-statement",
+                "value": "Improper management of domain names increase the risk of phishing attacks or domain takeovers."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-24T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#a21e09a0-87c6-5990-bd7d-0aa94f54e2ef",
+                "rel": "source",
+                "text": "Infrastructure Security Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "is-11_smt",
+                "name": "statement",
+                "prose": "Register .gov.sg and .edu.sg domain names with GovTech as the sole registrar."
+              },
+              {
+                "id": "is-11_gdn",
+                "name": "guidance",
+                "prose": "Use the Whole of Government Domain Name Server (DNS) portal on the IT Service Management (ITSM) portal to register domain names. While the root level of the domain must be registered with ITSM, the use of subdomain delegation to external DNS Services (e.g. AWS Route53, Cloudflare DNS, etc) is allowed."
+              }
+            ]
+          },
+          {
+            "id": "is-12",
+            "title": "DNS Security Extensions (DNSSEC)",
+            "props": [
+              {
+                "name": "risk-statement",
+                "value": "Insecure domain name resolution can lead to man-in-the-middle attacks caused by DNS spoofing or DNS cache poisoning."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-24T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#a21e09a0-87c6-5990-bd7d-0aa94f54e2ef",
+                "rel": "source",
+                "text": "Infrastructure Security Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "is-12_smt",
+                "name": "statement",
+                "prose": "Implement DNS Security Extensions (DNSSEC) for public DNS records and servers."
+              },
+              {
+                "id": "is-12_gdn",
+                "name": "guidance",
+                "prose": "DNS services such as WOG DNS, Amazon Route 53 and Cloudflare support DNSSEC configuration."
+              }
+            ]
+          },
+          {
+            "id": "is-13",
+            "title": "Defensive Domain Name Registration",
+            "props": [
+              {
+                "name": "risk-statement",
+                "value": "Malicious use of domain names similar to actual organisation domain names increases the risk of phishing and spoofing."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-24T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#a21e09a0-87c6-5990-bd7d-0aa94f54e2ef",
+                "rel": "source",
+                "text": "Infrastructure Security Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "is-13_smt",
+                "name": "statement",
+                "prose": "Register second (.sg) and third (.com.sg, .org.sg, .net.sg, .edu.sg) level domain name variants of the system's primary domain name."
+              },
+              {
+                "id": "is-13_gdn",
+                "name": "guidance",
+                "prose": "Consider defensive registration of domain names with typographical variants of the system's primary domain name."
+              }
+            ]
+          },
+          {
+            "id": "is-14",
+            "title": "Singapore SMS Sender ID Registry Registration",
+            "props": [
+              {
+                "name": "risk-statement",
+                "value": "Lack of Sender ID registration allows malicious entities to spoof legitimate Government SMSes."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-24T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#a21e09a0-87c6-5990-bd7d-0aa94f54e2ef",
+                "rel": "source",
+                "text": "Infrastructure Security Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "is-14_smt",
+                "name": "statement",
+                "prose": "Register and use whitelisted SMS Sender IDs with the Singapore SMS Sender ID Registry for sending SMSes to members of the public."
+              },
+              {
+                "id": "is-14_gdn",
+                "name": "guidance",
+                "prose": "Agencies must use the \"gov.sg\" Sender ID via the Postman tool to send SMSes to members of the public unless exempted. Whitelist Sender IDs used to send SMSes and blacklist Sender IDs which are variants of the whitelisted Sender IDs, agency names, or names of services."
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "back-matter": {
+      "resources": [
+        {
+          "uuid": "a21e09a0-87c6-5990-bd7d-0aa94f54e2ef",
+          "title": "Infrastructure Security — Singapore Government ICT&SS Policy Reform",
+          "description": "Official Infrastructure Security control catalog page.",
+          "rlinks": [
+            {
+              "href": "https://info.standards.tech.gov.sg/control-catalog/cybersecurity/is/"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

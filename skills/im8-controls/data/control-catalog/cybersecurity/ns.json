@@ -1,0 +1,410 @@
+{
+  "catalog": {
+    "uuid": "5a5da9a1-536f-5916-ac76-1da0a71d435a",
+    "metadata": {
+      "title": "Cybersecurity Control Catalog - Network Security",
+      "last-modified": "2026-03-05T00:00:00+08:00",
+      "version": "2026.03.05",
+      "oscal-version": "1.1.2",
+      "props": [
+        {
+          "name": "keywords",
+          "value": "IM8, GovTech, Singapore, cybersecurity, Network Security"
+        },
+        {
+          "name": "abbreviation",
+          "value": "NS"
+        },
+        {
+          "name": "source",
+          "value": "https://info.standards.tech.gov.sg/control-catalog/cybersecurity/ns/"
+        }
+      ]
+    },
+    "groups": [
+      {
+        "id": "ns",
+        "title": "Network Security",
+        "controls": [
+          {
+            "id": "ns-1",
+            "title": "Network and System Component Segmentation",
+            "props": [
+              {
+                "name": "risk-statement",
+                "value": "Failure to segregate private and public resources within distinct subnets in a virtual network increases the risk of unauthorised access to sensitive data, as private resources may be exposed to the public internet, compromising the overall security of the infrastructure."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-05T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#2e0df6ed-5925-5d49-9001-ee6bc7379f42",
+                "rel": "source",
+                "text": "Network Security Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "ns-1_smt",
+                "name": "statement",
+                "prose": "Segment and isolate system components into separate physical and logical networks or environments based on their security requirements and risk levels."
+              },
+              {
+                "id": "ns-1_gdn",
+                "name": "guidance",
+                "prose": "Deploy security controls such as firewalls, security groups, and API gateways to establish and maintain segmentation. In cloud environments, implement a tiered network architecture where internet-facing services are restricted to designated public segments, while sensitive backend systems remain in private segments with controlled outbound access. Consider micro-segmentation for granular control based on workload sensitivity."
+              }
+            ]
+          },
+          {
+            "id": "ns-2",
+            "title": "Access Restrictions on CSP Resources Outside Virtual Network",
+            "props": [
+              {
+                "name": "risk-statement",
+                "value": "Lack of access restrictions raises the risk of unauthorised access, data exposure, and potential misuse of critical services, compromising the overall security posture."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-05T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#2e0df6ed-5925-5d49-9001-ee6bc7379f42",
+                "rel": "source",
+                "text": "Network Security Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "ns-2_smt",
+                "name": "statement",
+                "prose": "Restrict access to CSP resources outside of a virtual network (e.g., Lambda, DynamoDb, API Gateways, S3, CloudFront) using access controls or application layer authorisation."
+              },
+              {
+                "id": "ns-2_gdn",
+                "name": "guidance",
+                "prose": "Apply access restrictions appropriate to the resource type. Access through interface VPC endpoints is only required if the client is hosted in a private subnet. For example:\n* Restrict access to DynamoDB with IAM policies.\n* Restrict access to API Gateway with Lambda authorizers or authorisation middlewares at the application layer. If the API Gateway is exposed to private subnets, create a private API.\n* Restrict access to S3 Buckets with IAM policies and block public access from the internet."
+              }
+            ]
+          },
+          {
+            "id": "ns-3",
+            "title": "Deny by Default - Allow by Exception",
+            "props": [
+              {
+                "name": "risk-statement",
+                "value": "Without network access controls, there's an increased risk of unauthorised or malicious network access, leading to potential security breaches and compromise of system integrity."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-05T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#2e0df6ed-5925-5d49-9001-ee6bc7379f42",
+                "rel": "source",
+                "text": "Network Security Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "ns-3_smt",
+                "name": "statement",
+                "prose": "Deny network communications traffic by default and allow network communications traffic by exception at managed interfaces."
+              },
+              {
+                "id": "ns-3_gdn",
+                "name": "guidance",
+                "prose": "Configure network access control lists and security groups to deny all traffic by default. Only allow traffic to and from specific hosts and ports by exception. For egress traffic to the internet, consider whitelisting domains at the application layer or DNS resolver rather than just hosts or ports at the transport layer."
+              }
+            ]
+          },
+          {
+            "id": "ns-4",
+            "title": "Inter-Private Network Connectivity",
+            "props": [
+              {
+                "name": "risk-statement",
+                "value": "When routing through the internet, there's an increased risk of man-in-the-middle and spoofing attacks. Allowing bidirectional access between networks without fine-grained access controls increases the risk of unauthorised access, potential data exfiltration, and compromise of network security compared to unidirectional access to specific resources."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-05T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#2e0df6ed-5925-5d49-9001-ee6bc7379f42",
+                "rel": "source",
+                "text": "Network Security Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "ns-4_smt",
+                "name": "statement",
+                "prose": "Route network traffic between private networks without going through the internet."
+              },
+              {
+                "id": "ns-4_gdn",
+                "name": "guidance",
+                "prose": "Use CSP Private endpoint services (e.g., AWS PrivateLink with VPC endpoints) when you want to allow one or more consumer VPCs unidirectional access to a specific service or set of instances in the service provider VPC. Otherwise, use VPC peering and Transit Gateway when you want to enable layer-3 IP connectivity between VPCs. Refer to the Multi-VPC AWS Network Infrastructure Whitepaper for further guidance."
+              }
+            ]
+          },
+          {
+            "id": "ns-5",
+            "title": "Network and Application Layer Filtering",
+            "props": [
+              {
+                "name": "risk-statement",
+                "value": "Lack of filtering for direct traffic from the internet exposes the system to the risk of network and application layer attacks, increasing the likelihood of unauthorised access, denial-of-service incidents, and compromise of sensitive data."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-05T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#2e0df6ed-5925-5d49-9001-ee6bc7379f42",
+                "rel": "source",
+                "text": "Network Security Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "ns-5_smt",
+                "name": "statement",
+                "prose": "Filter direct traffic from the internet to protect against network and application layer attacks."
+              },
+              {
+                "id": "ns-5_gdn",
+                "name": "guidance",
+                "prose": "Deploy the following mechanisms as appropriate for the system and network architecture:\n* Web Application Firewall\n* Distributed Denial of Service Protection (e.g., AWS Shield)\n* Content Delivery Network (e.g., CloudFront)"
+              }
+            ]
+          },
+          {
+            "id": "ns-6",
+            "title": "Valid and Trusted SSL/TLS Certificates",
+            "props": [
+              {
+                "name": "risk-statement",
+                "value": "Using invalid SSL/TLS certificates introduces the risk of compromised encryption, man-in-the-middle attacks, and potential unauthorised access to sensitive information."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-05T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#2e0df6ed-5925-5d49-9001-ee6bc7379f42",
+                "rel": "source",
+                "text": "Network Security Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "ns-6_smt",
+                "name": "statement",
+                "prose": "Ensure that deployed SSL/TLS certificates are:\n* signed by a trusted root Certificate Authority;\n* match the domain name of the service they are issued for;\n* not expired; and\n* not revoked."
+              },
+              {
+                "id": "ns-6_gdn",
+                "name": "guidance",
+                "prose": "Configure a certificate manager that auto-renews certificates and sends alerts before expiry (e.g., AWS Certificate Manager). Otherwise, automate these functions separately."
+              }
+            ]
+          },
+          {
+            "id": "ns-7",
+            "title": "Secure Inter-Service Communication",
+            "props": [
+              {
+                "name": "risk-statement",
+                "value": "Failure to ensure secure communications between services increases the risk of unauthorised access, data breaches, and potential manipulation of sensitive information during transit."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-05T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#2e0df6ed-5925-5d49-9001-ee6bc7379f42",
+                "rel": "source",
+                "text": "Network Security Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "ns-7_smt",
+                "name": "statement",
+                "prose": "Ensure communications between services are secure by making them authenticated, authorised and encrypted."
+              },
+              {
+                "id": "ns-7_gdn",
+                "name": "guidance",
+                "prose": "Design and build inter-service communications (e.g., databases, microservices) to be authenticated, authorised and encrypted (e.g., via API gateways, proxies, private endpoint services, message queues, or service meshes). It is recommended to log communication (such as access logs, transaction logs or payloads) between services for detection, monitoring and investigation of incidents."
+              }
+            ]
+          },
+          {
+            "id": "ns-8",
+            "title": "Secure Cloud and On-Premises Connectivity",
+            "props": [
+              {
+                "name": "risk-statement",
+                "value": "Insecure connectivity between cloud and on-premises environments can lead to data breaches, unauthorised access, and compromise of both cloud and on-premises resources."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-05T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#2e0df6ed-5925-5d49-9001-ee6bc7379f42",
+                "rel": "source",
+                "text": "Network Security Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "ns-8_smt",
+                "name": "statement",
+                "prose": "Route network traffic between on-premises systems and cloud systems through a secure intermediary."
+              },
+              {
+                "id": "ns-8_gdn",
+                "name": "guidance",
+                "prose": "Design and build secure communications to or from on-premises systems through a managed interface with boundary protection mechanisms rather than direct connectivity (e.g. via API gateways, application proxies or private endpoint services)."
+              }
+            ]
+          },
+          {
+            "id": "ns-9",
+            "title": "Intrusion Prevention System (IPS)/Intrusion Detection System (IDS)",
+            "props": [
+              {
+                "name": "risk-statement",
+                "value": "Absence of network or host IPS or IDS in the network increases the likelihood of undetected intrusions, putting sensitive data and system integrity at risk."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-05T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#2e0df6ed-5925-5d49-9001-ee6bc7379f42",
+                "rel": "source",
+                "text": "Network Security Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "ns-9_smt",
+                "name": "statement",
+                "prose": "Set up and configure an Intrusion Prevention System (IPS)/Intrusion Detection System (IDS) in the network."
+              },
+              {
+                "id": "ns-9_gdn",
+                "name": "guidance",
+                "prose": "Configure network or host IPS/IDS to detect malicious traffic to/from public or untrusted networks."
+              }
+            ]
+          },
+          {
+            "id": "ns-10",
+            "title": "Private Network Connectivity",
+            "props": [
+              {
+                "name": "risk-statement",
+                "value": "Weak private network security may expose the network to malicious activities, jeopardising the confidentiality, integrity, and availability of critical resources."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-05T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#2e0df6ed-5925-5d49-9001-ee6bc7379f42",
+                "rel": "source",
+                "text": "Network Security Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "ns-10_smt",
+                "name": "statement",
+                "prose": "Implement strong access controls, encryption, and logging for remote developer, maintainer, or administrator access to private network resources."
+              },
+              {
+                "id": "ns-10_gdn",
+                "name": "guidance",
+                "prose": "Use strong authentication and MFA. Layered security mechanisms and controls include:\n* Inspect traffic from gateway to private network;\n* Terminate all remote access connections in a dedicated network segment within the network and restrict access to only systems and services allowed by the organisation;\n* Implement strong encryption for remote access into internal networks;\n* Only allow authorised devices to remotely access internal networks;\n* Ensure that remote access connections are not perpetual and re-authenticate remote connections to the VPN gateway on a periodic basis (such as every four hours);\n* Set the maximum number of consecutive failed authentication attempts before account lockout for remote access to internal networks; and\n* Make sure that split tunnelling is not implemented."
+              }
+            ]
+          },
+          {
+            "id": "ns-11",
+            "title": "Alerts on Firewall Configuration Changes",
+            "props": [
+              {
+                "name": "risk-statement",
+                "value": "Any unintended changes to firewall rules can significantly lower the perimeter defence of a network."
+              },
+              {
+                "name": "last-modified",
+                "value": "2026-03-05T00:00:00+08:00"
+              }
+            ],
+            "links": [
+              {
+                "href": "#2e0df6ed-5925-5d49-9001-ee6bc7379f42",
+                "rel": "source",
+                "text": "Network Security Control Catalog"
+              }
+            ],
+            "parts": [
+              {
+                "id": "ns-11_smt",
+                "name": "statement",
+                "prose": "Generate alerts to inform appointed administrators on changes to firewall rules, including the enabling or disabling of rules."
+              },
+              {
+                "id": "ns-11_gdn",
+                "name": "guidance",
+                "prose": "Implement real time alerts to inform administrators of creation, deletion, modification, enabling and disabling of firewall rules. Also alert administrators when unusual or sudden spike/drop in utilisation of firewall's system resources."
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "back-matter": {
+      "resources": [
+        {
+          "uuid": "2e0df6ed-5925-5d49-9001-ee6bc7379f42",
+          "title": "Network Security — Singapore Government ICT&SS Policy Reform",
+          "description": "Official Network Security control catalog page.",
+          "rlinks": [
+            {
+              "href": "https://info.standards.tech.gov.sg/control-catalog/cybersecurity/ns/"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

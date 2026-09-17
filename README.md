@@ -16,7 +16,7 @@ The repo does three things:
 
 1. **Extracts** those pages into machine-readable [OSCAL](https://pages.nist.gov/OSCAL/) JSON.
 2. **Bundles** the JSON with a query script and instructions as a self-contained skill.
-3. **Packages** the skill as a zip that you can install in Claude Code, claude.ai or Claude Desktop.
+3. **Packages** the skill as a zip that you can install in Claude Code, claude.ai, Claude Desktop or chatgpt.com.
 
 ## Repository structure
 
@@ -110,6 +110,7 @@ If you add or remove a document in `fetch-control-catalog.sh`, update `EXPECTED_
 | Claude Code, inside `sg-im8-reform-skill/` | `mkdir -p .claude/skills && ln -s ../../skills/im8-controls .claude/skills/im8-controls` (`.claude/` is git-ignored, so each clone creates the link once) |
 | Claude Code, everywhere | `unzip im8-controls.zip -d ~/.claude/skills/` (or `ln -s "$PWD/skills/im8-controls" ~/.claude/skills/`, which keeps it in step with refreshes) |
 | claude.ai / Claude Desktop | Upload `im8-controls.zip` under Settings → Capabilities → Skills. |
+| chatgpt.com | Go to Plugins → Skills, click Add (+), choose Upload from your computer, and select `im8-controls.zip`. |
 
 Skills are discovered when a session starts, so open a new session after installing.
 

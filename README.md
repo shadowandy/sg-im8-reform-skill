@@ -21,7 +21,7 @@ The repo does three things:
 ## Repository structure
 
 ```
-im8reform/
+sg-im8-reform-skill/
 ├── README.md
 ├── package-skill.sh                  # validates the skill and builds im8-controls.zip
 ├── im8-controls.zip                  # build output (git-ignored; regenerate with package-skill.sh)
@@ -54,6 +54,15 @@ im8reform/
 - **The skill and its build tools are kept apart.** The extractor and its dependencies live in `tool/` and are never packaged.
 
 ## Workflow
+
+To install the skill without building it, download `im8-controls.zip` from the [latest release](https://github.com/shadowandy/sg-im8-reform-skill/releases/latest) and skip to [Install](#3-install).
+
+To work on the repo:
+
+```sh
+git clone https://github.com/shadowandy/sg-im8-reform-skill.git
+cd sg-im8-reform-skill
+```
 
 ### 1. Refresh the data
 
@@ -98,7 +107,7 @@ If you add or remove a document in `fetch-control-catalog.sh`, update `EXPECTED_
 
 | Where | How |
 |---|---|
-| Claude Code, this repo | `mkdir -p .claude/skills && ln -s ../../skills/im8-controls .claude/skills/im8-controls` (`.claude/` is git-ignored, so each clone creates the link once) |
+| Claude Code, inside `sg-im8-reform-skill/` | `mkdir -p .claude/skills && ln -s ../../skills/im8-controls .claude/skills/im8-controls` (`.claude/` is git-ignored, so each clone creates the link once) |
 | Claude Code, everywhere | `unzip im8-controls.zip -d ~/.claude/skills/` (or `ln -s "$PWD/skills/im8-controls" ~/.claude/skills/`, which keeps it in step with refreshes) |
 | claude.ai / Claude Desktop | Upload `im8-controls.zip` under Settings → Capabilities → Skills. |
 

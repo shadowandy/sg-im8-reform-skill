@@ -1,4 +1,4 @@
-# im8reform
+# IM8 Reform Agent Skill
 
 This repo turns Singapore Government Instruction Manual for ICT&SS (previously known as **IM8**) into an **agent skill**. With the skill installed, Claude (or any agent that supports skills) can answer questions like "which controls are mandatory for a medium-risk cloud system?" or "what does `as-5` require?" from the official data instead of from memory.
 

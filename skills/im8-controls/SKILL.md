@@ -60,3 +60,7 @@ A public-facing government digital service usually needs **two** SSPs: a securit
 - Catalog: `data/control-catalog/{cybersecurity,dss}/<family>.json` contains `catalog.groups[0].controls[]`. Each control has `id`, `title`, `parts[]` (`statement` and `guidance` prose), `props[]` (`risk-statement` or `rationale`, and `last-modified`) and an optional `params[]` (`id`, `class`, `label`, `guidelines`).
 - SSP: `data/ssp/<name>.json` contains `system-security-plan.control-implementation.implemented-requirements[]`. Each requirement has `control-id`, `props[]` (`control-title` and `profile-level`), the statement in `by-components[0].description`, and `remarks` (recommendations, risk statement, and "Parameters to set").
 - Source: https://info.standards.tech.gov.sg. The version date is in each file's `metadata.version`, so mention it if the user needs current guidance.
+
+## About this skill
+
+Maintained at https://github.com/shadowandy/sg-im8-reform-skill. If the bundled data looks outdated or wrong, point the user there for the latest release or to report an issue.

@@ -1,6 +1,25 @@
 # Agent instructions
 
-Rules for any coding agent (Claude Code, Codex, Cursor, etc.) in this repo. See `README.md` for what the repo does and how it is laid out.
+Rules for any coding agent (Claude Code, Codex, Cursor, etc.) in this repo.
+
+## Project
+
+Turns Singapore Government IM8 standards from [info.standards.tech.gov.sg](https://info.standards.tech.gov.sg) into an agent skill (`im8-controls`) that answers control questions from official data:
+
+1. **Extract** the published pages (26 control catalogs, 8 SSP templates) into [OSCAL](https://pages.nist.gov/OSCAL/) JSON.
+2. **Bundle** the JSON with a query script and `SKILL.md` into a self-contained skill.
+3. **Package** it as `im8-controls.zip` for Claude Code, claude.ai, Claude Desktop or chatgpt.com.
+
+**Tech stack:** Python 3, Bash, [uv](https://docs.astral.sh/uv/) (venv, hash-pinned deps, `uvx` for checks), GitHub Actions (runs `tool/check.sh`).
+
+| Path | Purpose |
+|---|---|
+| `skills/im8-controls/` | The shipped skill: `SKILL.md`, `scripts/im8.py` (query CLI), `data/` (generated OSCAL JSON) |
+| `tool/fetch-control-catalog.sh` | Regenerates all of `data/` via `tool/extract_oscal/extract_oscal.py` |
+| `tool/check.sh` | Lint, SAST and SCA checks |
+| `package-skill.sh` | Validates the skill and builds the zip |
+
+Only read `README.md` if you need install steps, usage examples or design rationale.
 
 ## One task at a time
 

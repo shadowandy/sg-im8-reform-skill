@@ -203,6 +203,17 @@ The agent recognises that this system needs two SSP templates: `medium-risk-clou
 
 Every control ID, title and quoted statement comes from the bundled data, not the model's memory. The response is based on data version 2026.03.24, and the exact wording will vary between runs.
 
+### Limits of the agent's judgement
+
+The skill makes *lookups* reliable, not *judgement*:
+
+- **Lookups** such as "What does `as-5` require?" or "Which controls are Level 0 in `medium-risk-cloud`?" come straight from the data, and `im8.py` gives the same answer every time.
+- **Judgements** such as "Which controls apply to my system?" or "Does my setup meet `ga-3`?" are the model's interpretation of your scenario. The model can pick the wrong SSP template, assume facts you didn't state (such as data classification or hosting location), misread a control, or answer differently when asked again.
+
+In the [example](#example), the control list and statements come from the data, but the advice on which `ga-*` controls apply is the model's reasoning.
+
+Treat scenario answers as a starting draft. Describe your system precisely, ask the agent which controls it relied on and check them with `im8.py control <id>`, and have your security team or system owner confirm what applies.
+
 ### Customising
 
 To change how the agent uses the skill, edit `skills/im8-controls/SKILL.md`. The `description` in its frontmatter decides when the skill is triggered.

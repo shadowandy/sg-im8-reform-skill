@@ -1,6 +1,6 @@
 ---
 name: im8-controls
-description: Look up Singapore Government IM8 control catalogs (Cybersecurity and Digital Service Standards/DSS) and System Security Plan (SSP) templates from info.standards.tech.gov.sg. Use when asked about IM8 or GovTech controls, control IDs like as-5, ac-2, lm-8 or wo-2, which controls or level apply to a system (low/medium/high-risk cloud, on-premises, CII, GenAI, sandbox, digital service), control levels 0/1/2, parameters, WCAG/accessibility or usability requirements for government digital services, or drafting, reviewing or gap-checking an SSP.
+description: Look up Singapore Government IM8 control catalogs (Cybersecurity and Digital Service Standards/DSS) and System Security Plan (SSP) templates from info.standards.tech.gov.sg. Use when asked about IM8 or GovTech controls, control IDs like as-5, ac-2, lm-8 or wo-2, which controls or level apply to a system (low/medium/high-risk cloud, on-premises, CII, GenAI, sandbox, digital service), control levels 0/1/2, parameters, WCAG/accessibility or usability requirements for government digital services, or drafting, reviewing or gap-checking an SSP. Control text and levels are exact lookups; which controls apply to a scenario is judgement that can be wrong, so present it as a draft for human confirmation.
 ---
 
 # IM8 Control Catalogs and System Security Plans
@@ -17,6 +17,8 @@ python3 scripts/im8.py compare dss-others dss-high   # controls whose level or p
 ```
 
 To go from a topic to a control ID, run `search` first. If it misses (for example because of synonyms), run `index` and read the titles. Cite control IDs and quote statements exactly. Don't paraphrase requirements from memory.
+
+When judging which templates or controls apply to the user's scenario, keep your reasoning separate from the data: state any assumptions (such as data classification or hosting), and say the result is a draft for the security team or system owner to confirm.
 
 ## Concepts
 

@@ -5,12 +5,15 @@
 #   Lint  pylint (Python), shellcheck (shell)
 #   SAST  bandit (Python); shellcheck also flags unsafe shell patterns
 #   SCA   pip-audit against the hash-pinned tool/extract_oscal/requirements.txt
+#   Data  tool/check_data.py parses the generated OSCAL JSON and asserts every
+#         control keeps its id, statement and profile level
 #
 # Usage: ./tool/check.sh
 #
-# Needs only uv: each tool runs through uvx at a pinned version, so results do
-# not depend on what is installed locally. pip-audit queries the PyPI advisory
-# database, so the SCA check needs network access.
+# Needs uv and python3: each tool runs through uvx at a pinned version, so results
+# do not depend on what is installed locally. pip-audit queries the PyPI advisory
+# database, so the SCA check needs network access. The data check is standard
+# library only and runs on the local python3.
 set -uo pipefail
 
 ROOT="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")/.." >/dev/null && pwd -P)"
@@ -23,6 +26,11 @@ SHELLCHECK_PY_VERSION="0.11.0.1"
 
 if ! command -v uvx >/dev/null 2>&1; then
     echo "[ERROR] uvx not found; install uv (https://docs.astral.sh/uv/)." >&2
+    exit 1
+fi
+
+if ! command -v python3 >/dev/null 2>&1; then
+    echo "[ERROR] python3 not found; needed for the data check." >&2
     exit 1
 fi
 
@@ -61,6 +69,9 @@ run "SAST: bandit (Python)" \
 run "SCA: pip-audit (tool/extract_oscal/requirements.txt)" \
     uvx "pip-audit@${PIP_AUDIT_VERSION}" --strict --require-hashes --disable-pip \
     -r tool/extract_oscal/requirements.txt
+
+run "data: OSCAL fields (skills/im8-controls/data)" \
+    python3 tool/check_data.py
 
 if ((${#FAILED[@]})); then
     echo "[ERROR] ${#FAILED[@]} check(s) failed:" >&2

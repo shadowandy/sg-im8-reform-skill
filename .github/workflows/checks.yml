@@ -9,6 +9,7 @@ on:
       - "**/*.sh"
       - ".pylintrc"
       - "tool/extract_oscal/requirements*"
+      - "skills/im8-controls/data/**"
       - ".github/workflows/checks.yml"
   pull_request:
     paths: *check-paths

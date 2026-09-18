@@ -29,7 +29,8 @@ Only read `README.md` if you need install steps, usage examples or design ration
 
 ## Definition of done
 
-If you added or changed any `*.py`, `*.sh` or `tool/extract_oscal/requirements*` file, run:
+If you added or changed any `*.py`, `*.sh`, `tool/extract_oscal/requirements*` or
+`skills/im8-controls/data/` file, run:
 
 ```sh
 ./tool/check.sh
@@ -43,10 +44,12 @@ The task is done only when it prints `All checks passed.` and exits 0. It checks
 | Lint | shellcheck | tracked `*.sh` |
 | SAST | bandit | tracked `*.py` |
 | SCA | pip-audit | `tool/extract_oscal/requirements.txt` |
+| Data | `tool/check_data.py` | generated OSCAL JSON in `skills/im8-controls/data/` |
 
 If a check fails:
 
 - **Fix the cause.** Don't suppress findings (`# pylint: disable`, `# nosec`, `# shellcheck disable=`, `--ignore-vuln`) or loosen `.pylintrc` or `tool/check.sh`. For a genuine false positive, suppress only that line, comment why, and tell the user.
+- **Data check fails:** the published pages changed shape. Fix `tool/extract_oscal/extract_oscal.py` and regenerate; never patch `data/` by hand.
 - **Vulnerable dependency:** raise the floor in `requirements.in` with a comment naming the CVE, then run `uv pip compile --generate-hashes requirements.in -o requirements.txt` in `tool/extract_oscal/`.
 - **Can't run the checks** (no `uv`, no network): say so. Never claim they passed.
 
